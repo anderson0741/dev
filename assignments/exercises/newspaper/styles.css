@@ -1,0 +1,96 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    border: solid 5px;
+    text-align: center;
+    padding: 9px;
+    background-color: rgb(226, 219, 219);
+}
+
+h1 {
+    font-family: 'Diplomata SC', cursive;
+    border: solid;
+    padding: 5px 5px;
+}
+
+#date {
+    font-size: 12px;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: 'Fjalla One', sans-serif;
+    line-height: 1px;
+    width: 100%;
+}
+
+h3 {
+    padding-left: 15px;
+    text-align: left;
+}
+
+p {
+    text-align: left;
+    padding: 5px 15px
+}
+
+.author {
+    font-size: 17px;
+    line-height: 0%;
+}
+.one{
+    float: left;
+}
+
+.two{
+    float: center;
+}
+.column {
+    font-size: 17px;
+    column-width: 240px;
+    column-count: 3;
+    column-gap: 40px;
+}
+
+#three {
+    font-size: 23px;
+}
+
+#subtitle {
+    text-align: center;
+    font-size: 33px;
+    text-decoration: dotted underline;
+}
+
+img {
+    float: left;
+    width: 200px;
+}
+
+#link {
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#link:hover {
+    text-decoration: underline;
+    font-size: 18px;
+}
+/* Your newspaper should have:
+
+1. A header with the name of your newspaper
+
+2. A title for the front page article
+
+3. A three columned body using p tags. 
+(Hint: you will need to alter the display characteristic.)
+
+4. Several words in the body should be individually styled 
+using inline elements. (i.e. highlighting, bolding, or text-color change)
+
+5. An image within the body of the article.
+
+Come up with your own story. It can be anything, including satire 
+or the recreation of an existing article somewhere. Make sure it looks nice so 
+that someone could obviously tell it's suppose to be a newspaper. */

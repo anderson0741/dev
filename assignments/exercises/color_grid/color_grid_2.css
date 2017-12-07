@@ -1,0 +1,94 @@
+/* colors */
+
+.pink {
+    background-color: #F5C6D6;
+    height: 150px; 
+    width: 100%;
+    margin: -2px;
+    border: 6px white solid;
+}
+
+.hot-pink {
+    background-color: #EE2E84;
+    height: 150px; 
+    width: 25%;
+    display: inline-block;
+    margin: -2px;
+    border: 6px white solid;
+}
+
+.blue {
+    background-color: #85CFD8;
+    height: 150px; 
+    width: 50%;
+    display: inline-block;
+    margin: -2px;
+    border: 6px white solid;
+}
+
+.green {
+    background-color: #8DC63F;
+    height: 150px; 
+    width: 75%;
+    display: inline-block;
+    margin: -2px;
+    border: 6px white solid;
+}
+
+.orange {
+    background-color: #E76E34;
+    height: 150px; 
+    width: 25%;
+    display: inline-block;
+    margin: -2px;
+    border: 6px white solid;
+}
+
+/* the body */
+body{
+    margin: auto;
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper{
+    height: 25%;
+    width: 60%;
+    margin: auto; 
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .pink{
+        display: block;
+        height: 75px;
+    }
+    .hot-pink{
+        display: block;
+        height: 75px;
+        width: 100%;
+    }
+    .blue{
+        display: block;
+        height: 75px;
+        width: 100%;
+    }
+    .green{
+        display: block;
+        height: 75px;
+        width: 100%
+    }
+    .orange{
+        display: block;
+        height: 75px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,24 @@
+#square {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    left: 45%;
+    top: 250px;
+    background-color: black;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+/* #square:hover{
+    background-color: blue;
+} */
+
+/* .square:active{
+    background-color: red;
+}
+
+.square:click{
+    background-color: yellow;
+} */

@@ -1,0 +1,26 @@
+body {
+    background-color: #111111;
+}
+
+h1 {
+    color: #E2E80F;
+    text-align: center;
+    font-size: 30px;
+}
+
+p {
+ color: #eeeeee;
+ font-size: 20px;
+ line-height: 25px;
+}
+
+.credits:hover {
+    text-decoration: underline;
+    color: #49DAFF;
+    cursor: pointer;
+    font-size: 22px;
+    font-style: italic;
+}
+
+
+

@@ -1,0 +1,62 @@
+/* box */
+
+.container {
+    margin: auto;
+    width: 60%;
+    height: 67vh;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+body {
+    height: 100vh;
+}
+
+.row {
+    height: 27%;
+}
+
+.col {
+    height: 100%;
+    border: solid 10px white;
+    display: inline-block;
+    margin: -5px; 
+}
+
+.full {
+    width: 98.5%;
+}
+
+.three-fourths {
+    width: 73.4%;
+}
+
+.half {
+    width: 48.3%;
+}
+.quarter {
+    width: 23.2%;
+}
+
+/* colors */
+
+.pink {
+    background-color: #F5C6D6
+}
+
+.hot-pink {
+    background-color: #EE2E84;
+}
+
+.blue {
+    background-color: #85CFD8;
+}
+
+.green {
+    background-color: #8DC63F
+}
+
+.orange {
+    background-color: #E76E34;
+}

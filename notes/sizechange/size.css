@@ -1,0 +1,71 @@
+/* #box {
+    background-color: blue;
+    height: 100px;
+}
+
+@media (max-width: 1000px) and (min-width: 300px) {
+    #box {
+        background-color: red;
+        height: 500px;
+    }
+} */
+
+/* #box {
+    background-color: blue;
+    height: 100px;
+}
+
+@media (max-width: 600px), (min-width: 900px) {
+    #box {
+        background-color: red;
+        height: 500px;
+    }
+} */
+/* or statement above */
+
+/* #box {
+    background-color: blue;
+    height: 100px;
+    display: inline-block;
+    width: 100%;
+}
+
+@media (max-width: 1600px) {
+    #box {
+        background-color: yellow;
+        width: 60%;
+    }
+} */
+
+#box {
+    background-color: red;
+    height: 100px;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    #box {
+        background-color: blue;
+        width: 60%;
+    }
+} 
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    #box {
+        background-color: chartreuse;
+        width: 10%;
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1600px) {
+    #box {
+        background-color: yellow;
+        width: 60%;
+    }
+} 
+
+@media (min-width: 1800px) and (max-width: 2000px) {
+    #box {
+        background-color: purple;
+        width: 60%;
+    }
+} 

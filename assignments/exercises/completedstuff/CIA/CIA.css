@@ -1,0 +1,56 @@
+body {
+    background-color: white; 
+    margin-left: 139px;
+    margin-right: 139px;
+}
+.parent{
+    position: fixed;
+    left: 20%;
+    right: 20%;
+}
+
+h1 {
+    color: darkgreen;
+}
+
+body {
+    font-family: Georgia;
+}
+
+.top {
+    text-align: center;
+}
+
+p {
+    line-height: 25px;
+}
+
+.txtlink {
+    text-decoration: none;
+
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.pic {
+    float:left;
+    width: 315px;
+}
+
+img {
+    height: 279px;
+    width: 279px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+}
+
+
+

@@ -1,0 +1,39 @@
+h1 {
+    color: blue;
+    font-size: 20px;
+}
+
+#hi {
+    color: red;
+}
+.title {
+    color: green;
+}
+
+p {
+    font-size: 20px;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+
+.list {
+    font-style: italic;
+}
+
+ol {
+    font-size: 24px;
+}
+
+.div1 h1 {
+    color: orange;
+}
+
+.div2 p {
+    color: orange;
+}
