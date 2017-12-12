@@ -1,0 +1,1 @@
+I found out I could be a newspaper writer
