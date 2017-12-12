@@ -1,32 +1,106 @@
 body {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 
 #title {
     background-color: red;
-    width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    border: black 3px solid
 }
 
 #bod {
     display: flex;
     justify-content: space-around;
-    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* flex-flow: ||; */
+    /* justify-content: center; */
     width: 100%;
     background-color: orange;
+    background-image: url(https://steamuserimages-a.akamaihd.net/ugc/80340382489034138/2A938A37F40878ABB6CC7879D20761DD2F909789/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside%7C637%3A358&composite-to=*,*%7C637%3A358&background-color=black);
+    /* height: 100vh; */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* margin: center; */
+    padding: 5% 5%;
 }
 
-#total {
-    background-color: green;
+.baddie {
     height: 100%;
+    width: 100%;
+    top: 50%;
+    margin: center;
+    text-align: center;
+    /* padding: 5% 5% */
+}
+#total {
+    /* background-color: green; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    height: 100%;
+    width: 100%;
+    /* top: 50%; */
+    text-align: center;
+    margin: center;
+    /* padding: 5% 5% */
 }
 
 ul{
     list-style: none;
+    /* border: 3px black solid */
+    /* width: 225px; */
+    margin: auto;
+    
+}
+
+li{
+    border: 3px black solid;
+    /* margin: auto; */
+    width: 225px;
 }
 
 img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
+    /* align-content: center; */
+    /* image-orientation: center; */
+    /* margin: auto; */
+    margin-right: 25%
+}
+
+#footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: green;
+}
+
+
+
+.white {
+    background-color: greenyellow;
+}
+
+.green{
+    background-color: rgb(42, 211, 42);
+}
+
+.gold {
+    background-color: gold;
+}
+
+#goCaught{
+    background-color: rgba(255, 213, 0, 0.479);
+}
+
+#bomCaught{
+    background-color: rgba(255, 213, 0, 0.479);
+}
+
+#cheCaught{
+    background-color: rgba(255, 213, 0, 0.479);
+}
+
+#fin {
+    background-color: rgba(255, 213, 0, 0.479);
 }

@@ -1,0 +1,92 @@
+@font-face {
+    font-family: Mario;
+    src: url(SuperMario256.ttf);
+}
+ @media (min-width: 800px) {
+    body {
+        height: 900px;
+        width: 1000px;
+        padding: 5px 5px;
+    }
+
+        /* font-family: Mario;
+        src: url(SuperMario256.ttf); */
+        /* margin-left: auto; */
+    }
+    div {
+        font-family: Mario;
+    }
+    wrapper {
+        /* height: 700px;
+        width: 300px; */
+        /* font-family: Mario 256 font;
+        src: url(supermario256.ttf); */
+    }
+    .title {
+        /* border: 3px black solid; */
+        width: 100%;
+        height: 10%;
+        background-color: gold;
+        color: red;
+    }
+    .picture {
+        background-color: red;
+        /* height: 50%; */
+        /* width: 100%; */
+        /* background-image: url(https://coursework.vschool.io/content/images/2015/07/luigi.png); */
+        /* background-repeat: no-repeat; */
+    }
+    .text{ 
+    height: 3em;
+    /* width: 25%; */
+    color: red;
+    /* text-align: center; */
+    /* left: -50%; */
+    /* height: 75%; */
+    margin: 5% 5%;
+    }
+    #footer {
+        background-color: gold;
+        height: 4em;
+        /* width: 1000px; */
+        position: relative;
+    }
+    #mushroom {
+        height: 60px;
+        position: absolute;
+        left: 90%;
+    }
+}
+
+@media (max-width: 799px) {
+    body{
+        height: 500px;
+        width: 100px;
+    }
+
+    .title{
+        width: 100%;
+        height: 10%;
+        background-color: gold;
+        color: red;
+    }
+
+    .picture {
+        background-color: red;
+    }
+
+    .text {
+        margin: 5% 5%;
+    }
+    #mushroom {
+        height: 60px;
+        position: absolute;
+        left: 90%
+    }
+    #footer {
+        background-color: gold;
+        height: 60px;
+        /* width: 1000px; */
+        bottom: 0;
+    }
+}

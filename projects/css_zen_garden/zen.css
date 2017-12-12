@@ -1,0 +1,55 @@
+.header {
+    background-image: url(http://www.csszengarden.com/214/huntington.jpg);
+    /* background-image: img src="huntington.jpg"; */
+    /* background-image: url(http://www.csszengarden.com/214/enso.svg); */
+    height: 310px;
+    width: 100%;
+    /* position: absolute; */
+    /* display: flex; */
+    
+
+}
+
+.head {
+    /* background-image: url(http://www.csszengarden.com/214/enso.svg); */
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
+    grid-template-areas: 
+        ". . . . . . . . . . . ."
+        ". . 1 1 2 2 2 2 . . . ."
+        ". . 1 1 3 3 3 3 . . . ."
+        ". . . . . . . . . . . .";
+}
+
+.swirl{
+    grid-area: 1;
+    background-image: url(http://www.csszengarden.com/214/enso.svg);
+}
+
+.title {
+    grid-area: 2;
+    color: white;
+    font-size: 2em;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.subTitle {
+    grid-area: 3;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+    font-size: 1.6em;
+}
+
+
+/* h2 {
+    color: rgba(255,255,255,0.6);
+    font-style: italic;
+    display: block;
+    font-size: 1.6em;
+} */
+
+
+/* body{
+    color: #182424;
+}. */

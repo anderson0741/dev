@@ -1,0 +1,12 @@
+#bod {
+    background-image: url(https://s-media-cache-ak0.pinimg.com/originals/a1/ab/6a/a1ab6a76b0c9c982bc0a0a478cdf32e7.jpg);
+    /* width: 100%; */
+    background-size: 100%;
+    /* background-image: url(http://a.abcnews.com/images/US/AP_guyana_plane_crash_jt_130707_16x9_992.jpg); */
+}
+
+.text{
+    text-align: center;
+    margin: auto;
+}
+

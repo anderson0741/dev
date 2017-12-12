@@ -14,14 +14,22 @@
     <div id="bod">
     <div class="baddie">
         <ul id="goo">    
-            <li id="goomba_price">Goombas</li>
-            <img id= "goo" src= "https://pm1.narvii.com/6294/ab7d43d4d6ba198e2271502f9c95edd3ec06ed1c_hq.jpg">
-            <li>Caught 12</li>
+            <li id="goomba_price" class="gold"><h1>Goombas</h1></li>
+            <img id= "goo" src= "https://vignette.wikia.nocookie.net/plantsvszombies/images/2/27/Goomba_from_Mario.png/revision/latest?cb=20161006234343">
+            <!-- <li class="white">Caught 5</li> -->
+            <li class="white">
+                <p><input id="goCaught" placeholder="Enter Number You Need Caught"></p>                
+            </li>
+            <!-- <li class="white">Price 11 coins</li> -->
+            <!-- <li class="white">
+                <p>Price per = <input id ="goomPrice"></p>
+            </li>             -->
+            <!-- <li class = "white">Caught 12</li> -->
             <!-- <li>
                 <input id="goCaught">
             </li> -->
-            <li>Price 5 coins</li>
-            <li>
+            <li class = "green">Price 5 coins</li>
+            <li class = "white">
                 <h3>Total = 
                     <span id="goOutput"></span>
                 </h3>
@@ -30,14 +38,19 @@
     </div>
     <div class="baddie">
         <ul id="bom">
-            <li>Bob ombs</li>
-            <img src= "https://vignette.wikia.nocookie.net/supermarioglitchy4/images/b/b3/King_Bob-omb_VS_Koopa_and_Toad.png/revision/latest?cb=20170324214314">
-            <li>Caught 8</li>
-            <!-- <li>
-                <input id="bobCaught">
+            <li class="gold"><h1>Bob ombs</h1></li>
+            <img src= "https://www.mariowiki.com/images/thumb/d/d8/MPSR_King_Bob-omb.png/250px-MPSR_King_Bob-omb.png">
+            <!-- <li class="white">Caught 5</li> -->
+            <li class="white">
+                <p></p><input id="bomCaught" placeholder="Enter Number You Need Caught"></p>
+            </li>
+            <li class="green">Price 7 coins</li>
+            <!-- <li class="white">
+                <p>Price per = <input id ="bomPrice"></p>
             </li> -->
-            <li>Price 7 coins</li>
-            <li>
+            <!-- <li class="white">Caught 8</li> -->
+            <!-- <li class="white">Price 7 coins</li> -->
+            <li class="white">
                 <h3>Total = 
                     <span id="boOutput"></span>
                 </h3>
@@ -46,25 +59,42 @@
         </div>
     <div class="baddie">
         <ul id="che">
-            <li>Cheep-Cheeps</li>
-            <img src= "http://www.godisageek.com/wp-content/uploads/Super-Mario-Odyssey-4.jpg">
-            <li>Caught 5</li>
-            <!-- <li>
-                <input id="cheCaught">
+            <li class="gold"><h1>Cheep-Cheeps</h1></li>
+            <img src= "https://vignette.wikia.nocookie.net/fantendo/images/8/8a/Cheep_Boss_SMW3D.png/revision/latest?cb=20120705035752">
+            <!-- <li class="white">Caught 5</li> -->
+            <li class="white">
+                <p><input id="cheCaught" placeholder="Enter Number You Need Caught"></p>
+            </li>
+            <li class="green">Price 11 coins</li>
+            <!-- <li class="white">
+                <p>Price per = <input id ="chePrice"></p>
             </li> -->
-            <li>Price 11 coins</li>
-            <li>
+            <li class="white">
                 <h3>Total = 
                     <span id="cheOutput"></span>
                 </h3>
             </li>
         </ul>
     </div>
-    </div>
     <div id="total">
-        <h1>Grand Total = <span id="finalOut"></span>
-            
-        </h1>
+        <ul id="final">
+            <li class="gold"><h1>Grand Total</h1></li>
+            <div><img src="https://vignette2.wikia.nocookie.net/deathbattle/images/b/be/Paragoomba_in_flight.png/revision/latest?cb=20170121102414"></div>
+            <li class="white finalOut">
+                <h1>
+                    <span id="finalOutput"></span>
+                </h1>
+            </li>
+            <h4 id="nobord">
+                    <button id="fin">Click here</button> 
+            </h4>
+        </ul>
+    </div>
+    </div>
+    <div id="footer">
+        <h4>Mario@getthepeach.com</h4> 
+        <h4>444 Portland Oregon</h4>
+        <h4> www.mariothemurderer.com</h4>
     </div>
     <script type="text/javascript" src="mario.js"></script>
 </body>
