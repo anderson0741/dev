@@ -1,0 +1,23 @@
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+#content{
+    height: 200px;
+    width: 500px;
+}
+
+#title {
+    width: 245px;
+}
+
+#author{
+    width: 245px;
+}

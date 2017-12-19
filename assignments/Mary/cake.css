@@ -1,0 +1,177 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh; 
+}
+
+.wrapper{
+    display: grid;
+    width: 900px;
+    height: 900px;
+    margin: auto;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: 350px 350px 350px;
+    /* grid-gap: .1px; */
+    grid-template-areas: "t1 t1 t1 t1" "t2 t2 t3 t3"
+}
+
+
+.weddingCakes {
+    grid-area: t1;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px;
+    grid-gap: 7px;
+    grid-template-areas: 
+    "c1 c1 c2 c2 c3 c3" 
+    "c4 c4 c4 c5 c5 c5"
+}
+
+.cakeOne {
+    grid-area: c1;
+    background-image: url(http://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/vehicles/2018/performance/camaro/mov/01-images/2018-camaro-shared-13.jpg?imwidth=1200);
+    background-position: center;
+    background-size: 100% 100%;
+    z-index: 3;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    margin: auto; border: 1px solid black;
+    box-shadow: 10px 10px 5px grey;
+    border-radius: 1%;
+    transition: all 1.5s ease-in .4s
+}
+
+.cakeOne:hover{
+    background-color: red;
+    border-radius: 0;
+    width: 300%;
+    height: 300%;
+    box-shadow: 200px 200px 200px black;
+
+}
+
+.cakeTwo {
+    grid-area: c2;
+    background-image: url(wedding_cake.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    margin: auto; border: 1px solid black;
+    box-shadow: 10px 10px 5px grey;
+    border-radius: 1%;
+    transition: all 1.5s ease-in .4s;
+}
+
+.cakeTwo:hover{
+    /* margin-left: -50%; */
+    border-radius: 0;
+    height: 300%;
+    width: 300%;
+    box-shadow: 200px 200px 200px black;
+    /* position: absolute; */
+    /* top: 0;
+    left: 50%; */
+}
+.cakeThree {
+    grid-area: c3;
+    background-color: red;
+}
+.cakeFour {
+    grid-area: c4;
+    background-color: beige;
+}
+.cakeFive {
+    grid-area: c5;
+    background-color: gold;
+} 
+
+
+.cup {
+    grid-area: t2;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px;
+    grid-gap: 7px;
+    grid-template-areas: 
+    "cu1 cu2 cu3" 
+    "cu4 cu5 cu6"
+}
+
+.cup1 {
+    grid-area: cu1;
+    background-color: thistle;
+}
+.cup2 {
+    grid-area: cu2;
+    background-color: lightgray;
+}
+.cup3 {
+    grid-area: cu3;
+    background-color: lightgreen;
+}
+.cup4 {
+    grid-area: cu4;
+    background-color: turquoise;
+}
+.cup5 {
+    grid-area: cu5;
+    background-color: purple;
+}
+.cup6 {
+    grid-area: cu6;
+    background-color: orange;
+}
+
+.regcake {
+    grid-area: t3;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    grid-gap: 7px;
+    grid-template-areas: "r1 r2 r3" "r4 r5 r6"
+
+}
+
+.regCake1{
+    grid-area: r1;
+    background-color: lightcoral;
+}
+
+.regCake2{
+    grid-area: r2;
+    background-color: orangered;
+}
+
+.regCake3{
+    grid-area: r3;
+    background-color: tan;
+}
+
+.regCake4{
+    grid-area: r4;
+    background-color: plum;
+}
+
+.regCake5{
+    grid-area: r5;
+    background-color: lemonchiffon;
+}
+
+.regCake6{
+    grid-area: r6;
+    background-color: darkblue;
+}
+
+
