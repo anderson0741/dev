@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Level Up Cars</title>
 </head>
@@ -14,27 +15,53 @@
     <div class="header"></div>
     <div class="wrapper">
         <div class="title_div">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light nav-mini">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
             <div id="title_div">
                 <img id="title_image" src="level_up_cars.jpg" alt="" srcset="">
             </div>
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-secondary">Home</button>
+            <div class="btn-group nav-main" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary">
+                    <a class="the_links" href="index.html">Home</a>
+                </button>
                 <button type="button" class="btn btn-secondary">Shop</button>
                 <button type="button" class="btn btn-secondary">Upgrades</button>
                 <button type="button" class="btn btn-secondary">Testimonials</button>
-                <button type="button" class="btn btn-secondary">About Us</button>
+                <button type="button" class="btn btn-secondary">
+                    <a class="the_links" href="about.html">About Us</a>
+                </button>
                 <button type="button" class="btn btn-secondary">Contact</button>
                 <button type="button" class="btn btn-secondary">Blog</button>
             </div>
-            
         </div>
         <div class="open">
             <div class="welcome">
                 <h1>Welcome to Level Up Car Sales</h1>
-                <video onclick="playVid()" onclick="shopauseVid()" id="intro_video" src="level_up.mov"></video>
-                <br>
-                <button class="wlcome" onclick="playVid()" type="button">Play</button>
-                <button class="wlcome" onclick="pauseVid()" type="button">Pause</button>
+                <video autoplay="autoplay" preload="auto" onclick="pauseVid()" ondblclick="playVid()" id="intro_video" src="level_up.mov"></video>
             </div>
             <div class="positive">
                 <h1>Something great about level up!</h1>
@@ -42,38 +69,53 @@
             </div>
         </div>
         <div class="for_grid">
-            <div class="shop">
+            <div class="shop shadows">
                 <h1>Shop Cars</h1>
-                <a href="#">
-                    <img class="pic" src="shop_car.JPG" alt="">
-                    <h2>Shop Cars</h2>
+                <!-- <img src="shop_cars.JPG" alt=""> -->
+                <!-- <a href="#"> -->
+                <!-- <img class="pic" src="shop_car.JPG" alt=""> -->
+                <!-- <h2>Shop Cars</h2> -->
                 </a>
             </div>
-            <div class="story">
-                <h1>how we started</h1>
-                <a href="#"></a>
+            <div class="story shadows"><a class="no-link" href="about.html">
+                <h1>how we started</h1></a>
+                <!-- <a href="#"></a> -->
             </div>
-            <div class="acc">
+            <div class="acc shadows">
                 <h1>Shop Other</h1>
-                <a href="#"></a>
+                <!-- <a href="#"></a> -->
             </div>
-            <div class="aftermarket">
+            <div class="aftermarket shadows">
                 <h1>Aftermarket Parts</h1>
-                <a href="#"></a>
+                <!-- <a href="#"></a> -->
             </div>
         </div>
-        <div class="featured">
-            <h1>Featured Listings</h1>
-            <img src="" alt="" srcset="">
-            <a href="#">See More Cars</a>
-        </div>
-        <div class="social">
-            <h1>Social</h1>
-            <h2>Follow us @LevelUpCarSales</h2>
-            <img src="" alt="" srcset="">
-            <img src="" alt="" srcset="">
-            <img src="" alt="" srcset="">
-            <img src="" alt="" srcset="">
+        <div class="end">
+            <!-- <div class="featured">
+                <h1>Featured Listings</h1>
+                <img src="" alt="" srcset="">
+                <a href="#">See More Cars</a>
+            </div> -->
+            <div class="social">
+                <h1>Social</h1>
+                <h2>Follow us @LevelUpCarSales</h2>
+                <link rel="stylesheet" href="https://www.instagram.com/levelupcarsales/?hl=en" class="fa-instagram">
+                <!-- <style>
+                    .fa-instagram {
+                        background: #125688;
+                        color: white;
+                    }
+
+                    .fa-facebook {
+                        background: #3B5998;
+                        color: white;
+                    }
+                </style> -->
+                <!-- <img src="" alt="" srcset="">
+                <img src="" alt="" srcset="">
+                <img src="" alt="" srcset="">
+                <img src="" alt="" srcset=""> -->
+            </div>
         </div>
         <div class="footer">
             <h3>Phone: 801.675.7453</h3>
