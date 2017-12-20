@@ -2,7 +2,9 @@
     body {
         background-color: ivory;
         font-family: block
-        /* font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; */
+    }
+    .not-big{
+        display: none;
     }
     .title_div {
         background-color: white;
@@ -36,20 +38,15 @@
         max-width: 800px;
     }
     .for_grid {
-        /* margin-left: 45px;
-        margin-right: 45px; */
-        /* margin-left: -25%; */
         display: grid;
         height: 500px;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-gap: 15px;
         grid-template-areas: ". p1 p2 ." ". p3 p4 ."
-        /* width: 75%; */
     }
 
     .shadows{
-        /* background-image: url(other.jpeg); */
         background-position: center;
         background-size: 100% auto;
         background-repeat: no-repeat;
@@ -63,30 +60,27 @@
 
     .shadows:hover{
         border-radius: 0;
-        /* height: 105%;
-        width: 105%; */
         transform: scale(1.4);
         box-shadow: 50px 50px 5px black;
     }
     .shop {
         grid-area: p1;
-        /* color: white; */
-        background-image: url(shop_cars.JPG);
+        background-image: url(images/shop_cars.JPG);
     }
 
     .story {
         grid-area: p2;
-        background-image: url(story.JPG);
+        background-image: url(images/story.JPG);
     }
 
     .acc {
         grid-area: p3;
-        background-image: url(other.jpeg);
+        background-image: url(images/other.jpeg);
     }
 
     .aftermarket {
         grid-area: p4;
-        background-image: url(aftermarket.JPG);
+        background-image: url(images/aftermarket.JPG);
     }
 
     .social {
@@ -106,14 +100,13 @@
 @media (max-width: 700px) {
     body {
         background-color: ivory;
-        /* font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; */
-        font-size: 10px;
+    }
+    .big{
+        display: none;
     }
     .title_div {
         display: flex;
         background-color: white;
-        /* text-align: left; */
-        /* margin: 0px 230px; */
     }
     #title_image {
         grid-area: t;
@@ -149,7 +142,7 @@
         height: 75%;
     }
     .shop {
-        background-image: url(shop_cars.JPG);
+        background-image: url(images/shop_cars.JPG);
         object-fit: contain;
         background-position: left;
         background-size: 100% auto;
@@ -166,7 +159,7 @@
         box-shadow: 100px 100px 100px black;
     }
     .story {
-        background-image: url(story.JPG);
+        background-image: url(images/story.JPG);
         background-position: left;
         background-size: 100% auto;
         background-repeat: no-repeat;
@@ -182,7 +175,7 @@
         box-shadow: 100px 100px 100px black;
     }
     .acc {
-        background-image: url(other.jpeg);
+        background-image: url(images/other.jpeg);
         background-position: center;
         background-size: 100% auto;
         background-repeat: no-repeat;
@@ -197,7 +190,7 @@
         box-shadow: 100px 100px 100px black;
     }
     .aftermarket {
-        background-image: url(aftermarket.JPG);
+        background-image: url(images/aftermarket.JPG);
         background-position: center;
         background-size: 100% auto;
         border-radius: 3%;
@@ -217,6 +210,7 @@
     .footer {
         background-color: lightgoldenrodyellow;
         text-align: center;
+        font-size: 10px !important;
     }
     .end {
         margin: auto;
@@ -224,6 +218,23 @@
     }
 }
 
+.the_links{
+    text-decoration-line: none !important;
+    color: white
+}
 .no-link{
     text-decoration-line: none !important;
+}
+
+.social_icons{
+    height: 35px;
+    width: 35px;
+}
+
+#input{
+    height: 35px;
+}
+
+.end{
+    margin: 25px 25px;
 }

@@ -85,12 +85,6 @@ h1{
         width: 300px;
         margin-left: 20%;
         margin-right: 20%;
-        /* display: inline-block; */
-        /* display: flex; */
-        /* justify-content: space-around;
-        align-content: space-around; */
-        /* margin-right: 15px;
-        margin-left: 25px; */
     }
     
     .paragraph {
@@ -107,4 +101,9 @@ h1{
         font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif
     }
     
+    }
+
+    .the_links{
+        text-decoration-line: none !important;
+        color: white
     }
