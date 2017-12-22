@@ -1,0 +1,88 @@
+
+{
+"appetizers": [
+    {
+        "name": "boneless wings", 
+        "ingrediants": ["wings with no bones", "various sauces", "chapotle"],
+        "description": ["happiness", "joy", "tastyness"]
+    },
+    {  
+        "name": "nachos",
+        "ingrediants": ["chips", "cheese", "melting properties"],
+        "description": ["good", "tasty", "yum"]
+    },
+    {
+        "name": "chips and salsa",
+        "ingrediants": ["corn chips", "salsa", "and"],
+        "description": ["goodness", "smile causing", "pit in your stomach because it doesnt satisfy your hunger"]
+    }
+],
+"cold sandwiches": [
+    {
+        "name": "turky",
+        "ingrediants": ["bread", "turkey flesh", "crust"],
+        "description": ["makes you tired"]
+    },
+    {
+        "name": "ham",
+        "ingrediants": ["wheat bread", "pig flesh", "condiments"],
+        "description": ["tastes nasty"]
+    },
+    {
+        "name": "roast beef",
+        "ingrediants": ["white bread", "cow flesh", "arbys sauce"],
+        "description": ["tastes good"]
+    } 
+],
+"hot sandwiches": [
+    {
+        "name": "Cheese from the grill",
+        "ingrediants": ["cheese", "bread", "butter"],
+        "description": "good on your taste buds"
+    },
+    { 
+        "name": "warm roast beef",
+        "ingrediants": ["heated cow flesh", "bread", "sauces from arbys"],
+        "description": "very nice"
+    },
+    {
+        "name": "cooked albino turkey",
+        "ingrediants": ["cooked rare albino turkey", "bread", "crums"],
+        "description": "rare albino turkey is found and cooked for your taste buds"
+    }
+],
+"desserts": [
+    {
+        "name": "moose tracks",
+        "ingrediants": ["milk", "coldness", "chocolate"],
+        "description": "its ice cream, what else do you need to know?"
+    },
+    {
+        "name": "caramel",
+        "ingrediants": ["caramel", "caramel", "caramel"],
+        "description": "its nice"
+    },
+    {
+        "name": "bannana cream pie",
+        "ingrediants": ["bannana", "cream", "pie"],
+        "description": "one of the best pies"
+    }
+],
+"drinks": [
+    {
+        "name": "water",
+        "ingrediants": "water",
+        "description": "water"
+    },
+    { 
+        "name": "lemonade",
+        "ingrediants": ["lemons", "water", "sugar"],
+        "description": "sour"
+    },
+    {
+        "name": "root beer",
+        "ingrediants": ["roots", "beer", "sugar"],
+        "description": "good stuff"
+    }
+]
+}

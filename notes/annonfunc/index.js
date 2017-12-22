@@ -24,26 +24,26 @@ let database = [{
     }
 ];
 
-//filter forEach map
-// database.forEach(function (person, i) {
-//     console.log(i + ":" + person.name);
-// })
+// filter forEach map
+database.forEach(function (person, i) {
+    console.log(i + ":" + person.name);
+})
 
-// let alphabetizeDatabase = database.sort(function (person1, person2) {
-//     person1 = person1.name.toLowerCase();
-//     person2 = person2.name.toLowerCase();
-//     if (person1 < person2) {
-//         return -1;
-//     } else if (person1 > person2) {
-//         return 1;
-//     } else {
-//         return 0;
-//     }
-// })
+let alphabetizeDatabase = database.sort(function (person1, person2) {
+    person1 = person1.name.toLowerCase();
+    person2 = person2.name.toLowerCase();
+    if (person1 < person2) {
+        return -1;
+    } else if (person1 > person2) {
+        return 1;
+    } else {
+        return 0;
+    }
+})
 
-// alphabetizeDatabase.forEach(function (person) {
-//     console.log(person.name);
-// })
+alphabetizeDatabase.forEach(function (person) {
+    console.log(person.name);
+})
 
 // let sortNumber = database.sort(function (a, b) {
 //     a = a.age;
@@ -61,10 +61,10 @@ let database = [{
 //     console.log(person.age, person.name);
 // })
 
-let avg = database.age.reduce(function(total, num){
-    return total + num;
-}) / database.age.length;
-console.log(avg);
+// let avg = database.age.reduce(function(total, num){
+//     return total + num;
+// }) / database.age.length;
+// console.log(avg);
 
 // let numbers = [1, 2, 3, 4, 5];
 
