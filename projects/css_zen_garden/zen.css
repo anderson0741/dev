@@ -48,7 +48,7 @@ header {
 	height: 230px;
 	padding: 20px 0 70px 0;
 	background-attachment: fixed, fixed, fixed, scroll;
-	background-image: url(img/contours.png), url(img/noise.png), url(img/gridlines.png), url(img/huntington.jpg);
+	background-image: url(images/contours.png), url(images/noise.png), url(images/gridlines.png), url(images/huntington.jpg);
 	background-repeat: repeat, repeat, repeat, no-repeat;
 	background-size: auto, auto, auto, cover;
 	text-align: left;

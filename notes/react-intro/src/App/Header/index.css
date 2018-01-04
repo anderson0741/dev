@@ -1,0 +1,5 @@
+header{
+    grid-area: hdr;
+    padding: 10px;
+    background-color: greenyellow;
+}

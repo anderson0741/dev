@@ -1,0 +1,7 @@
+.app-wrapper{
+    height: 100vh;
+    background-color: aqua;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: "hdr" "con";
+}

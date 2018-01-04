@@ -4,7 +4,8 @@
   "description": "VSchool projects",
   "main": "index.js",
   "dependencies": {
-    "chai": "^4.1.2"
+    "chai": "^4.1.2",
+    "react": "^16.2.0"
   },
   "devDependencies": {},
   "scripts": {

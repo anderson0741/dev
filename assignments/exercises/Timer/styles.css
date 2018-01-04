@@ -1,0 +1,19 @@
+body{
+    background-color: red;
+    background-image: url(https://www.factslides.com/imgs/atomic-bomb.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#clock{
+    display: flex;
+    /* justify-content: space-around; */
+    font-size: 55px;
+    justify-content: center;
+    align-content: center;
+}
+
+.border{
+    border: black 3px solid;
+    background-color: green;
+}
