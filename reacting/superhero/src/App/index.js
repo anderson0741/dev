@@ -13,6 +13,7 @@ class App extends Component {
     display(i) {
         alert(this.state.superheros[i].catchphrase);
     }
+    
     render() {
         let { superheros } = this.state;
         return (

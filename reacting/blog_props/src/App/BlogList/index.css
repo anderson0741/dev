@@ -1,0 +1,50 @@
+.post {
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    margin-top: 30px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.date {
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+    color: #868e96;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.oldButton {
+    text-transform: uppercase;
+    height: 35px;
+    width: 20%;
+    background-color: #0085a1;
+    border-color: #0085a1;
+    color: white;
+    transition-duration: .4s;
+    /* float: right; */
+}
+
+.oldButton:hover{
+    background-color: #01748b;
+}
+
+.dalink:hover{
+    transition-duration: .4s;
+    color: #0085a1;
+}
+
+.olderPosts {
+    display: flex;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 130px;
+    margin-left: 130px;
+}

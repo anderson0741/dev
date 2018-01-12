@@ -3,7 +3,7 @@ import React from "react";
 function SuperHero(props) {
     return (
         <div>
-            {/* <button onClick={this.state}>Click here</button> */}
+            <button onClick={this.state}>Click here</button>
         </div>
     )
 }

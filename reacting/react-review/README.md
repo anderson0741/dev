@@ -12,8 +12,9 @@ The 5 principles
     - as view triggers changes in the state, the virtual dom is updated, then compared with real DOM, and view is therefor updated containing new changes
 
 purposes of a web page:
-1) display data
+1) extract data from user
 2) manipulate data
+3) display data
 
 
 
