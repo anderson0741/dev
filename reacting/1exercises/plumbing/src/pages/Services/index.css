@@ -1,0 +1,6 @@
+.service-links{
+    display: flex;
+    flex-flow: column;
+    /* justify-content: ; */
+    /* align-items: center; */
+}

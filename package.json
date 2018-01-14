@@ -6,7 +6,8 @@
   "dependencies": {
     "chai": "^4.1.2",
     "mocha": "^4.1.0",
-    "react": "^16.2.0"
+    "react": "^16.2.0",
+    "redux": "^3.7.2"
   },
   "devDependencies": {},
   "scripts": {
