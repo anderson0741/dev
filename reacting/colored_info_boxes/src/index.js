@@ -5,7 +5,7 @@ import App from "./App";
 
 ReactDOM.render(
     <App
-        name="Wizard Cards"
-        founder="Celeste"
+        name="Various Cards"
+        founder="J K Rowling"
     />, document.getElementById("root")
 );
