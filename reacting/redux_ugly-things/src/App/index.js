@@ -1,9 +1,10 @@
 import React from 'react';
+import Form from '../shared/Form';
 
 function App() {
     return (
         <div>
-            test
+            <Form add clear></Form>
         </div>
     )
 }
