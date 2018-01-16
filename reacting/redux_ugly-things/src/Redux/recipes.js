@@ -10,6 +10,10 @@ const recipesReducer = (prevRecipes = [], action) => {
                     return recipe;
                 }
             })
+        case "REMOVE_RECIPE":
+            return [...prevRecipes].filter((recipe, i) => {
+                return i !== action.index;
+            })
         default:
             return prevRecipes;
     }
@@ -26,6 +30,12 @@ export const editRecipe = (updatedRecipe, index) => {
     return {
         type: "EDIT_RECIPE",
         updatedRecipe,
+        index
+    }
+}
+export const removeRecipe = (index) => {
+    return {
+        type: "REMOVE_RECIPE",
         index
     }
 }
