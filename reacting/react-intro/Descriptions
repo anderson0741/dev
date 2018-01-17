@@ -1,0 +1,20 @@
+array = [{}, '', 0, true, []];
+
+object = {
+    arr: ["dog", "cat"],
+    boolean: true,
+    subObject: {
+        num: 1,
+        str: "name",
+        array: ['bat', 'fat']
+    }
+}
+
+
+array[2]
+
+object.boolean
+
+object.arr[1]
+
+object.subObject.array[1]

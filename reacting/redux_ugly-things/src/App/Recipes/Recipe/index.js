@@ -4,12 +4,12 @@ import { removeRecipe } from '../../../Redux/recipes.js';
 import Form from '../../../shared/Form';
 
 function Recipe(props) {
-    let { index, name, category, cookTime, removeRecipe } = props;
+    let { index, name, category, image, removeRecipe } = props;
     return (
         <div>
             <h3>{name}</h3>
             <p>type: {category}</p>
-            <p>time to prep: {cookTime}</p>
+            <p>awfuleness: <img src={image} alt=""/></p>
             <button onClick={() => removeRecipe(index)}>X</button>
             <Form {...props}/>
         </div>

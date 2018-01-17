@@ -5,16 +5,16 @@ import { addRecipe, editRecipe } from '../Redux/recipes.js';
 class Form extends Component {
     constructor(props) {
         super(props);
-        // var name, category, cookTime;
+        // var name, category, image;
         // if (props.index) {
-        //     var { name, category, cookTime } = props.recipes[props.index];
+        //     var { name, category, image } = props.recipes[props.index];
         // }
-        let { name, category, cookTime } = props;
+        let { name, category, image } = props;
         this.state = {
             inputs: {
                 name: name || "",
                 category: category || "",
-                cookTime: cookTime || "",
+                image: image || "",
             }
         }
         this.handleChange = this.handleChange.bind(this);
@@ -36,7 +36,7 @@ class Form extends Component {
             inputs: {
                 name: "",
                 category: "",
-                cookTime: ""
+                image: ""
             }
         })
     }
@@ -54,13 +54,13 @@ class Form extends Component {
         }
     }
     render() {
-        let { name, category, cookTime } = this.state.inputs;
+        let { name, category, image } = this.state.inputs;
         // console.log(this.props);
         return (
             <form onSubmit={this.handleSubmit}>
                 <input onChange={this.handleChange} placeholder="Name" value={name} name="name" type="text" />
                 <input onChange={this.handleChange} placeholder="Category" value={category} name="category" type="text" />
-                <input onChange={this.handleChange} placeholder="Cook Time" value={cookTime} name="cookTime" type="text" />
+                <input onChange={this.handleChange} placeholder="Image" value={image} name="image" type="text" />
                 <button>Submit</button>
             </form>
         )
