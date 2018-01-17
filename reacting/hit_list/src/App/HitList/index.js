@@ -9,8 +9,7 @@ export default class HitList extends Component {
     constructor(props){
         super(props);
         this.state = {
-            name: [],
-            image: [],
+            people: [],
             loading: true,
             err: false,
             errMsg: ""
@@ -20,9 +19,8 @@ export default class HitList extends Component {
     componentDidMount(){
         axios.get(hlUrl)
             .then((response) => {
-                let {results } = response.data;
                 this.setState({
-                    name: results,
+                    people: response.data,
                     loading: false
                 })
             })
