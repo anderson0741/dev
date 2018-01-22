@@ -1,0 +1,98 @@
+.formWrapper{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: black solid 2px;
+    border-radius: 10px;
+    height: 300px;
+    width: 800px;
+
+}
+
+.inputWrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    width: 700px;
+    margin-bottom: 2%;
+}
+
+.firstName {
+    border: solid black 2px;
+}
+.firstName:hover {
+    border: solid black 2px;
+    background-color: lightgoldenrodyellow;
+    transition-duration: 0.5s;
+}
+.lastName {
+    border: solid black 2px;
+}
+.lastName:hover {
+    border: solid black 2px;
+    background-color: lightgoldenrodyellow;
+    transition-duration: 0.5s;
+}
+.phone {
+    border: solid black 2px;
+}
+.phone:hover {
+    border: solid black 2px;
+    background-color: lightgoldenrodyellow;
+    transition-duration: 0.5s;
+}
+.email {
+    border: solid black 2px;
+}
+.email:hover {
+    border: solid black 2px;
+    background-color: lightgoldenrodyellow;
+    transition-duration: 0.5s;
+}
+.favFood {
+    border: solid black 2px;
+}
+.favFood:hover {
+    border: solid black 2px;
+    background-color: lightgoldenrodyellow;
+    transition-duration: 0.5s;
+}
+.birthPlace {
+    border: solid black 2px;
+}
+.birthPlace:hover {
+    border: solid black 2px;
+    background-color: lightgoldenrodyellow;
+    transition-duration: 0.5s;
+}
+.submit {
+    border: solid black 2px;
+    border-radius: 5px;
+    background-color: rgb(167, 164, 164);
+    color: black;
+}
+.submit:hover{
+    background-color: red;
+    transition: .2s all;
+    transition-delay: .4s all;
+    box-shadow: 1px;
+}
+
+.about {
+    border: solid black 2px;
+    width: 500px;
+    height: 100px;
+    word-wrap: normal;
+}
+.about:hover {
+    border: solid black 2px;
+    width: 500px;
+    height: 100px;
+    word-wrap: normal;
+    border: solid black 2px;
+    background-color: lightgoldenrodyellow;
+    transition-duration: 0.5s;
+}

@@ -15,7 +15,7 @@ class App extends Component {
     }
     
     render() {
-        let { superheros } = this.state;
+        // let { superheros } = this.state;
         return (
             <div>
                 {superheros.map((hero, index) => {
