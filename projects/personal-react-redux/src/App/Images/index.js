@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import './index.css';
 
 const ronQuotes = 'http://ron-swanson-quotes.herokuapp.com/v2/quotes';
-// axios.post(Images);
+// axios.post(Content);
 
-export default class Images extends Component {
+export default class Content extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -37,8 +38,13 @@ export default class Images extends Component {
 
     render() {
         return (
-            <div>
-                <button>Quotes</button>
+            <div className='imageDiv'>
+
+                <div className="swanDiv">
+                    <h1 className="swan">Ron Swanson Quotes</h1>
+                    <button className='button'>Quotes</button>
+                    <p></p>
+                </div>
             </div>
         )
     }
