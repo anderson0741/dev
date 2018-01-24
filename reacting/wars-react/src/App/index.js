@@ -1,5 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Sidebar from './Sidebar';
+import './index.css';
 
 import {Switch, Route, Link} from 'react-router-dom';
 

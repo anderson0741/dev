@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-// import './Character.css';
+import './character.css';
 
 const swUrl = 'https://swapi.co/api/people/';
 
@@ -23,9 +23,9 @@ export default class Character extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        let {id} = this.props.match.params;
+        let { id } = this.props.match.params;
         let nextId = nextProps.match.params.id;
-        if ( nextId !== id) {
+        if (nextId !== id) {
             this.getCharacterObj(nextId);
         }
     }
@@ -51,10 +51,10 @@ export default class Character extends Component {
         let { loading } = this.state;
         return (
             loading ?
-                <div>Thank you for your patience while your info loads...</div>
+                <div>Loading...</div>
                 :
-                <div className='character-wrapper'>
-                    <h3>Name: {name}</h3>
+                <div className='the-wrapper'>
+                    <h3 className='hred'>Name: {name}</h3>
                     <h4>Height: {height}</h4>
                     <h4>Mass: {mass}</h4>
                     <h4>Hair Color: {hair_color}</h4>

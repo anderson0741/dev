@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+
 import Character from './Character';
-// import './Sidebar.css';
+import './index.css';
 
 const swapi = 'https://swapi.co/api/people/';
 
