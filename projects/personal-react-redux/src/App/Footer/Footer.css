@@ -1,0 +1,16 @@
+
+.footerDiv{
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    width: 100%;
+    background-color: maroon;
+    text-align: center;
+    opacity: 0.9;
+    border: black 3px solid;
+    border-radius: 3px;
+}
+
+.icons{
+    height: 45px;
+}

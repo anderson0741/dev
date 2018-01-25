@@ -21,8 +21,8 @@ class SwansonQuotes extends Component {
 
     render() {
         return (
-            <div>
-                <button onClick={this.handleClick}>Swanson Quote</button>
+            <div className='swansonJava'>
+                <button onClick={this.handleClick} className='button'>Swanson Quote</button>
                 <h1 className='answer'>{this.props.quote[0]}</h1>
             </div>
         )
