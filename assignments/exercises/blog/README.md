@@ -1,1 +1,1 @@
-blog
+designing a blog
