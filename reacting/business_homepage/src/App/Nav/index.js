@@ -9,9 +9,9 @@ function Nav() {
     return (
         <div className="papa">
             <div className="navi">
-                <img className='imgs' src={images} alt="" />
+                {/* <img className='imgs' src={images} alt="" /> */}
                 <div className="navBod ">
-                    {/* <img className='imgs' src={images} alt="" /> */}
+                    <img className='imgs' src={images} alt="" />
                     <p className='links'>/</p>
                     <Link className='links' to="/">Home</Link>
                     <p className='links'>/</p>
@@ -20,6 +20,8 @@ function Nav() {
                     <Link className='links' to="/cars">Shop Cars</Link>
                     <p className='links'>/</p>
                     <Link className='links' to="/contact">Contact Us</Link>
+                    <p className='links'>/</p>
+                    <Link className='links' to="/upload">Upload Content</Link>
                     <p className='links'>/</p>
                 </div>
             </div>
