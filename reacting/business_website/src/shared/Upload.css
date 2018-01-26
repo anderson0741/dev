@@ -1,0 +1,6 @@
+.FileUpload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 40px;
+}
