@@ -7,9 +7,9 @@ import { AppBar } from 'material-ui/AppBar';
 import './Login';
 
 class Register extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state ={
+        this.state = {
             first_name: '',
             last_name: '',
             email: '',
@@ -17,10 +17,17 @@ class Register extends Component {
         }
     }
 
-    handleClick(event){
+    handleClick(event) {
         let apiBaseUrl = "http://localhost:4000/api";
         console.log("values", this.state.first_name, this.state.last_name, this.state.email, this.state.password);
-        .state
+        let self = this;
+        let payload = {
+            "first_name": this.state.first_name,
+            "last_name": this.state.last_name,
+            "email": this.state.email,
+            "password": this.state.password
+        }
+        axios.post(apiBaseUrl)
     }
     render() {
         return (
@@ -28,57 +35,57 @@ class Register extends Component {
                 <MuiThemeProvider>
                     <div>
                         <AppBar
-                        title='Register'
+                            title='Register'
                         />
                         <TextField
-                        hintText="Enter your First Name"
-                        floatingLabelText="First Name"
-                        onChange={
-                            (event,newValue) => this.setState({
-                                first_name:newValue
-                            })
-                        } />
+                            hintText="Enter your First Name"
+                            floatingLabelText="First Name"
+                            onChange={
+                                (event, newValue) => this.setState({
+                                    first_name: newValue
+                                })
+                            } />
                         <br />
                         <TextField
-                        hintText="Enter your Last Name"
-                        floatingLabelText="Last Name"
-                        onChange={
-                            (event, newValue) => this.setState({
-                                last_name: newValue
-                            })
-                        } />
+                            hintText="Enter your Last Name"
+                            floatingLabelText="Last Name"
+                            onChange={
+                                (event, newValue) => this.setState({
+                                    last_name: newValue
+                                })
+                            } />
                         <br />
                         <TextField
-                        hintText="Enter your Email"
-                        floatingLabelText="Last Name"
-                        onChange={
-                            (event, newValue) => this.setState({
-                                email: newValue
-                            })
-                        } />
+                            hintText="Enter your Email"
+                            floatingLabelText="Last Name"
+                            onChange={
+                                (event, newValue) => this.setState({
+                                    email: newValue
+                                })
+                            } />
                         <br />
                         <TextField
-                        type = "password"
-                        hintText="Enter your Password"
-                        floatingLabelText="Password"
-                        onChange={
-                            (event, newValue) => this.setState({
-                                password: newValue
-                            })
-                        } />
+                            type="password"
+                            hintText="Enter your Password"
+                            floatingLabelText="Password"
+                            onChange={
+                                (event, newValue) => this.setState({
+                                    password: newValue
+                                })
+                            } />
                         <br />
                         <RaisedButton
-                        label="Submit" primary={true} style={style} onClick={
-                            (event) => this.handleClick(event)
-                        } />
+                            label="Submit" primary={true} style={style} onClick={
+                                (event) => this.handleClick(event)
+                            } />
                     </div>
-                    </MuiThemeProvider>
+                </MuiThemeProvider>
             </div>
         );
     }
 }
 
-const style ={
+const style = {
     margin: 15,
 };
 

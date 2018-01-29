@@ -19,6 +19,7 @@ function App(props) {
                 <Route exact path='/cars' component={Shop} />
                 <Route path='/contact' component={Contact} />
                 <Route path='/upload' component={Upload} />
+                {/* <Route path='/login' component={Login} /> */}
             </Switch>
         </div>
     )
