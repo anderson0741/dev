@@ -27,7 +27,25 @@ class Register extends Component {
             "email": this.state.email,
             "password": this.state.password
         }
-        axios.post(apiBaseUrl)
+        axios.post(apiBaseUrl+'/register', payload)
+        .then(function (response) {
+            if(response.data.code == 200){
+                let loginscreen = [];
+                loginscreen.push(
+                    <Login parentContext={this}/>
+                )
+                let loginmessage = "Username or password not found";
+                self.props.parentContext.setState({
+                    loginscreen:loginscreen,
+                    loginmessage: loginmessage,
+                    buttonLabel:"Register",
+                    isLogin:true
+                });
+            }
+        })
+        .catch(function(error){
+            console.error(error);
+        });
     }
     render() {
         return (

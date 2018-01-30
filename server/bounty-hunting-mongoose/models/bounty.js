@@ -7,4 +7,4 @@ const bountySchema = new mongoose.Schema({
     "alive": Boolean
 });
 
-module.exports = mongoose.model("Bounty", bountySchema);"type"
+module.exports = mongoose.model("Bounty", bountySchema);
