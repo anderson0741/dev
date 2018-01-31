@@ -4,22 +4,21 @@ import SuperHero from "./SuperHero";
 
 class App extends Component {
     constructor(props) {
-        super();
-        this.state = {
-            superheros: superheros
-        }
-        this.display = this.display.bind(this);
+        super(props);
+        this.displayCatchPhrase = this.displayCatchPhrase.bind(this);
     }
-    display(i) {
-        alert(this.state.superheros[i].catchphrase);
+    displayCatchPhrase(str) {
+        alert(str);
     }
-    
+
     render() {
         // let { superheros } = this.state;
         return (
             <div>
-                {superheros.map((hero, index) => {
-                    return <SuperHero key= {index}{...hero} index={index} display={this.display} />
+                {superheros.map((superhero, index) => {
+                    return (
+                        <SuperHero displayCatchPhrase={this.displayCatchPhrase} {...superhero} key={index} />
+                    )
                 })}
             </div>
         )
