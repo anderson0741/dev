@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Shema = mongoose.Schema;
 
 const bountySchema = new mongoose.Schema({
     "name": String,
