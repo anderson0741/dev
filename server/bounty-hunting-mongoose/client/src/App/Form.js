@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import bountiesLink from './bountiesLink';
+import BountiesLink from './BountiesLink';
+import './Form.css';
+import Bounty from './Bounty';
 
-const bountyUrl = 'http://localhost:8080/bounty';
+const bountyUrl = '/bounty/';
 
 export default class Form extends Component {
     constructor(props) {
@@ -19,23 +21,16 @@ export default class Form extends Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.getBounties = this.getBounties.bind(this);
+        this.bountyDelete = this.bountyDelete.bind(this);
     }
 
     handleChange(e) {
-        let { name, value } = e.target;
-        if (name === 'alive') {
-            if (value === "true") {
-                value = true;
-            } else {
-                value = false;
-            }
-        }
+        let { name, value, type, checked } = e.target;
         this.setState(prevState => {
             return {
                 inputs: {
                     ...prevState.inputs,
-                    [name]: value
+                    [name]: type === "checkbox" ? checked : value
                 }
             }
         });
@@ -48,6 +43,12 @@ export default class Form extends Component {
         axios.post(bountyUrl, bounty)
             .then(response => {
                 console.log('response:', response);
+                this.setState((prevState)=>{
+                    return {
+                        bounties: [response.data, ...prevState.bounties],
+                        loading: false
+                    }
+                })
             })
             .catch(err => {
                 console.error(err);
@@ -55,17 +56,46 @@ export default class Form extends Component {
         this.clearInputs();
     }
 
-    getBounties() {
+    bountyDelete(id) {
+        let { bounties } = this.state;
+        axios.delete('/bounty/' + id)
+            .then(response => {
+                this.setState({
+                    bounties: bounties.filter((bounty, index) => {
+                        return bounty._id !== id
+                    }),
+                    loading: false
+                });
+            })
+            .catch((err) => {
+                console.error(err);
+            })
+    }
+
+    // bountyChange(id){
+    //     let {bounties} =this.state;
+    //     axios.put('/bounty/' + id)
+    //         .then(response => {
+    //             this.setState({
+    //                 bounties:
+    //             })
+    //         })
+    // }
+
+    componentDidMount() {
         axios.get(bountyUrl)
             .then(response => {
                 this.setState({
-                    bounties: response.data
+                    bounties: response.data,
+                    loading: false
                 })
             })
             .catch(err => {
                 console.error(err);
             });
     }
+
+
 
     clearInputs() {
         this.setState({
@@ -78,27 +108,36 @@ export default class Form extends Component {
         })
     }
     render() {
-        let {name, type, reward} = this.state.inputs;
-        let {bounties} =this.state;
+        let { name, type, reward, alive } = this.state.inputs;
+        let { bounties, loading } = this.state;
         return (
-            <div>
-                <form onSubmit={this.handleSubmit} className='bounties-wrap'>
-                    <h1 className="title">Bounty Hunters</h1>
-                    <input onChange={this.handleChange} name='name' value={name} type='text' placeholder='Bounties Name'/>
+            <div className="menu">
+                <form /*onSubmit={this.handleSubmit}*/ className='bounties-wrap'>
+                    <h1 className="title">Bounty Hunter</h1>
+                    <input onChange={this.handleChange} name='name' value={name} type='text' placeholder='Bounties Name' />
+                    <br />
                     <label className="radioStyle">
-                        alive? 
-                        <input onChange={this.handleChange} name='alive' value='true' type="radio"/> True
-                        <input onChange={this.handleChange} name='alive' value='false' type="radio"/> False
+                        Living:
+                        {/* <input type="radio" onChange={this.handleChange} name="status" value="true" /> True
+                        <input type="radio" onChange={this.handleChange} name="status" value="false" /> False */}
+                        <input name='alive' onChange={this.handleChange} checked={alive} type="checkbox" /> Alive
+                        {/* <input name="type" onChange={this.handleChange} checked={alive}  type="checkbox" /> Super Dead */}
+                        {/* <input name="type" onChange={this.handleChange} checked={alive}  type="checkbox" /> Dead */}
                     </label>
-                    <input type="number" onChange={this.handleChange} name="reward" value={reward} placeholder='Reward Amount'/> 
+                    <br />
+                    <input type="number" onChange={this.handleChange} name="reward" value={reward} placeholder='Reward Amount' />
+                    <br />
                     <label className="radioStyle">
                         Type:
-                        <input type="radio" onChange={this.handleChange} name="type" value="Jedi"/> Jedi
-                        <input type="radio" onChange={this.handleChange} name="type" value="Sith"/> Sith
+                        <input type="radio" onChange={this.handleChange} name="type" value="Jedi" /> Jedi
+                        <input type="radio" onChange={this.handleChange} name="type" value="Sith" /> Sith
                     </label>
-                    <input type="submit" value="Sumbit"/>
+                    <br />
+                    <input type="submit" value="Submit" onClick={this.handleSubmit} />
+                    <br />
                 </form>
-                <bountiesLink bounties = {bounties} />
+                <br />
+                <BountiesLink bountyDelete={this.bountyDelete} bounties={bounties} loading={loading} />
             </div>
         )
     }

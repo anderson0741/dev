@@ -1,0 +1,15 @@
+.who{
+    background-color: white;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px black solid;
+    border-radius: 3px;
+    opacity: 0.7;
+}
+
+.button{
+    align-self: flex-end;
+}

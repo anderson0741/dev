@@ -1,0 +1,29 @@
+.title {
+    text-shadow: 5px 5px gray;
+    color: rgb(196, 196, 98);
+    font-size: 70px;
+    border-bottom: solid black 3px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bounties-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 3px;
+    opacity: 0.8;
+    width: 700px;
+}
+
+body {
+    background-image: url(https://wallpapertag.com/wallpaper/full/2/f/e/64566-vertical-star-wars-desktop-wallpaper-1920x1080-large-resolution.jpg)
+}
