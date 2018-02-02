@@ -43,7 +43,7 @@ export default class Form extends Component {
         axios.post(bountyUrl, bounty)
             .then(response => {
                 console.log('response:', response);
-                this.setState((prevState)=>{
+                this.setState((prevState) => {
                     return {
                         bounties: [response.data, ...prevState.bounties],
                         loading: false
@@ -117,10 +117,10 @@ export default class Form extends Component {
                     <input onChange={this.handleChange} name='name' value={name} type='text' placeholder='Bounties Name' />
                     <br />
                     <label className="radioStyle">
-                        Living:
+                        Body Status:
                         {/* <input type="radio" onChange={this.handleChange} name="status" value="true" /> True
                         <input type="radio" onChange={this.handleChange} name="status" value="false" /> False */}
-                        <input name='alive' onChange={this.handleChange} checked={alive} type="checkbox" /> Alive
+                        <input name='alive' onChange={this.handleChange} checked={alive} type="checkbox" /> Dead
                         {/* <input name="type" onChange={this.handleChange} checked={alive}  type="checkbox" /> Super Dead */}
                         {/* <input name="type" onChange={this.handleChange} checked={alive}  type="checkbox" /> Dead */}
                     </label>
