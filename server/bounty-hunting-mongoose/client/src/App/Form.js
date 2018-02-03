@@ -3,6 +3,7 @@ import axios from 'axios';
 import BountiesLink from './BountiesLink';
 import './Form.css';
 import Bounty from './Bounty';
+import ImageUploader from './Images';
 
 const bountyUrl = '/bounty/';
 
@@ -14,7 +15,8 @@ export default class Form extends Component {
                 "name": '',
                 "type": '',
                 "reward": '',
-                "alive": false
+                "alive": false,
+                "photo": []
             },
             bounties: [],
             loading: true
@@ -22,6 +24,7 @@ export default class Form extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.bountyDelete = this.bountyDelete.bind(this);
+        this.onDrop = this.onDrop.bind(this);
     }
 
     handleChange(e) {
@@ -72,6 +75,12 @@ export default class Form extends Component {
             })
     }
 
+    onDrop(picture) {
+        this.setState({
+            pictures: this.state.pictures.concat(picture),
+        });
+    }
+
     // bountyChange(id){
     //     let {bounties} =this.state;
     //     axios.put('/bounty/' + id)
@@ -103,26 +112,23 @@ export default class Form extends Component {
                 "name": '',
                 "type": '',
                 "reward": '',
-                "alive": false
+                "alive": false,
+                "photo": ''
             }
         })
     }
     render() {
-        let { name, type, reward, alive } = this.state.inputs;
+        let { name, type, reward, alive, photo } = this.state.inputs;
         let { bounties, loading } = this.state;
         return (
             <div className="menu">
-                <form /*onSubmit={this.handleSubmit}*/ className='bounties-wrap'>
+                <form className='bounties-wrap'>
                     <h1 className="title">Bounty Hunter</h1>
                     <input onChange={this.handleChange} name='name' value={name} type='text' placeholder='Bounties Name' />
                     <br />
                     <label className="radioStyle">
                         Body Status:
-                        {/* <input type="radio" onChange={this.handleChange} name="status" value="true" /> True
-                        <input type="radio" onChange={this.handleChange} name="status" value="false" /> False */}
                         <input name='alive' onChange={this.handleChange} checked={alive} type="checkbox" /> Dead
-                        {/* <input name="type" onChange={this.handleChange} checked={alive}  type="checkbox" /> Super Dead */}
-                        {/* <input name="type" onChange={this.handleChange} checked={alive}  type="checkbox" /> Dead */}
                     </label>
                     <br />
                     <input type="number" onChange={this.handleChange} name="reward" value={reward} placeholder='Reward Amount' />
@@ -132,6 +138,14 @@ export default class Form extends Component {
                         <input type="radio" onChange={this.handleChange} name="type" value="Jedi" /> Jedi
                         <input type="radio" onChange={this.handleChange} name="type" value="Sith" /> Sith
                     </label>
+                    <br />
+                    <ImageUploader
+                        withIcon={true}
+                        buttonText='Choose images'
+                        onChange={this.onDrop}
+                        imgExtension={['.jpg', '.gif', '.png', '.gif']}
+                        maxFileSize={5242880}
+                    />
                     <br />
                     <input type="submit" value="Submit" onClick={this.handleSubmit} />
                     <br />

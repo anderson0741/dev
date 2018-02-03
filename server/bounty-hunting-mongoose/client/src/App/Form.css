@@ -25,5 +25,9 @@
 }
 
 body {
-    background-image: url(https://wallpapertag.com/wallpaper/full/2/f/e/64566-vertical-star-wars-desktop-wallpaper-1920x1080-large-resolution.jpg)
+    background-image: url(https://wallpapertag.com/wallpaper/full/2/f/e/64566-vertical-star-wars-desktop-wallpaper-1920x1080-large-resolution.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
 }
+/* p{ background-image: none} */

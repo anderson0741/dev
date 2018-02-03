@@ -13,6 +13,7 @@ mongoose.connect("mongodb://localhost/bounty", (err) => {
 app.use(bodyParser.json());
 app.use('/bounty', require('./routes/bounty'));
 
+
 app.listen(8080, () =>{
     console.log("Server is running on port 8080");
 })

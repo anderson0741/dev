@@ -5,6 +5,7 @@ const bountySchema = new mongoose.Schema({
     "name": String,
     "type": String,
     "reward": Number,
+    "photo": String,
     "alive": Boolean
 });
 
