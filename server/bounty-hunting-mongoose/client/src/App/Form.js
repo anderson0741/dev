@@ -147,7 +147,7 @@ export default class Form extends Component {
                         maxFileSize={5242880}
                     />
                     <br />
-                    <input type="submit" value="Submit" onClick={this.handleSubmit} />
+                    <input className="submit" type="submit" value="Submit" onClick={this.handleSubmit} />
                     <br />
                 </form>
                 <br />
