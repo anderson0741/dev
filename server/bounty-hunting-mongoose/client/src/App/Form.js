@@ -85,7 +85,7 @@ export default class Form extends Component {
     //     let {bounties} =this.state;
     //     axios.put('/bounty/' + id)
     //         .then(response => {
-    //             this.setState({
+                // this.setState({
     //                 bounties:
     //             })
     //         })
