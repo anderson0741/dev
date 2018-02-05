@@ -26,18 +26,18 @@ export default class Form extends Component {
         this.listingDelete = this.listingDelete.bind(this);
     }
 
-    handleChange(e) {
-        let { make, model, year, miles, drivetrain, transmission, color, doors, price } = e.target;
-        this.setState(prevState => {
-            return {
-                inputs: {
-                    ...prevState.inputs,
-                    [name]: type === 'radio' ? checked : value
-                }
-            }
-        });
-        console.log(this.state.inputs);
-    }
+    // handleChange(e) {
+    //     let { make, model, year, miles, drivetrain, transmission, color, doors, price } = e.target;
+    //     this.setState(prevState => {
+    //         return {
+    //             inputs: {
+    //                 ...prevState.inputs,
+    //                 [name]: make === 'radio' ? checked : value
+    //             }
+    //         }
+    //     });
+    //     console.log(this.state.inputs);
+    // }
 
     handleSubmit(e) {
         let listing = this.state.inputs
