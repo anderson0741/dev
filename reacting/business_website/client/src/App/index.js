@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import { Switch, Route } from 'react-router-dom';
-//import injectTapEventPlugin from 'react-tap-event-plugin';
 import Home from '../shared/Home';
 import About from '../shared/About/About';
-import Shop from '../App/Form';
 import Contact from '../shared/Contact/index';
 import Upload from '../shared/Upload';
+import Listing from './Listing';
+import Form from './Form';
 import Nav from './Nav';
 import './App.css';
 
@@ -17,9 +17,9 @@ function App(props) {
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/about' component={About} />
-                <Route exact path='/cars' component={Shop} />
+                <Route exact path='/cars' component={Listing} />
+                <Route path='/upload' component={Form} />
                 <Route path='/contact' component={Contact} />
-                <Route path='/upload' component={Upload} />
             </Switch>
         </div>
     )
