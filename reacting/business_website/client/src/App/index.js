@@ -19,6 +19,7 @@ function App(props) {
                 <Route exact path='/about' component={About} />
                 <Route exact path='/cars' component={Listing} />
                 <Route path='/upload' component={Form} />
+                <Route path='/image' component={Upload} />
                 <Route path='/contact' component={Contact} />
             </Switch>
         </div>

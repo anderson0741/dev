@@ -91,3 +91,11 @@
     align-self: center;
     width: 8em;
 }
+
+.imageUpload{
+    align-self: center;
+}
+
+.imgTxt{
+    text-align: center;
+}

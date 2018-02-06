@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Dropzone from 'react-dropzone';
+// import Upload from '../shared/Upload';
+import request from 'superagent';
 
 import './Form.css';
 
 const listingUrl = '/listing/';
+const cloudinaryPreset = 'level_up';
+const cloudinaryUrl = 'https://api.cloudinary.com/v1_1/anderson0741/upload';
 
 export default class Form extends Component {
     constructor(props) {
@@ -21,11 +26,38 @@ export default class Form extends Component {
                 "price": ''
             },
             listings: [],
+            uploadedFileCloudinaryUrl: "",
             loading: true
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.listingDelete = this.listingDelete.bind(this);
+        this.handleImageUpload = this.handleImageUpload.bind(this);
+        this.onImageDrop = this.onImageDrop.bind(this);
+    }
+
+    onImageDrop(files) {
+        this.setState({
+            uploadedFile: files[0]
+        });
+        this.handleImageUpload(files[0]);
+    }
+
+    handleImageUpload(file) {
+        let upload = request.post(cloudinaryUrl)
+            .field('upload_preset', cloudinaryPreset)
+            .field('file', file);
+        upload.end((err, response) => {
+            if (err) {
+                console.error(err);
+            }
+            console.log(response)
+            if (response.body.secure_url !== '') {
+                this.setState({
+                    uploadedFileCloudinaryUrl: response.body.secure_url
+                });
+            }
+        });
     }
 
     handleChange(e) {
@@ -43,7 +75,6 @@ export default class Form extends Component {
     handleSubmit(e) {
         let listing = this.state.inputs
         e.preventDefault();
-        // this.props.submit(this.submit.inputs);
         axios.post(listingUrl, listing)
             .then(response => {
                 console.log('response:', response);
@@ -103,7 +134,8 @@ export default class Form extends Component {
                 "color": '',
                 "doors": '',
                 "price": ''
-            }
+            },
+            uploadedFileCloudinaryUrl: ""
         })
     }
 
@@ -137,8 +169,8 @@ export default class Form extends Component {
                             </div>
                             <p className="input">Drivetrain:
                                     <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> 4WD</label>
-                                    {/* Fix with checked in the radios! */}
-                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /*checked={"drivetrain" === "Rear Wheel Drive"}*//> RWD</label>
+                                {/* Fix with checked in the radios! */}
+                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /*checked={"drivetrain" === "Rear Wheel Drive"}*/ /> RWD</label>
                                 <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> AWD</label>
                                 <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> FWD</label>
                             </p>
@@ -158,6 +190,23 @@ export default class Form extends Component {
                                 $100,000
                             </div>
                             <p className="result input"></p> */}
+                            <div className="imageUpload input">
+                                <Dropzone
+                                    multiple={true}
+                                    accept="image/*"
+                                    onDrop={this.onImageDrop.bind(this)}
+                                >
+                                    <p className="imgTxt">Drop Image</p>
+                                </Dropzone>
+                            </div>
+                            <div className="input">
+                                {this.state.uploadedFileCloudinaryUrl === '' ? null :
+                                    <div>
+                                        <p>{this.state.uploadedFile.name}</p>
+                                        <img src={this.state.uploadedFileCloudinaryUrl} />
+                                    </div>}
+                            </div>
+                            <br />
                             <input className="submit" type="submit" value="Submit" onClick={this.handleSubmit} />
                             <br />
                         </div>
