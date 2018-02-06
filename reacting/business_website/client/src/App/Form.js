@@ -29,21 +29,21 @@ export default class Form extends Component {
     }
 
     handleChange(e) {
-        let { /*make, model, year, miles, drivetrain, transmission, color, doors, price,*/ name, value /*type, checked*/ } = e.target;
+        let { name, value, checked, type } = e.target;
         this.setState(prevState => {
             return {
                 inputs: {
                     ...prevState.inputs,
-                    [name]: value /*=== 'radio' ? checked : value*/
+                    [name]: value
                 }
             }
         });
-        // console.log(this.state.inputs);
     }
 
     handleSubmit(e) {
         let listing = this.state.inputs
         e.preventDefault();
+        // this.props.submit(this.submit.inputs);
         axios.post(listingUrl, listing)
             .then(response => {
                 console.log('response:', response);
@@ -110,8 +110,8 @@ export default class Form extends Component {
     render() {
         let { make, model, year, miles, drivetrain, transmission, color, doors, price } = this.state.inputs;
         let { listings, loading } = this.state;
-        console.log(this.state.inputs);
-        
+        console.log(make, model, year, miles, drivetrain, transmission, color, doors, price);
+
         return (
             <div>
                 <form onSubmit={this.handleSubmit} className="overallWrap">
@@ -135,27 +135,23 @@ export default class Form extends Component {
                                 <p className="input">Price:
                                     <input className="input vehicleInfo price" onChange={this.handleChange} name="price" type="text" value={price} placeholder="Vehicle Price" /></p>
                             </div>
-                            <label>
-                                <p className="input">Drivetrain:
-                                    <input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> 4 Wheel Drive
-                                    <input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> Rear Wheel Drive
-                                    <input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> All Wheel Drive
-                                    <input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> Front Wheel Drive
-                                </p>
-                            </label>
-                            <label>
-                                <p className="input">Transmission:
-                                    <input className="input" onChange={this.handleChange} type="radio" name="transmission" value={transmission} /> Automatic
-                                    <input className="input" onChange={this.handleChange} type="radio" name="transmission" value={transmission} /> Manual
-                                </p>
-                            </label>
-                            <label>
-                                <p className="input">Doors:
-                                    <input className="input" onChange={this.handleChange} type="radio" name="door" value={doors} /> 2 door
-                                    <input className="input" onChange={this.handleChange} type="radio" name="door" value={doors} /> 4 door
-                                    <input className="input" onChange={this.handleChange} type="radio" name="door" value={doors} /> 5 door
-                                </p>
-                            </label>
+                            <p className="input">Drivetrain:
+                                    <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> 4WD</label>
+                                    {/* Fix with checked in the radios! */}
+                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /*checked={"drivetrain" === "Rear Wheel Drive"}*//> RWD</label>
+                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> AWD</label>
+                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> FWD</label>
+                            </p>
+                            <p className="input">Transmission:
+                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="transmission" value={transmission} /> Automatic</label>
+                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="transmission" value={transmission} /> Manual</label>
+                            </p>
+                            <p className="input">Doors:
+                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="door" value={doors} /> 2 door</label>
+                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="door" value={doors} /> 4 door</label>
+                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="door" value={doors} /> 5 door</label>
+                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="door" value={doors} /> Other</label>
+                            </p>
                             {/* <h3 className="titleRange input">Price Range</h3>
                             <div className="range input">$0
                                 <input className="input" onChange={this.handleChange} id="price" type="range" value={price} name="points" min="0" max="100000" />
