@@ -1,0 +1,79 @@
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
+import "./Search.css";
+
+export default class Search extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            inputs: {
+                "make": '',
+                "model": '',
+                "year": '',
+                "miles": '',
+                "drivetrain": '',
+                "transmission": '',
+                "color": '',
+                "doors": '',
+                "price": ''
+            },
+            listings: [],
+            uploadedFileCloudinaryUrl: "",
+            loading: true
+        }
+    }
+    render() {
+        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, description } = this.state.inputs;
+        let { listings, loading } = this.state;
+        return (
+            <div className="wrapper">
+                <div className="searchBod">
+                    <div className="searchCl">
+                        {/* <p className="inputSearch">Make: */}
+                        <input className="inputSearch vehicleInfo make" onChange={this.handleChange} name="make" type="text" value={make} placeholder="Make" />
+                        {/* </p> */}
+                        {/* <p className="inputSearch">Model: */}
+                        <input className="inputSearch vehicleInfo model" onChange={this.handleChange} name="model" type="text" value={model} placeholder="Model" />
+                        {/* </p> */}
+                        {/* <p className="inputSearch">Year: */}
+                        <input className="inputSearch vehicleInfo year" onChange={this.handleChange} name="year" type="number" value={year} placeholder="Year" />
+                        {/* </p> */}
+                        {/* <p className="inputSearch">Miles: */}
+                        <input className="inputSearch vehicleInfo miles" onChange={this.handleChange} name="miles" type="number" value={miles} placeholder="Miles" />
+                        {/* </p> */}
+                        {/* <p className="inputSearch">Color: */}
+                        <input className="inputSearch vehicleInfo carColor" onChange={this.handleChange} name="color" type="text" value={color} placeholder="Color" />
+                        {/* </p> */}
+                        {/* <p className="inputSearch">Price: */}
+                        <input className="inputSearch vehicleInfo price" onChange={this.handleChange} name="price" type="text" value={price} placeholder="Price" />
+                        {/* </p> */}
+                    </div>
+                    <div className="searchRadio">
+                        <p className="inputSearch">Drivetrain:
+                            
+                                    <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> 4WD</label>
+                            {/* Fix with checked in the radios! */}
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /*checked={"drivetrain" === "Rear Wheel Drive"}*/ /> RWD</label>
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> AWD</label>
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> FWD</label>
+
+                        </p>
+                        <p className="inputSearch">Transmission:
+                                <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="transmission" value={transmission} /> Automatic</label>
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="transmission" value={transmission} /> Manual</label>
+
+                        </p>
+                        <p className="inputSearch">Doors:
+                                <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="door" value={doors} /> 2 door</label>
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="door" value={doors} /> 4 door</label>
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="door" value={doors} /> 5 door</label>
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="door" value={doors} /> Other</label>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}

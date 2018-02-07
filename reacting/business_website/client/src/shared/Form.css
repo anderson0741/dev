@@ -37,8 +37,8 @@
 
 .grid {
     display: grid;
-    grid-template-columns: 300px 300px;
-    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 50px 50px;
     grid-gap: 0px;
     grid-template-areas: "ma mo" "ye mi" "co pr"
 }
@@ -98,4 +98,9 @@
 
 .imgTxt{
     text-align: center;
+}
+
+.describe{
+    width: 90%;
+    height: 100px;
 }

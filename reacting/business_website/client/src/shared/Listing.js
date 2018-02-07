@@ -12,27 +12,32 @@ function Listing(props) {
             </div>
             <div className='list'>
                 <button className="deleteButton" onClick={() => { listingDelete(_id) }}>Delete</button>
-                <div className="details">
-                    <div className="one">
+                <div className="content">
+                    <div className="details">
                         <div className="image">
                             <p>PICTURES{photos}</p>
                         </div>
-                        <div className="inputs">
-                            <p>Make: {make}</p>
-                            <p>Model: {model}</p>
-                            <p>Year: {year}</p>
-                            <p>Miles: {miles}</p>
+                        <div className="one">
+                            <div className="inputListing">
+                                <p>Make: {make}</p>
+                                <p>Model: {model}</p>
+                                <p>Year: {year}</p>
+                                <p>Miles: {miles}</p>
+                            </div>
                         </div>
-                    </div>
-                    <br />
-                    <div className="radios">
-                        <p>Drivetrain: {drivetrain}</p>
-                        <p>Transmission: {transmission}</p>
-                        <p>Color: {color}</p>
-                        <p>Doors: {doors}</p>
-                    </div>
-                    <div className="price">
-                        <p>Price: ${price}</p>
+                        <br />
+                        <div className="radios">
+                            <p>Drivetrain: {drivetrain}</p>
+                            <p>Transmission: {transmission}</p>
+                            <p>Color: {color}</p>
+                            <p>Doors: {doors}</p>
+                        </div>
+                        <div className="price">
+                            <p>Price: ${price}</p>
+                        </div>
+                        <div>
+                            <br />
+                        </div>
                     </div>
                     <div className="description">
                         <p>{description}</p>

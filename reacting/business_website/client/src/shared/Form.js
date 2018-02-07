@@ -195,11 +195,11 @@ export default class Form extends Component {
                             </div>
                             <p className="result input"></p> */}
                             <div className="description input">
-                                <textarea name="description" placeholder="Description" value={description} onChange={this.handleChange} id="" cols="30" rows="10"></textarea>
+                                <textarea name="description" className="describe" placeholder="Description" value={description} onChange={this.handleChange} id="" cols="30" rows="10"></textarea>
                             </div>
-                            <div className="photo input">
+                            {/* <div className="photo input">
                                 <textarea name="text" id="" cols="30" rows="10"></textarea>
-                            </div>
+                            </div> */}
                             <div className="imageUpload input">
                                 <Dropzone
                                     multiple={true}

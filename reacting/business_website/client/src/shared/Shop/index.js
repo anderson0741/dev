@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ListingDisplay from '../ListingDisplay';
 import axios from 'axios';
+import Search from './SearchBar/Search';
 
 import './Shop.css'
 
@@ -43,6 +44,7 @@ export default class componentName extends Component {
         let { listings, loading } = this.state;
         return (
             <div className="parent">
+                <Search />
                 <br />
                 <ListingDisplay loading={loading} listings={listings} className="list"/>
                 <br />

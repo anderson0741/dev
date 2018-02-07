@@ -5,6 +5,11 @@
     /* width: 10000px; */
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
 .image{
     height: 200px;
     width: 200px;
@@ -13,28 +18,37 @@
 .list {
     background-color: white;
     border: solid black 2px;
+    border-radius: 3px;
     width: 900px;
     display: flex;
+    flex-direction: column;
     align-content: center;
     margin: auto
 }
 
 .one{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 .deleteButton{
     height: 18px;
     width: 55px;
-    align-self: flex-start;
-    justify-content: flex-end;
+    align-self: flex-end;
 }
 
 .details{
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px gray;
+    width: 90%;
+    align-self: center;
+}
+
+.inputListing{
+    align-self: flex-start;
 
 }
 
-.inputs{
-    align-self: flex-start;
-
+.description {
+    padding: 0px 44px;
 }
