@@ -16,8 +16,8 @@ function Nav() {
                     <p className='links'>/</p>
                     <Link className='links' to="/">Home</Link>
                     <p className='links'>/</p>
-                    {/* <Link className='links' to="/about">About</Link>
-                    <p className='links'>/</p> */}
+                    <Link className='links' to="/about">About</Link>
+                    <p className='links'>/</p>
                     <Link className='links' to="/cars">Shop Cars</Link>
                     <p className='links'>/</p>
                     <Link className='links' to="/upload">Upload Content</Link>
