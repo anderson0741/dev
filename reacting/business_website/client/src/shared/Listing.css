@@ -1,0 +1,40 @@
+.parent{
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    /* width: 10000px; */
+}
+
+.image{
+    height: 200px;
+    width: 200px;
+    background-color: orange;
+}
+.list {
+    background-color: white;
+    border: solid black 2px;
+    width: 900px;
+    display: flex;
+    align-content: center;
+    margin: auto
+}
+
+.one{
+    display: flex;
+    justify-content: space-between;
+}
+.deleteButton{
+    height: 18px;
+    width: 55px;
+    align-self: flex-start;
+    justify-content: flex-end;
+}
+
+.details{
+
+}
+
+.inputs{
+    align-self: flex-start;
+
+}

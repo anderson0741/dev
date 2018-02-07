@@ -1,34 +1,52 @@
-// import React, { Component } from 'react'; 
-// import {Link} from 'react-router-dom';
-// import axios from 'axios';
+import React, { Component } from 'react';
+import ListingDisplay from '../ListingDisplay';
+import axios from 'axios';
 
-// import Cars from './Cars';
+import './Shop.css'
 
-// const cloudUrl = 'https://api.cloudinary.com/v1_1/anderson0741/'
+const listingUrl = `/listing/`;
 
-// export default class Shop extends Component {
-//     constructor(props){
-//         super(props);
-//         this.state = {
-            
-//         }
-//     }
+export default class componentName extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            inputs: {
+                "make": '',
+                "model": '',
+                "year": '',
+                "miles": '',
+                "drivetrain": '',
+                "transmission": '',
+                "color": '',
+                "doors": '',
+                "price": ''
+            },
+            listings: [],
+            uploadedFileCloudinaryUrl: "",
+            loading: true
+        }
+    }
 
-//     componentDidMount(){
-//         axios.get(cloudUrl)
-//         .then(response => {
-//             console.log(response.data.results);
-//             this.setState({
-
-//             })
-//         })
-//     }
-//     render() {
-//         return (
-//             <div>
-                
-//             </div>
-//         )
-//     }
-// }
-
+    componentDidMount(){
+        axios.get(listingUrl)
+            .then(response => {
+                this.setState({
+                    listings: response.data,
+                    loading: false
+                })
+            })
+            .catch(err => {
+                console.error(err);
+            })
+    }
+    render() {
+        let { listings, loading } = this.state;
+        return (
+            <div className="parent">
+                <br />
+                <ListingDisplay loading={loading} listings={listings} className="list"/>
+                <br />
+            </div>
+        )
+    }
+}

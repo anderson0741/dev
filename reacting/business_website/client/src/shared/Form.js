@@ -3,10 +3,11 @@ import axios from 'axios';
 import Dropzone from 'react-dropzone';
 // import Upload from '../shared/Upload';
 import request from 'superagent';
+import ListingDisplay from './ListingDisplay';
 
 import './Form.css';
 
-const listingUrl = '/listing/';
+const listingUrl = `/listing/`;
 const cloudinaryPreset = 'level_up';
 const cloudinaryUrl = 'https://api.cloudinary.com/v1_1/anderson0741/upload';
 
@@ -23,7 +24,8 @@ export default class Form extends Component {
                 "transmission": '',
                 "color": '',
                 "doors": '',
-                "price": ''
+                "price": '',
+                "description": ''
             },
             listings: [],
             uploadedFileCloudinaryUrl: "",
@@ -77,13 +79,13 @@ export default class Form extends Component {
         e.preventDefault();
         axios.post(listingUrl, listing)
             .then(response => {
-                console.log('response:', response);
+                console.log(response.data);
                 this.setState((prevState) => {
                     return {
                         listings: [response.data, ...prevState.listings],
                         loading: false
                     }
-                })
+                });
             })
             .catch(err => {
                 console.error(err);
@@ -133,16 +135,18 @@ export default class Form extends Component {
                 "transmission": '',
                 "color": '',
                 "doors": '',
-                "price": ''
+                "price": '',
+                "description": ''
             },
             uploadedFileCloudinaryUrl: ""
         })
     }
 
     render() {
-        let { make, model, year, miles, drivetrain, transmission, color, doors, price } = this.state.inputs;
+        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, description } = this.state.inputs;
         let { listings, loading } = this.state;
-        console.log(make, model, year, miles, drivetrain, transmission, color, doors, price);
+        console.log(listings);
+        // console.log(make, model, year, miles, drivetrain, transmission, color, doors, price);
 
         return (
             <div>
@@ -190,6 +194,12 @@ export default class Form extends Component {
                                 $100,000
                             </div>
                             <p className="result input"></p> */}
+                            <div className="description input">
+                                <textarea name="description" placeholder="Description" value={description} onChange={this.handleChange} id="" cols="30" rows="10"></textarea>
+                            </div>
+                            <div className="photo input">
+                                <textarea name="text" id="" cols="30" rows="10"></textarea>
+                            </div>
                             <div className="imageUpload input">
                                 <Dropzone
                                     multiple={true}
@@ -207,11 +217,12 @@ export default class Form extends Component {
                                     </div>}
                             </div>
                             <br />
-                            <input className="submit" type="submit" value="Submit" onClick={this.handleSubmit} />
+                            <input className="submit" type="submit" value="Submit" />
                             <br />
                         </div>
                     </div>
                 </form>
+                <ListingDisplay listingDelete={this.listingDelete} loading={loading} listings={listings} />
             </div>
 
         )

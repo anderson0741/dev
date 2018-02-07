@@ -10,7 +10,9 @@ const listingSchema = new mongoose.Schema({
     "transmission": String,
     "color": String,
     "doors": Number,
-    "price": Number
+    "price": Number,
+    "description": String,
+    "photo": String
 });
 
 module.exports = mongoose.model("Listings", listingSchema);
