@@ -169,7 +169,7 @@ export default class Form extends Component {
                                 <p className="input">Color:
                                     <input className="input vehicleInfo carColor" onChange={this.handleChange} name="color" type="text" value={color} placeholder="Vehicle Color" /></p>
                                 <p className="input">Price:
-                                    <input className="input vehicleInfo price" onChange={this.handleChange} name="price" type="text" value={price} placeholder="Vehicle Price" /></p>
+                                    <input className="input vehicleInfo price" onChange={this.handleChange} name="price" type="number" value={price} placeholder="Vehicle Price" /></p>
                             </div>
                             <p className="input">Drivetrain:
                                     <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> 4WD</label>
