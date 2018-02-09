@@ -3,10 +3,9 @@ import axios from 'axios';
 import Dropzone from 'react-dropzone';
 // import Upload from '../shared/Upload';
 import request from 'superagent';
-import ListingDisplay from './Listing/ListingDisplay';
-import EditForm from './EditForm/EditForm';
+import ListingDisplay from '../Listing/ListingDisplay';
 
-import './Form.css';
+import '../Form.css';
 
 const listingUrl = `/listing/`;
 const cloudinaryPreset = 'level_up';
@@ -15,138 +14,47 @@ const cloudinaryUrl = 'https://api.cloudinary.com/v1_1/anderson0741/upload';
 export default class Form extends Component {
     constructor(props) {
         super(props);
-        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, description } = props;
+        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, description, _id, updateListing, options } = this.props;
         this.state = {
             inputs: {
-                "make": '',
-                "model": '',
-                "year": '',
-                "miles": '',
-                "drivetrain": '',
-                "transmission": '',
-                "color": '',
-                "doors": '',
-                "price": '',
-                "description": ''
+                "make": make || '',
+                "model": model || '',
+                "year": year || '',
+                "miles": miles || '',
+                "drivetrain": drivetrain || '',
+                "transmission": transmission || '',
+                "color": color || '',
+                "doors": doors || '',
+                "price": price || '',
+                "description": description || ''
             },
             listings: [],
             uploadedFileCloudinaryUrl: "",
             loading: true
         }
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.listingDelete = this.listingDelete.bind(this);
-        // this.listingChange = this.listingChange.bind(this);
-        this.handleImageUpload = this.handleImageUpload.bind(this);
-        this.onImageDrop = this.onImageDrop.bind(this);
+        this.handleEdit = this.handleEdit.bind(this);
     }
 
-    onImageDrop(files) {
-        this.setState({
-            uploadedFile: files[0]
-        });
-        this.handleImageUpload(files[0]);
-    }
-
-    handleImageUpload(file) {
-        let upload = request.post(cloudinaryUrl)
-            .field('upload_preset', cloudinaryPreset)
-            .field('file', file);
-        upload.end((err, response) => {
-            if (err) {
-                console.error(err);
-            }
-            console.log(response)
-            if (response.body.secure_url !== '') {
-                this.setState({
-                    uploadedFileCloudinaryUrl: response.body.secure_url
-                });
-            }
-        });
-    }
-
-    handleChange(e) {
-        let { name, value, checked, type } = e.target;
-        this.setState(prevState => {
-            return {
-                inputs: {
-                    ...prevState.inputs,
-                    [name]: value
-                }
-            }
-        });
-    }
-
-    handleSubmit(e) {
-        let { options, add, _id, updateListing } = this.props;
-        let listing = this.state.inputs
+    handleEdit(e) {
         e.preventDefault();
-        // if (add) {
-        axios.post(listingUrl, listing)
+        let { listings, inputs } = this.state;
+        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, description, _id, updateListing, options } = this.props;
+        let newListing = listings;
+        axios.put(listingUrl + "/" + _id, inputs)
             .then(response => {
-                console.log(response.data);
-                this.setState((prevState) => {
-                    return {
-                        listings: [response.data, ...prevState.listings],
-                        loading: false
+                for (let i = 0; i < newListing.length; i++) {
+                    if (newListing[i]._id === _id) {
+                        newListing[i] = Object.assign(newListing[i], updateListing);
+                        updateListing = newListing[i];
+                        this.setState({
+                            listings: newListing
+                        })
                     }
-                });
+                }
             })
-            .catch(err => {
-                console.error(err);
-            })
-        // } else {
-        //     let { listings, inputs } = this.state;
-        //     let newListing = listings;
-        //     axios.put(listingUrl + "/" + _id, inputs)
-        //         .then(response => {
-        //             for (let i = 0; i < newListing.length; i++) {
-        //                 if (newListing[i]._id === _id) {
-        //                     newListing[i] = Object.assign(newListing[i], updateListing);
-        //                     updateListing = newListing[i];
-        //                     this.setState({
-        //                         listings: newListing
-        //                     })
-        //                 }
-        //             }
-        //         }) 
-        //     options.toggle()
-    // }
-        this.clearInputs();
+        options.toggle()
     }
 
-listingDelete(id) {
-    let { listings } = this.state;
-    axios.delete(listingUrl + id)
-        .then(response => {
-            this.setState({
-                listings: listings.filter((listing, index) => {
-                    return listing._id !== id
-                }),
-                loading: false
-            });
-        })
-        .catch((err) => {
-            console.error(err);
-        })
-}
-
-// listingChange(_id, updateListing) {
-//     let { listings } = this.state;
-//     let newListing = listings;
-//     axios.put(listingUrl + "/" + _id, updateListing)
-//         .then(response => {
-//             for (let i = 0; i < newListing.length; i++) {
-//                 if (newListing[i]._id === _id) {
-//                     newListing[i] = Object.assign(newListing[i], updateListing);
-//                     updateListing = newListing[i];
-//                     this.setState({
-//                         listings: newListing
-//                     })
-//                 }
-//             }
-//         })
-// }
 
 componentDidMount() {
     axios.get(listingUrl)
@@ -161,29 +69,10 @@ componentDidMount() {
         });
 }
 
-clearInputs() {
-    this.setState({
-        inputs: {
-            "make": '',
-            "model": '',
-            "year": '',
-            "miles": '',
-            "drivetrain": '',
-            "transmission": '',
-            "color": '',
-            "doors": '',
-            "price": '',
-            "description": ''
-        },
-        uploadedFileCloudinaryUrl: ""
-    })
-}
-
 render() {
-    let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, description } = this.state.inputs;
+    let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, description, _id, updateListing, options } = this.state.inputs;
     let { listings, loading } = this.state;
     console.log(listings);
-    // console.log(make, model, year, miles, drivetrain, transmission, color, doors, price);
 
     return (
         <div>
@@ -237,14 +126,14 @@ render() {
                         {/* <div className="photo input">
                                 <textarea name="text" id="" cols="30" rows="10"></textarea>
                             </div> */}
-                        <div className="imageUpload input">
+                        {/* <div className="imageUpload input">
                             <Dropzone
                                 multiple={true}
                                 accept="image/*"
                                 onDrop={this.onImageDrop.bind(this)}>
                                 <p className="imgTxt">Select Image</p>
                             </Dropzone>
-                        </div>
+                        </div> */}
                         <div className="input">
                             {this.state.uploadedFileCloudinaryUrl === '' ? null :
                                 <div>
@@ -258,7 +147,7 @@ render() {
                     </div>
                 </div>
             </form>
-            <ListingDisplay listingDelete={this.listingDelete} /*listingChange={this.listingChange}*/ loading={loading} listings={listings} />
+            <ListingDisplay listingDelete={this.listingDelete} listingChange={this.listingChange} loading={loading} listings={listings} />
         </div>
 
     )

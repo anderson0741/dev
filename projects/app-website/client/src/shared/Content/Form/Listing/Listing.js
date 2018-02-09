@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form from '../Form';
 import './Listing.css';
+import EditForm from '../EditForm/EditForm';
 // import Camaro from '../images/Camaro_orange.jpg';
 
 class Listing extends Component {
@@ -22,7 +23,7 @@ class Listing extends Component {
     render() {
         let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, description, listingDelete, listingChange, _id, id } = this.props;
         if (this.state.isEditing) {
-            return <Form {...this.props} options={{ toggle: this.toggleEdit }} />
+            return <EditForm {...this.props} options={{ toggle: this.toggleEdit }} />
         } else {
             return (
                 <div className="parent">

@@ -10,6 +10,7 @@ import Shop from '../shared/Shop/index';
 import Form from '../shared/Content/Form/Form';
 import Content from '../shared/Content/Content';
 import Nav from './Nav';
+import Footer from './Footer/Footer';
 import './App.css';
 
 
@@ -17,6 +18,7 @@ function App(props) {
     return (
         <div>
             <Nav />
+            <br />
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/about' component={About} />
@@ -25,6 +27,8 @@ function App(props) {
                 {/* <Route path='/image' component={Upload} /> */}
                 <Route path='/contact' component={Contact} />
             </Switch>
+            <br />
+            <Footer />
         </div>
     )
 }
