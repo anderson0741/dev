@@ -32,6 +32,7 @@ listingRoutes.put('/:id', (req, res) => {
 });
 
 listingRoutes.delete('/:id', (req, res) => {
+    console.log(req.params.id)
     Listings.findByIdAndRemove(req.params.id, (err, deletedListing) =>{
         if (err) return res.status(500).send(err);
         return res.send(deletedListing);

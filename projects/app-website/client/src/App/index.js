@@ -3,11 +3,12 @@ import { Switch, Route } from 'react-router-dom';
 import Home from '../shared/Home';
 import About from '../shared/About/About';
 import Contact from '../shared/Contact/index';
-import Upload from '../shared/Upload';
-import Listing from '../shared/Listing';
-import ListingDisplay from '../shared/ListingDisplay';
+// import Upload from '../shared/Upload';
+import Listing from '../shared/Content/Form/Listing/Listing';
+import ListingDisplay from '../shared/Content/Form/Listing/ListingDisplay';
 import Shop from '../shared/Shop/index';
-import Form from '../shared/Form';
+import Form from '../shared/Content/Form/Form';
+import Content from '../shared/Content/Content';
 import Nav from './Nav';
 import './App.css';
 
@@ -20,7 +21,7 @@ function App(props) {
                 <Route exact path='/' component={Home} />
                 <Route exact path='/about' component={About} />
                 <Route exact path='/cars' component={Shop} />
-                <Route path='/upload' component={Form} />
+                <Route path='/upload' component={Content} />
                 {/* <Route path='/image' component={Upload} /> */}
                 <Route path='/contact' component={Contact} />
             </Switch>

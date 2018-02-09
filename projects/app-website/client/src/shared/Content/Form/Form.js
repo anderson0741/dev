@@ -3,7 +3,7 @@ import axios from 'axios';
 import Dropzone from 'react-dropzone';
 // import Upload from '../shared/Upload';
 import request from 'superagent';
-import ListingDisplay from './ListingDisplay';
+import ListingDisplay from '../Form/Listing/ListingDisplay';
 
 import './Form.css';
 
@@ -14,18 +14,19 @@ const cloudinaryUrl = 'https://api.cloudinary.com/v1_1/anderson0741/upload';
 export default class Form extends Component {
     constructor(props) {
         super(props);
+        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, description } = props;
         this.state = {
             inputs: {
-                "make": '',
-                "model": '',
-                "year": '',
-                "miles": '',
-                "drivetrain": '',
-                "transmission": '',
-                "color": '',
-                "doors": '',
-                "price": '',
-                "description": ''
+                "make": make || '',
+                "model": model || '',
+                "year": year || '',
+                "miles": miles || '',
+                "drivetrain": drivetrain || '',
+                "transmission": transmission || '',
+                "color": color || '',
+                "doors": doors || '',
+                "price": price || '',
+                "description": description || ''
             },
             listings: [],
             uploadedFileCloudinaryUrl: "",
@@ -34,6 +35,7 @@ export default class Form extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.listingDelete = this.listingDelete.bind(this);
+        // this.listingChange = this.listingChange.bind(this);
         this.handleImageUpload = this.handleImageUpload.bind(this);
         this.onImageDrop = this.onImageDrop.bind(this);
     }
@@ -75,27 +77,46 @@ export default class Form extends Component {
     }
 
     handleSubmit(e) {
+        let {options, add, _id, updateListing} = this.props;
         let listing = this.state.inputs
         e.preventDefault();
-        axios.post(listingUrl, listing)
-            .then(response => {
-                console.log(response.data);
-                this.setState((prevState) => {
-                    return {
-                        listings: [response.data, ...prevState.listings],
-                        loading: false
+        if (add) {
+            axios.post(listingUrl, listing)
+                .then(response => {
+                    console.log(response.data);
+                    this.setState((prevState) => {
+                        return {
+                            listings: [response.data, ...prevState.listings],
+                            loading: false
+                        }
+                    });
+                })
+                .catch(err => {
+                    console.error(err);
+                })
+        } else {
+            let { listings, inputs } = this.state;
+            let newListing = listings;
+            axios.put(listingUrl + "/" + _id, inputs)
+                .then(response => {
+                    for (let i = 0; i < newListing.length; i++) {
+                        if (newListing[i]._id === _id) {
+                            newListing[i] = Object.assign(newListing[i], updateListing);
+                            updateListing = newListing[i];
+                            this.setState({
+                                listings: newListing
+                            })
+                        }
                     }
-                });
-            })
-            .catch(err => {
-                console.error(err);
-            });
+                }) 
+            options.toggle()
+        }
         this.clearInputs();
     }
 
     listingDelete(id) {
         let { listings } = this.state;
-        axios.delete('/listing/' + id)
+        axios.delete(listingUrl + id)
             .then(response => {
                 this.setState({
                     listings: listings.filter((listing, index) => {
@@ -109,7 +130,22 @@ export default class Form extends Component {
             })
     }
 
-    // listingChange
+    // listingChange(_id, updateListing) {
+    //     let { listings } = this.state;
+    //     let newListing = listings;
+    //     axios.put(listingUrl + "/" + _id, updateListing)
+    //         .then(response => {
+    //             for (let i = 0; i < newListing.length; i++) {
+    //                 if (newListing[i]._id === _id) {
+    //                     newListing[i] = Object.assign(newListing[i], updateListing);
+    //                     updateListing = newListing[i];
+    //                     this.setState({
+    //                         listings: newListing
+    //                     })
+    //                 }
+    //             }
+    //         })
+    // }
 
     componentDidMount() {
         axios.get(listingUrl)
@@ -152,11 +188,11 @@ export default class Form extends Component {
             <div>
                 <form onSubmit={this.handleSubmit} className="overallWrap">
                     <br />
-                    <div className="color"><h1 className="title">Shop Cars</h1></div>
+                    <div className="color small"><h1 className="title">Shop Cars</h1></div>
                     <br />
                     <div className="listingWrap">
                         <div className="color">
-                            <h3 className="input about">About Vehicle</h3>
+                            <h3 className="input about small">About Vehicle</h3>
                             <div className="grid">
                                 <p className="input">Make:
                                     <input className="input vehicleInfo make" onChange={this.handleChange} name="make" type="text" value={make} placeholder="Vehicle Make" /></p>
@@ -172,11 +208,11 @@ export default class Form extends Component {
                                     <input className="input vehicleInfo price" onChange={this.handleChange} name="price" type="number" value={price} placeholder="Vehicle Price" /></p>
                             </div>
                             <p className="input">Drivetrain:
-                                    <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> 4WD</label>
+                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} checked={"drivetrain" === "4WD"}/> 4WD</label>
                                 {/* Fix with checked in the radios! */}
-                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /*checked={"drivetrain" === "Rear Wheel Drive"}*/ /> RWD</label>
-                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> AWD</label>
-                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> FWD</label>
+                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} checked={"drivetrain" === "RWD"} /> RWD</label>
+                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} checked={"drivetrain" === "AWD"}/> AWD</label>
+                                <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} checked={"drivetrain" === "FWD"}/> FWD</label>
                             </p>
                             <p className="input">Transmission:
                                 <label htmlFor=""><input className="input" onChange={this.handleChange} type="radio" name="transmission" value={transmission} /> Automatic</label>
@@ -204,16 +240,15 @@ export default class Form extends Component {
                                 <Dropzone
                                     multiple={true}
                                     accept="image/*"
-                                    onDrop={this.onImageDrop.bind(this)}
-                                >
-                                    <p className="imgTxt">Drop Image</p>
+                                    onDrop={this.onImageDrop.bind(this)}>
+                                    <p className="imgTxt">Select Image</p>
                                 </Dropzone>
                             </div>
                             <div className="input">
                                 {this.state.uploadedFileCloudinaryUrl === '' ? null :
                                     <div>
                                         <p>{this.state.uploadedFile.name}</p>
-                                        <img src={this.state.uploadedFileCloudinaryUrl} />
+                                        <img className="thumbnail" src={this.state.uploadedFileCloudinaryUrl} />
                                     </div>}
                             </div>
                             <br />
@@ -222,7 +257,7 @@ export default class Form extends Component {
                         </div>
                     </div>
                 </form>
-                <ListingDisplay listingDelete={this.listingDelete} loading={loading} listings={listings} />
+                <ListingDisplay listingDelete={this.listingDelete} listingChange={this.listingChange} loading={loading} listings={listings} />
             </div>
 
         )

@@ -52,24 +52,22 @@ export default class Search extends Component {
                     <div className="searchRadio">
                         <p className="inputSearch">Drivetrain:
                             
-                                    <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> 4WD</label>
-                            {/* Fix with checked in the radios! */}
-                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /*checked={"drivetrain" === "Rear Wheel Drive"}*/ /> RWD</label>
-                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> AWD</label>
-                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="drivetrain" value={drivetrain} /> FWD</label>
+                                    <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="drivetrain" value={drivetrain} /> 4WD</label>
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="drivetrain" value={drivetrain} /*checked={"drivetrain" === "Rear Wheel Drive"}*/ /> RWD</label>
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="drivetrain" value={drivetrain} /> AWD</label>
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="drivetrain" value={drivetrain} /> FWD</label>
 
                         </p>
                         <p className="inputSearch">Transmission:
-                                <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="transmission" value={transmission} /> Automatic</label>
-                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="transmission" value={transmission} /> Manual</label>
+                                <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="transmission" value={transmission} /> Automatic</label>
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="transmission" value={transmission} /> Manual</label>
 
                         </p>
                         <p className="inputSearch">Doors:
-                                <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="door" value={doors} /> 2 door</label>
-                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="door" value={doors} /> 4 door</label>
-                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="door" value={doors} /> 5 door</label>
-                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="radio" name="door" value={doors} /> Other</label>
-
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="door" value={doors} /> 2 door</label>
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="door" value={doors} /> 4 door</label>
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="door" value={doors} /> 5 door</label>
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="door" value={doors} /> Other</label>
                         </p>
                     </div>
                 </div>

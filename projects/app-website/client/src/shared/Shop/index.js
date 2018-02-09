@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import ListingDisplay from '../ListingDisplay';
+import ListingDisplay from '../Content/Form/Listing/ListingDisplay';
 import axios from 'axios';
-import Search from './SearchBar/Search';
+import Search from '../Shop/SearchBar/Search';
+import GuestDisplay from '../Content/Form/Guest/GuestDisplay';
 
-import './Shop.css'
+import '../Shop/Shop.css';
 
 const listingUrl = `/listing/`;
 
@@ -46,9 +47,10 @@ export default class componentName extends Component {
             <div className="parent">
                 <Search />
                 <br />
-                <ListingDisplay loading={loading} listings={listings} className="list"/>
+                {/* <ListingDisplay loading={loading} listings={listings} className="list"/> */}
+                <GuestDisplay loading={loading} listings={listings} className="list"/>
                 <br />
             </div>
         )
-    }
+     }
 }

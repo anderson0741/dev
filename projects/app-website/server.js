@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const morgan = require("morgan");
 // const cors = require('cors');
 
 mongoose.connect("mongodb://localhost/listings", (err) => {
@@ -9,6 +10,7 @@ mongoose.connect("mongodb://localhost/listings", (err) => {
     console.log("Connected to the Listings Database");
 });
 
+app.use(morgan("dev"));
 app.use(bodyParser.json());
 // app.use(cors());
 app.use('/listing', require('./routes/routes'));
