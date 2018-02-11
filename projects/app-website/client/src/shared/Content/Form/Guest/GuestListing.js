@@ -6,7 +6,7 @@ import '../Listing/Listing.css';
 class GuestListing extends Component {
 
     render() {
-        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, description, listingDelete, listingChange, _id, id } = this.props;
+        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, photo1, photo2, photo3, photo4, description, listingDelete, listingChange, _id, id } = this.props;
         return (
             <div className="parent">
                 <div className="space">
@@ -28,8 +28,15 @@ class GuestListing extends Component {
                         <div className="padding">
                             <div className="images">
                                 <br />
-                                <img className="image" src="https://i.ytimg.com/vi/ZopdphMMTE4/maxresdefault.jpg" alt="" />
+                                <img className="image" src={photo1} alt="" ></img>
+                                <img className="image" src={photo2} alt="" ></img>
+                                <img className="image" src={photo3} alt="" ></img>
+                                {/* <img className="image" src={photo4} alt="" ></img> */}
                             </div>
+                            {/* <div className="images">
+                                <br />
+                                <img className="image" src="https://i.ytimg.com/vi/ZopdphMMTE4/maxresdefault.jpg" alt="" />
+                            </div> */}
                             <div className="radios">
                                 <p>Drivetrain: {drivetrain}</p>
                                 <p>Transmission: {transmission}</p>

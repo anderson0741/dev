@@ -7,7 +7,7 @@ const listingUrl = '/listing/';
 
 export default class ListingDisplay extends Component {
     render() {
-        let { listings, loading, listingDelete, listingChange } = this.props;
+        let { listings, loading, listingDelete, listingChange, _id, updateListing } = this.props;
         return (
             loading ?
                 <div>
@@ -16,7 +16,7 @@ export default class ListingDisplay extends Component {
                 :
                 <div>
                     {listings.map((listing, index) => {
-                        return <Listing listingChange={listingChange} listingDelete={listingDelete} key={listing._id} {...listing} />
+                        return <Listing handleEdit={this.props.handleEdit} listingDelete={listingDelete} key={listing._id} {...listing} />
                     })}
                 </div>
         )

@@ -1,15 +1,22 @@
 @media (min-width: 768px) {
+    .images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .image {
-        height: 150px;
-        width: 300px;
+        /* height: 150px; */
+        width: 250px;
         /* background-color: orange; */
         /* padding: 10px 25px; */
-        border: solid black 2px;
+        /* border: solid black 2px;
         border-radius: 3px;
-        box-shadow: 3px 3px 13px black
+        box-shadow: 3px 3px 13px black */
     }
     .radios {
-        align-self: center !important;
+        /* align-self: center !important; */
+        display: flex;
+        justify-content: space-between;
     }
     .list {
         background-color: white;
@@ -25,7 +32,7 @@
     .padding {
         padding: 0px 25px;
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
         justify-content: space-between
     }
     .button {

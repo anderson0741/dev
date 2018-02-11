@@ -21,15 +21,14 @@ class Listing extends Component {
 
 
     render() {
-        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, description, listingDelete, listingChange, _id, id } = this.props;
-        if (this.state.isEditing) {
-            return <EditForm {...this.props} options={{ toggle: this.toggleEdit }} />
-        } else {
-            return (
-                <div className="parent">
-                    <div className="space">
-                        <br />
-                    </div>
+        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photo1, photo2, photo3, photo4, description, listingDelete, listingChange, _id, id, updateListing } = this.props;
+        let { isEditing } = this.state;
+        return (
+            <div className="parent">
+                <div className="space">
+                    <br />
+                </div>
+                {!isEditing ?
                     <div className='list'>
                         <div className="content">
                             <div className="details">
@@ -46,7 +45,14 @@ class Listing extends Component {
                             <div className="padding">
                                 <div className="images">
                                     <br />
-                                    <img className="image" src="https://i.ytimg.com/vi/ZopdphMMTE4/maxresdefault.jpg" alt="" />
+                                    <img className="image" src={photo1} alt="" ></img>
+                                    {/* <h1>1{photo1}</h1>
+                                    <h1>2{photo2}</h1>
+                                    <h1>3{photo3}</h1>
+                                    <h1>4{photo4}</h1> */}
+                                    <img className="image" src={photo2} alt="" ></img>
+                                    <img className="image" src={photo3} alt="" ></img>
+                                    {/* <img className="image" src={photo4} alt="" ></img> */}
                                 </div>
                                 <div className="radios">
                                     <p>Drivetrain: {drivetrain}</p>
@@ -62,14 +68,16 @@ class Listing extends Component {
                         </div>
                         <div className="button">
                             <button className="deleteButton" onClick={() => { listingDelete(_id) }}>Delete</button>
-                            <br />
                             <button className="deleteButton" onClick={this.toggleEdit}>Edit</button>
+                            <br />
                         </div>
                         <br />
                     </div>
-                </div>
-            )
-        }
+                    :
+                    <EditForm {...this.props} toggleEdit={this.toggleEdit}handleEdit={this.props.handleEdit} />}
+
+            </div>
+        )
     }
 }
 

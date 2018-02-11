@@ -58,6 +58,12 @@
     .price {
         grid-area: pr;
     }
+    .linkedPhotos{
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        margin: auto;
+    }
     .vehicleInfo {
         width: 15em;
     }
