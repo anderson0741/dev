@@ -8,28 +8,58 @@
         background-color: white;
         border: solid black 1px;
         border-radius: 3px;
-        width: 85%;
+        width: 700px;
         display: flex;
         flex-direction: column;
         flex-grow: -1;
         justify-content: center;
         align-items: center;
         align-content: center;
+        box-shadow: 3px 3px 13px black;
     }
     .searchCl {
         display: flex;
+        flex-direction: column;
         flex-grow: -1;
-        /* justify-content: center; */
+        justify-content: center;
         align-items: center;
     }
     .searchRadio {
         display: flex;
         /* flex-direction: column; */
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+        border-top: solid black 1px;
     }
     .inputSearch {
         width: 50%;
+    }
+    .vehicleInfo {
+        /* width: 15px; */
+        display: flex;
+    }
+    .inputTitleAlign{
+        display: flex;
+        /* margin: auto; */
+        justify-content: space-around;
+    }
+    .drive {
+        border-right: solid black 1px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+    }
+    .trans {
+        display: flex;
+        flex-direction: column;
+        border-right: solid black 1px;
+        justify-content: center;
+        width: 300px;
+    }
+    .doorss {
+        display: flex;
+        flex-direction: column;
     }
 }
 

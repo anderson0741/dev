@@ -30,40 +30,32 @@ export default class Search extends Component {
             <div className="wrapper">
                 <div className="searchBod">
                     <div className="searchCl">
-                        {/* <p className="inputSearch">Make: */}
-                        <input className="inputSearch vehicleInfo make" onChange={this.handleChange} name="make" type="text" value={make} placeholder="Make" />
-                        {/* </p> */}
-                        {/* <p className="inputSearch">Model: */}
-                        <input className="inputSearch vehicleInfo model" onChange={this.handleChange} name="model" type="text" value={model} placeholder="Model" />
-                        {/* </p> */}
-                        {/* <p className="inputSearch">Year: */}
-                        <input className="inputSearch vehicleInfo year" onChange={this.handleChange} name="year" type="number" value={year} placeholder="Year" />
-                        {/* </p> */}
-                        {/* <p className="inputSearch">Miles: */}
-                        <input className="inputSearch vehicleInfo miles" onChange={this.handleChange} name="miles" type="number" value={miles} placeholder="Miles" />
-                        {/* </p> */}
-                        {/* <p className="inputSearch">Color: */}
-                        <input className="inputSearch vehicleInfo carColor" onChange={this.handleChange} name="color" type="text" value={color} placeholder="Color" />
-                        {/* </p> */}
-                        {/* <p className="inputSearch">Price: */}
-                        <input className="inputSearch vehicleInfo price" onChange={this.handleChange} name="price" type="text" value={price} placeholder="Price" />
-                        {/* </p> */}
+                        <div className="inputTitle">
+                            <h1>Search Bar</h1>
+                            <p className="inputTitleAlign"> Make: <input className="inputSearch vehicleInfo make" onChange={this.handleChange} name="make" type="text" value={make} placeholder="Make" /></p>
+                            <p className="inputTitleAlign">Model: <input className="inputSearch vehicleInfo model" onChange={this.handleChange} name="model" type="text" value={model} placeholder="Model" /></p>
+                            <p className="inputTitleAlign">Year: <input className="inputSearch vehicleInfo year" onChange={this.handleChange} name="year" type="number" value={year} placeholder="Year" /></p>
+                            <p className="inputTitleAlign">Miles: <input className="inputSearch vehicleInfo miles" onChange={this.handleChange} name="miles" type="number" value={miles} placeholder="Miles" /></p>
+                            <p className="inputTitleAlign">Color: <input className="inputSearch vehicleInfo carColor" onChange={this.handleChange} name="color" type="text" value={color} placeholder="Color" /></p>
+                            <p className="inputTitleAlign">Price: <input className="inputSearch vehicleInfo price" onChange={this.handleChange} name="price" type="text" value={price} placeholder="Price" /></p>
+                            <br/>
+                        </div>
                     </div>
                     <div className="searchRadio">
-                        <p className="inputSearch">Drivetrain:
-                            
-                                    <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="drivetrain" value={drivetrain} /> 4WD</label>
-                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="drivetrain" value={drivetrain} /*checked={"drivetrain" === "Rear Wheel Drive"}*/ /> RWD</label>
+                        <p className="inputSearch drive">Drivetrain:
+                            <br />
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="drivetrain" value={drivetrain} /> 4WD</label>
+                            <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="drivetrain" value={drivetrain} /> RWD</label>
                             <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="drivetrain" value={drivetrain} /> AWD</label>
                             <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="drivetrain" value={drivetrain} /> FWD</label>
 
                         </p>
-                        <p className="inputSearch">Transmission:
+                        <p className="inputSearch trans">Transmission:
                                 <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="transmission" value={transmission} /> Automatic</label>
                             <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="transmission" value={transmission} /> Manual</label>
 
                         </p>
-                        <p className="inputSearch">Doors:
+                        <p className="inputSearch doorss">Doors:
                             <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="door" value={doors} /> 2 door</label>
                             <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="door" value={doors} /> 4 door</label>
                             <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="door" value={doors} /> 5 door</label>
