@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import Form from '../Form';
 import './Listing.css';
 import EditForm from '../EditForm/EditForm';
-// import Camaro from '../images/Camaro_orange.jpg';
 
 class Listing extends Component {
     constructor(props) {
@@ -21,7 +19,7 @@ class Listing extends Component {
 
 
     render() {
-        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photo1, photo2, photo3, photo4, description, listingDelete, listingChange, _id, id, updateListing } = this.props;
+        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photo1, photo2, photo3, /*photo4,*/ description, listingDelete, _id, } = this.props;
         let { isEditing } = this.state;
         return (
             <div className="parent">
@@ -46,10 +44,6 @@ class Listing extends Component {
                                 <div className="images">
                                     <br />
                                     <img className="image" src={photo1} alt="" ></img>
-                                    {/* <h1>1{photo1}</h1>
-                                    <h1>2{photo2}</h1>
-                                    <h1>3{photo3}</h1>
-                                    <h1>4{photo4}</h1> */}
                                     <img className="image" src={photo2} alt="" ></img>
                                     <img className="image" src={photo3} alt="" ></img>
                                     {/* <img className="image" src={photo4} alt="" ></img> */}
@@ -74,7 +68,7 @@ class Listing extends Component {
                         <br />
                     </div>
                     :
-                    <EditForm {...this.props} toggleEdit={this.toggleEdit}handleEdit={this.props.handleEdit} />}
+                    <EditForm {...this.props} toggleEdit={this.toggleEdit} handleEdit={this.props.handleEdit} />}
 
             </div>
         )

@@ -1,7 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import images from '../../images/level_up_cars.jpg';
-import Home from '../../shared/Home/index.js';
 import instagram from '../../images/instagram1.png';
 import facebook from '../../images/facebook.png';
 

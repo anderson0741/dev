@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import "./Search.css";
 
@@ -24,8 +24,8 @@ export default class Search extends Component {
         }
     }
     render() {
-        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, description } = this.state.inputs;
-        let { listings, loading } = this.state;
+        let { make, model, year, miles, drivetrain, transmission, color, doors, price } = this.state.inputs;
+        // let { listings, loading } = this.state;
         return (
             <div className="wrapper">
                 <div className="searchBod">

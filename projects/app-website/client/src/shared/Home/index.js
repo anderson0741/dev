@@ -1,7 +1,7 @@
 import React from 'react';
-import vid from '../../images/level_up.mov';
+// import vid from '../../images/level_up.mov';
 import './Home.css';
-import Cadillac from '../../images/IMG_4066.JPG';
+// import Cadillac from '../../images/IMG_4066.JPG';
 
 function Home(props) {
     return (

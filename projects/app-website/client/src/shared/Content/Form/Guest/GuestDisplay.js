@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import Form from '../Form';
 import GuestListing from './GuestListing';
-
-const listingUrl = '/listing/';
 
 export default class GuestDisplay extends Component {
     render() {

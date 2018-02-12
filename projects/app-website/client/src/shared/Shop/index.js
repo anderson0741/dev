@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ListingDisplay from '../Content/Form/Listing/ListingDisplay';
 import axios from 'axios';
 import Search from '../Shop/SearchBar/Search';
 import GuestDisplay from '../Content/Form/Guest/GuestDisplay';

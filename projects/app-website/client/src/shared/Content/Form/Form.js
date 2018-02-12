@@ -4,7 +4,7 @@ import Dropzone from 'react-dropzone';
 // import Upload from '../shared/Upload';
 import request from 'superagent';
 import ListingDisplay from './Listing/ListingDisplay';
-import EditForm from './EditForm/EditForm';
+// import EditForm from './EditForm/EditForm';
 
 import './Form.css';
 
@@ -15,7 +15,7 @@ const cloudinaryUrl = 'https://api.cloudinary.com/v1_1/anderson0741/upload';
 export default class Form extends Component {
     constructor(props) {
         super(props);
-        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, photo1, photo2, photo3, photo4, description } = props;
+        // let { /*make, model, year, miles, drivetrain, transmission, color, doors, price, photos, photo1, photo2, photo3, photo4,*/ description } = props;
         this.state = {
             inputs: {
                 "make": '',
@@ -71,7 +71,7 @@ export default class Form extends Component {
     }
 
     handleChange(e) {
-        let { name, value, checked, type } = e.target;
+        let { name, value } = e.target;
         this.setState(prevState => {
             return {
                 inputs: {
@@ -83,10 +83,9 @@ export default class Form extends Component {
     }
 
     handleSubmit(e) {
-        let { _id, updateListing } = this.props;
+        // let { _id, updateListing } = this.props;
         let listing = this.state.inputs
         e.preventDefault();
-        // if (add) {
         axios.post(listingUrl, listing)
             .then(response => {
                 console.log(response.data);
@@ -119,24 +118,6 @@ export default class Form extends Component {
             })
     }
 
-    // listingChange(_id, updateListing) {
-    //     let { listings, inputs } = this.state;
-    //     let newListing = listings;
-    //     axios.put(listingUrl + "/" + _id, inputs)
-    //         .then(response => {
-    //             for (let i = 0; i < newListing.length; i++) {
-    //                 if (newListing[i]._id === _id) {
-    //                     newListing[i] = Object.assign(newListing[i], updateListing);
-    //                     updateListing = newListing[i];
-    //                     this.setState({
-    //                         listings: newListing
-    //                     })
-    //                 }
-    //             }
-    //         })
-    //     // options.toggle()
-    // }
-
     componentDidMount() {
         axios.get(listingUrl)
             .then(response => {
@@ -160,7 +141,7 @@ export default class Form extends Component {
                             if(listing._id === id){
                                 return newListing;
                             } else {
-                                listing
+                                return listing;
                             }
                         })
                     }
@@ -191,7 +172,7 @@ export default class Form extends Component {
     }
 
     render() {
-        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, description, photo1, photo2, photo3, photo4, _id, updateListing } = this.state.inputs;
+        let { make, model, year, miles, drivetrain, transmission, color, doors, price, description, photo1, photo2, photo3, photo4 } = this.state.inputs;
         let { listings, loading } = this.state;
         console.log(listings);
         // console.log(make, model, year, miles, drivetrain, transmission, color, doors, price);
@@ -279,7 +260,7 @@ export default class Form extends Component {
                         </div>
                     </div>
                 </form>
-                <ListingDisplay listingDelete={this.listingDelete} handleEdit={this.handleEdit} loading={loading} listings={listings} />
+                <ListingDisplay handleEdit={this.handleEdit} listingDelete={this.listingDelete} loading={loading} listings={listings} />
             </div>
 
         )

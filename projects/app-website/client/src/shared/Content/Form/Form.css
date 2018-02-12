@@ -111,6 +111,7 @@
 @media (max-width: 767px) {
     .overallWrap {
         width: 300px;
+        margin: auto;
     }
     .color {
         background-color: white;

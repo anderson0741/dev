@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import Form from '../Form';
 import Listing from './Listing';
-
-const listingUrl = '/listing/';
 
 export default class ListingDisplay extends Component {
     render() {
-        let { listings, loading, listingDelete, listingChange, _id, updateListing } = this.props;
+        let { listings, loading, listingDelete } = this.props;
         return (
             loading ?
                 <div>

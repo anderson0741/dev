@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import Dropzone from 'react-dropzone';
+// import axios from 'axios';
+// import Dropzone from 'react-dropzone';
 // import Upload from '../shared/Upload';
-import request from 'superagent';
+// import request from 'superagent';
 
 import '../Form.css';
-
-const listingUrl = `/listing/`;
-const cloudinaryPreset = 'level_up';
-const cloudinaryUrl = 'https://api.cloudinary.com/v1_1/anderson0741/upload';
 
 export default class EditForm extends Component {
     constructor(props) {
         super(props);
         console.log(props);
-        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, photo1, photo2, photo3, photo4, description, _id, updateListing, options } = props;
+        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photo1, photo2, photo3, /*photo4,*/ description } = props;
         this.state = {
             inputs: {
                 make: make || '',
@@ -29,8 +25,8 @@ export default class EditForm extends Component {
                 "description": description || '',
                 photo1: photo1 || '',
                 photo2: photo2 || '',
-                photo3: photo3 || '',
-                photo4: photo4 || ''
+                photo3: photo3 || ''
+                /*photo4: photo4 || ''*/
             },
             listings: [],
             uploadedFileCloudinaryUrl: "",
@@ -62,7 +58,7 @@ export default class EditForm extends Component {
     // }
 
     handleChange(e) {
-        let { name, value, checked, type } = e.target;
+        let { name, value } = e.target;
         this.setState(prevState => {
             return {
                 inputs: {
@@ -80,8 +76,8 @@ export default class EditForm extends Component {
     }
 
     render() {
-        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, photo1, photo2, photo3, photo4, description, _id, updateListing, options, inputs } = this.state.inputs;
-        let { listings, loading } = this.state;
+        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photo1, photo2, photo3, /*photo4,*/ description } = this.state.inputs;
+        let { listings } = this.state;
         console.log(listings);
         return (
             <div>
@@ -109,7 +105,7 @@ export default class EditForm extends Component {
                                     <input onChange={this.handleChange} type="text" name="photo1" value={photo1} id="" />
                                     <input onChange={this.handleChange} type="text" name="photo2" value={photo2} id="" />
                                     <input onChange={this.handleChange} type="text" name="photo3" value={photo3} id="" />
-                                    <input onChange={this.handleChange} type="text" name="photo4" value={photo4} id="" />
+                                    {/* <input onChange={this.handleChange} type="text" name="photo4" value={photo4} id="" /> */}
                                 </p>
                             </div>
                             <p className="input">Drivetrain:

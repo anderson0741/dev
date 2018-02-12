@@ -1,13 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from '../shared/Home';
 import About from '../shared/About/About';
 import Contact from '../shared/Contact/index';
-// import Upload from '../shared/Upload';
-import Listing from '../shared/Content/Form/Listing/Listing';
-import ListingDisplay from '../shared/Content/Form/Listing/ListingDisplay';
 import Shop from '../shared/Shop/index';
-import Form from '../shared/Content/Form/Form';
 import Content from '../shared/Content/Content';
 import Nav from './Nav';
 import Footer from './Footer/Footer';
@@ -35,5 +31,3 @@ function App(props) {
 
 export default App;
 
-
-//The idea is to make a site for a dealership where car listings can be added like a blog page.  It will include a description of the vehicle, a picture, the model, year, miles, drivetrain, etc. The minimum will be a listing set up where they can at least add information about the vehicle.
