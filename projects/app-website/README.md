@@ -1,0 +1,1 @@
+Fully CRUD program for listing and posting,  working on user authentication, but currently has a section for guests to see posts.
