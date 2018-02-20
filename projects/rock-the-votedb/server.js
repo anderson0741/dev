@@ -5,16 +5,16 @@ const bodyParser = require('body-parser');
 const morgan = require("morgan");
 // const cors = require('cors');
 
-mongoose.connect("mongodb://localhost/listings", (err) => {
+mongoose.connect("mongodb://localhost/polls", (err) => {
     if (err) throw err;
-    console.log("Connected to the Listings Database");
+    console.log("Connected to the Polls Database");
 });
 
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 // app.use(cors());
-app.use('/listing', require('./routes/routes'));
+app.use('/polls', require('./routes/routes'));
 
-app.listen(8088, () => {
-    console.log("Server is running on port 8088");
+app.listen(8000, () => {
+    console.log("Server is running on port 8000");
 })

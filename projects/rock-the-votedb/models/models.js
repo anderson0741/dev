@@ -1,21 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const listingSchema = new mongoose.Schema({
-    "make": String,
-    "model": String,
-    "year": Number,
-    "miles": Number,
-    "drivetrain": String,
-    "transmission": String,
-    "color": String,
-    "doors": String,
-    "price": Number,
-    "description": String,
-    "photo1": String,
-    "photo2": String,
-    "photo3": String,
-    "photo4": String
+const pollSchema = new mongoose.Schema({
+    "title": String,
+    "description": String
 });
 
-module.exports = mongoose.model("Listings", listingSchema);
+module.exports = mongoose.model("Polls", pollSchema);

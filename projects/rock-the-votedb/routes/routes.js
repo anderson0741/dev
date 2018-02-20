@@ -1,42 +1,42 @@
 const express = require('express');
-const listingRoutes = express.Router();
-const Listings = require('../models/models');
+const pollRoutes = express.Router();
+const Polls = require('../models/models');
 
-listingRoutes.get('/', (req, res) => {
-    Listings.find({}, (err, listingz) => {
+pollRoutes.get('/', (req, res) => {
+    Polls.find({}, (err, pollz) => {
         if(err) return res.status(500).send(err);
-        return res.send(listingz);
+        return res.send(pollz);
     })
 });
 
-listingRoutes.post('/', (req, res) => {
-    const newListing = new Listings(req.body);
-    newListing.save((err) => {
+pollRoutes.post('/', (req, res) => {
+    const newPoll = new Polls(req.body);
+    newPoll.save((err) => {
         if (err) return res.status(500).send(err);
-        return res.send(newListing);
+        return res.send(newPoll);
     })
 });
 
-listingRoutes.get('/:id', (req, res) => {
-    Listings.findById(req.params.id, (err, listing) => {
+pollRoutes.get('/:id', (req, res) => {
+    Polls.findById(req.params.id, (err, poll) => {
         if (err) return res.status(500).send(err);
-        return res.send(listing);
+        return res.send(poll);
     })
 });
 
-listingRoutes.put('/:id', (req, res) => {
-    Listings.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedListing) => {
+pollRoutes.put('/:id', (req, res) => {
+    Polls.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedPoll) => {
         if (err) return res.status(500).send(err);
-        return res.send(updatedListing);
+        return res.send(updatedPoll);
     })
 });
 
-listingRoutes.delete('/:id', (req, res) => {
+pollRoutes.delete('/:id', (req, res) => {
     console.log(req.params.id)
-    Listings.findByIdAndRemove(req.params.id, (err, deletedListing) =>{
+    Polls.findByIdAndRemove(req.params.id, (err, deletedPoll) =>{
         if (err) return res.status(500).send(err);
-        return res.send(deletedListing);
+        return res.send(deletedPoll);
     })
 });
 
-module.exports = listingRoutes;
+module.exports = pollRoutes;

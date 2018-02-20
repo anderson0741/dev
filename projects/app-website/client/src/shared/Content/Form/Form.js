@@ -138,7 +138,7 @@ export default class Form extends Component {
                 this.setState(prevState => {
                     return {
                         listings: prevState.listings.map(listing => {
-                            if(listing._id === id){
+                            if (listing._id === id) {
                                 return newListing;
                             } else {
                                 return listing;

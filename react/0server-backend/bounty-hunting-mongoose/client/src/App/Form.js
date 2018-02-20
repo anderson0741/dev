@@ -81,16 +81,6 @@ export default class Form extends Component {
         });
     }
 
-    // bountyChange(id){
-    //     let {bounties} =this.state;
-    //     axios.put('/bounty/' + id)
-    //         .then(response => {
-                // this.setState({
-    //                 bounties:
-    //             })
-    //         })
-    // }
-
     componentDidMount() {
         axios.get(bountyUrl)
             .then(response => {
@@ -139,13 +129,13 @@ export default class Form extends Component {
                         <input type="radio" onChange={this.handleChange} name="type" value="Sith" /> Sith
                     </label>
                     <br />
-                    <ImageUploader
+                    {/* <ImageUploader
                         withIcon={true}
                         buttonText='Choose images'
                         onChange={this.onDrop}
                         imgExtension={['.jpg', '.gif', '.png', '.gif']}
                         maxFileSize={5242880}
-                    />
+                    /> */}
                     <br />
                     <input className="submit" type="submit" value="Submit" onClick={this.handleSubmit} />
                     <br />
