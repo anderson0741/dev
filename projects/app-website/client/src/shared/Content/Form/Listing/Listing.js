@@ -69,7 +69,6 @@ class Listing extends Component {
                     </div>
                     :
                     <EditForm {...this.props} toggleEdit={this.toggleEdit} handleEdit={this.props.handleEdit} />}
-
             </div>
         )
     }

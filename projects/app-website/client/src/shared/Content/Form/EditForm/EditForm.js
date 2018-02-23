@@ -37,26 +37,6 @@ export default class EditForm extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    // handleEdit(e) {
-    //     e.preventDefault();
-    //     let { listings, inputs } = this.state;
-    //     let { make, model, year, miles, drivetrain, transmission, color, doors, price, photos, description, _id, updateListing, options } = this.props;
-    //     let newListing = listings;
-    //     axios.put(listingUrl + "/" + _id, inputs)
-    //         .then(response => {
-    //             for (let i = 0; i < newListing.length; i++) {
-    //                 if (newListing[i]._id === _id) {
-    //                     newListing[i] = Object.assign(newListing[i], updateListing);
-    //                     updateListing = newListing[i];
-    //                     this.setState({
-    //                         listings: newListing
-    //                     })
-    //                 }
-    //             }
-    //         })
-    //     options.toggle()
-    // }
-
     handleChange(e) {
         let { name, value } = e.target;
         this.setState(prevState => {

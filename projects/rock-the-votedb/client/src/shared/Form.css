@@ -1,0 +1,20 @@
+.votes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    opacity: 0.8;
+    width: 500px;
+    border: solid black 3px;
+}
+
+.disp{
+    border: solid black 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+}
