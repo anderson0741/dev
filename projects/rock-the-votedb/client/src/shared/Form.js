@@ -185,6 +185,7 @@ export default class Form extends Component {
         return (
             <div>
                <form className='votes'>
+                   <h1>ROCK THE VOTE DB!!</h1>
                    <input onChange={this.handleChange} className='title-input' type="text" placeholder='Title' value={title} name='title'/>
                    <input onChange={this.handleChange} className='description-input'type="text" placeholder='Description' value={description} name='description' />
                    <button className='submit' type='submit' onClick={this.handleSubmit}>Submit</button>
