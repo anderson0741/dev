@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(235, 222, 205);
+}
+
+.appStructure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

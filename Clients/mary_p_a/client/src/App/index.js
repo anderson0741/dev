@@ -18,7 +18,7 @@ export default class App extends Component {
                 <div className="content">
                     <LeftSideBar />
                     <Switch>
-                        <Route path="/home" component={Home} />
+                        <Route path="/" component={Home} />
                     </Switch>
                     <RightSideBar />
                 </div>

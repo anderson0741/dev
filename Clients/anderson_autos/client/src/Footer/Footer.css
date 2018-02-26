@@ -1,0 +1,36 @@
+
+.footerWrapper {
+    height: 100px;
+    width: 110%;
+    margin-left: -10px;
+    background-color: rgb(114, 87, 0);
+    color: white;
+    border: 1px solid gray;
+    box-shadow: 3px 3px 10px gray;
+}
+
+.footerBod {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.toPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

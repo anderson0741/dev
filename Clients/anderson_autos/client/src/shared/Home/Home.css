@@ -1,0 +1,57 @@
+.cadi {
+    background-image: url('../../images/IMG_4066.JPG');
+    width: 100%;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: absolute;
+    top: 20%;
+    color: white;
+}
+.tag{
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    font-stretch: expanded;
+    font-size: 8vw
+}
+
+.other {
+    z-index: 3;
+    position: absolute;
+    top: 120vh;
+}
+
+@media (min-width: 500px) {
+    .vid {
+        height: 90%;
+        width: 90%;
+    }
+    .homeD {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .words {
+        margin: 2% 20%;
+    }
+    
+}
+
+@media (max-width: 499px) {
+    .vid {
+        height: 50%;
+        width: 50%;
+    }
+    .homeD {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .words {
+        margin: 2% 20%;
+    }
+}
