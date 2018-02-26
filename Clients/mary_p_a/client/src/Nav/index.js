@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import images from '../../images/level_up_cars.jpg';
+// import images from '../../images/level_up_cars.jpg';
 // import Home from '../../shared/Home/index.js';
 
 
@@ -10,7 +10,7 @@ function Nav() {
     return (
         <div className="papa">
             <div className="navBod">
-                <img className='imgs' src={images} alt="" />
+                {/* <img className='imgs' src={images} alt="" /> */}
                 <div className="navi ">
                     {/* <img className='imgs' src={images} alt="" /> */}
                     <p className='links'>/</p>
