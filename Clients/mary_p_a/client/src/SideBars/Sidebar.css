@@ -1,0 +1,14 @@
+.right{
+    background-color: gray;
+    height: 1000px;
+    width: 200px;
+    border: black 1px solid;
+    box-shadow: 2px 2px 2px black;
+}
+.left{
+    background-color: gray;
+    height: 1000px;
+    width: 200px;
+    border: black 1px solid;
+    box-shadow: 2px 2px 2px black;
+}
