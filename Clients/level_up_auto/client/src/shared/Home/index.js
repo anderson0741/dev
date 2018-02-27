@@ -24,7 +24,7 @@ function Home(props) {
                     <a className="aboutSelector homeBox" href="/about">
                         <h1>ABOUT US</h1>
                     </a>
-                    <a href="location" className="location homeBox">
+                    <a href="contact" className="location homeBox">
                         <h1>LOCATION</h1>
                     </a>
                     <div className="otherFuture homeBox">
