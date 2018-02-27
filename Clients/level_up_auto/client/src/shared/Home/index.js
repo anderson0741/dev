@@ -18,17 +18,17 @@ function Home(props) {
                 </div>
                 <br />
                 <div className="selector">
-                    <div className="shopCars homeBox">
-                        <p>selector</p>
-                    </div>
-                    <div className="aboutSelector homeBox">
-                        <p>about</p>
-                    </div>
-                    <div className="location homeBox">
-                        <p>location</p>
-                    </div>
+                    <a href="cars" className="shopCars homeBox">
+                        <h1>SHOP CARS</h1>
+                    </a>
+                    <a className="aboutSelector homeBox" href="/about">
+                        <h1>ABOUT US</h1>
+                    </a>
+                    <a href="location" className="location homeBox">
+                        <h1>LOCATION</h1>
+                    </a>
                     <div className="otherFuture homeBox">
-                        <p>future</p>
+                        <h1>future</h1>
                     </div>
                 </div>
             </div>
