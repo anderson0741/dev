@@ -98,16 +98,4 @@
         /* align-self: flex-end; */
     }
 }
-
-/* @media (max-width: 767px) {
-    .links {
-        display: none;
-    }
-    .navBod {
-        display: none;
-    }
-    .imgs {
-        height: 100%;
-        border: 5px gray solid;
-    }
-} */ 
+ 

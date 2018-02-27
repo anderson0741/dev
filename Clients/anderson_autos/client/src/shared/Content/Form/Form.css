@@ -83,15 +83,14 @@
         align-self: center;
         width: 8em;
     }
-    .submit:hover {
+    /* .submit:hover {
         align-self: center;
         width: 9em;
         background-color: orange;
         transition-delay: 0.9s;
         border: gray solid 3px;
         border-radius: 3px;
-
-    }
+    } */
     .imageUpload {
         align-self: center;
     }
