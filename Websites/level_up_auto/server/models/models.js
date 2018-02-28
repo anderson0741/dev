@@ -36,12 +36,7 @@ const listingSchema = new mongoose.Schema({
     "photo1": String,
     "photo2": String,
     "photo3": String,
-    "photo4": String,
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: "User",
-        required: true
-    }
+    "photo4": String
 });
 
 module.exports = mongoose.model("Listings", listingSchema);

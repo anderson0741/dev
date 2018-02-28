@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 // import Dropzone from 'react-dropzone';
 // import Upload from '../shared/Upload';
-import request from 'superagent';
+import request from 'superagent'; 
 import ListingDisplay from './Listing/ListingDisplay';
 // import EditForm from './EditForm/EditForm';
 

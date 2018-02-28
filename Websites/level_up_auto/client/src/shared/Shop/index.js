@@ -28,7 +28,7 @@ export default class componentName extends Component {
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         axios.get(listingUrl)
             .then(response => {
                 this.setState({
@@ -44,12 +44,15 @@ export default class componentName extends Component {
         let { listings, loading } = this.state;
         return (
             <div className="parent">
-                <Search />
-                <br />
+                <div className="searchin">
+                    <Search />
+                </div>
                 {/* <ListingDisplay loading={loading} listings={listings} className="list"/> */}
-                <GuestDisplay loading={loading} listings={listings} className="list"/>
+                <div className="guestin">
+                    <GuestDisplay loading={loading} listings={listings} className="list" />
+                </div>
                 <br />
             </div>
         )
-     }
+    }
 }

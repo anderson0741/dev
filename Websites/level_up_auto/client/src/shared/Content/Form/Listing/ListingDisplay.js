@@ -7,7 +7,7 @@ export default class ListingDisplay extends Component {
         return (
             loading ?
                 <div>
-                    loading
+                    loading...
                 </div>
                 :
                 <div>
