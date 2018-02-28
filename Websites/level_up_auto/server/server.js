@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+require("dotenv").config(); 
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const morgan = require("morgan");
@@ -12,7 +13,9 @@ mongoose.connect("mongodb://localhost/listings", (err) => {
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 
-app.use('/listing', require('./routes/routes'));
+app.use("/api", expressJwt({secret: process.env.SECRET}));
+app.use("/auth", require("./routes/auth"));
+app.use('/api/listing', require('./routes/routes'));
 
 app.listen(8088, () => {
     console.log("Server is running on port 8088");
