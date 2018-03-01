@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import images from '../images/level_up_cars.jpg';
 import { connect } from "react-redux";
@@ -8,33 +8,40 @@ import { logout } from "../redux/auth";
 
 import './Nav.css';
 
-function Nav() {
-    return (
-        <div className="papa">
-            <div className="navBod">
-                <img className='imgs' src={images} alt="" />
-                <div className="navi ">
-                    {/* <img className='imgs' src={images} alt="" /> */}
-                    <p className='links'>/</p>
-                    {isAuthenticated ? null :  <Link className='links' to="/">Home</Link>}
-                    <p className='links'>/</p>
-                    {isAuthenticated ? null : <Link className='links' to="/about">About</Link>}
-                    <p className='links'>/</p>
-                    {isAuthenticated ? null : <Link className='links' to="/cars">Shop Cars</Link>}
-                    <p className='links'>/</p>
-                    {isAuthenticated ? <Link className='links' to="/upload">Upload Content</Link> : null}
-                    <p className='links'>/</p>
-                    {isAuthenticated ? <div className="navlinkz">
-                        <Link className='links' onClick={this.props.logout}>Logout</Link className='links'>
-                    </div> : null}
-                    {/* <Link className='links' to="/image">Upload Image</Link> */}
-                    <p className='links'>/</p>
-                    <Link className='links' to="/contact">Contact Us</Link>
-                    <p className='links'>/</p>
+class Nav extends Component {
+    render() {
+        const isAuthenticated = this.props.isAuthenticated;
+        return (
+            <div className="papa" >
+                <div className="navBod">
+                    <img className='imgs' src={images} alt="" />
+                    <div className="navi ">
+                        {/* <img className='imgs' src={images} alt="" /> */}
+                        <div className='links'><p>/</p></div>
+                        {isAuthenticated ? null : <div className='links'><Link className='links' to="/">Home</Link></div>}
+                        <div className='links'><p>/</p></div>
+                        {isAuthenticated ? null : <div className='links'><Link className='links' to="/about">About</Link></div>}
+                        <div className='links'><p>/</p></div>
+                        {isAuthenticated ? null : <div className='links'><Link className='links' to="/cars">Shop Cars</Link></div>}
+                        <div className='links'><p>/</p></div>
+                        {isAuthenticated ? <div className='links'><Link className='links' to="/upload">Upload Content</Link></div> : null}
+                        {isAuthenticated ? <div className='links'><p>/</p></div> : null}
+                        {isAuthenticated ? <div className="links">
+                            <Link className='links' onClick={this.props.logout}>Logout</Link>
+                        </div> : null}
+                        {/* <Link to="/image">Upload Image</Link> */}
+                        {isAuthenticated ? <div className='links'><p>/</p></div> : null}
+                        <div className='links'><Link className='links' to="/contact">Contact Us</Link></div>
+                        <div className='links'><p>/</p></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
+    }
+
+const mapStateToProps = (state) => {
+    return state.user;
 }
 
-export default Nav;
+export default connect(mapStateToProps, { logout })(Nav); 

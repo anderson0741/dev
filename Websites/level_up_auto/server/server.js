@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 app.use("/api", expressJwt({secret: process.env.SECRET}));
 app.use("/auth", require("./routes/auth"));
-app.use('/api/listing', require('./routes/routes'));
+app.use('/listing', require('./routes/routes'));
 
 app.listen(8088, () => {
     console.log("Server is running on port 8088");

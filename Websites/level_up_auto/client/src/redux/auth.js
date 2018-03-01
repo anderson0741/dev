@@ -8,7 +8,7 @@ export function signup(userInfo) {
                 localStorage.token = token
                 localStorage.user = JSON.stringify(user);
                 dispatch(authenticate(user));
-                //console.log(response.data);
+                // console.log(response.data);
             })
             .catch(err => {
                 console.error(err);

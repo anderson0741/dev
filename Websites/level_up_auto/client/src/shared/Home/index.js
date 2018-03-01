@@ -27,9 +27,9 @@ function Home(props) {
                     <a href="contact" className="location homeBox">
                         <h1>LOCATION</h1>
                     </a>
-                    <div className="otherFuture homeBox">
+                    {/* <div className="otherFuture homeBox">
                         <h1>future</h1>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

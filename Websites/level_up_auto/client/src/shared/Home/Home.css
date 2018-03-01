@@ -84,9 +84,9 @@
 .selector{
     display: grid;
     grid-template-columns: 400px 400px;
-    grid-template-rows: 400px 400px;
+    grid-template-rows: 400px 200px;
     grid-gap: 50px;
-    grid-template-areas: "s a" "l of";
+    grid-template-areas: "s a" "l l";
 }
 .homeBox{
     border: solid black 3px;
