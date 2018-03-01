@@ -41,7 +41,7 @@ export default class Search extends Component {
                             <br />
                         </div>
                     </div>
-                    <div className="drivetrain">
+                    {/* <div className="drivetrain">
                         <p>Drivetrain:</p>
                         <p className="inputSearch drive">
                             <br />
@@ -66,7 +66,7 @@ export default class Search extends Component {
                             <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="door" value={doors} /> 5 door</label>
                             <label htmlFor=""><input className="inputSearch" onChange={this.handleChange} type="checkbox" name="door" value={doors} /> Other</label>
                         </p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         )
