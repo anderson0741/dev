@@ -1,0 +1,23 @@
+.cards {
+    padding: 50px;
+    color: white;
+    width: 30%;
+    border: solid 1px white;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease-in-out;
+    margin: 10px;
+    border-radius: 10px;
+}
+    @media(max-width: 993px) {
+        .cards {
+            min-width: 309px;
+        }
+    }
+
+.cards:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.cards:last-of-type {
+    width: 95%;
+}
