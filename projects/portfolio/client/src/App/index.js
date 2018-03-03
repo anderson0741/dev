@@ -1,16 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-// import Nav from '../shared/Nav/Nav'
-import Content from '../shared/Content';
+import Nav from './Navbar/Nav'
 
-function App(props) {
-    return (
-        <div>
-            <h1>Welcome to {props.name}</h1>
-            <h2>Founded by {props.founder}</h2>
-            <Content></Content>
-        </div>
-    )
+export default class App extends Component {
+    render() {
+        return (
+            <div>
+                <Nav />
+            </div>
+        )
+    }
 }
-
-export default App;
