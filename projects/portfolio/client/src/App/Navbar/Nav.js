@@ -11,21 +11,19 @@ function Nav() {
         <div className="papa">
             <div className="navBod">
                 {/* <img className='imgs' src={images} alt="" /> */}
-                <div className="navi ">
+                <button className="dropbtn">Level Up Site</button>
+                <div className="level_up_dropdwn">
+                    <a href="/level_up_home">Home</a>
                     {/* <img className='imgs' src={images} alt="" /> */}
+                    {/* <p className='links'>/</p>
+                    <Link className='links' to="/level_up_home">Home</Link>
                     <p className='links'>/</p>
-                    <Link className='links' to="/">Home</Link>
+                    <Link className='links' to="/level_up_about">About</Link>
                     <p className='links'>/</p>
-                    <Link className='links' to="/about">About</Link>
+                    <Link className='links' to="/level_up_upload">Upload Content</Link>
                     <p className='links'>/</p>
-                    <Link className='links' to="/cars">Shop Cars</Link>
-                    <p className='links'>/</p>
-                    <Link className='links' to="/upload">Upload Content</Link>
-                    <p className='links'>/</p>
-                    {/* <Link className='links' to="/image">Upload Image</Link>
+                    <Link className='links' to="/level_up_contact">Contact Us</Link>
                     <p className='links'>/</p> */}
-                    <Link className='links' to="/contact">Contact Us</Link>
-                    <p className='links'>/</p>
                 </div>
             </div>
         </div>
