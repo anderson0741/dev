@@ -9,7 +9,14 @@ import './Nav.css';
 function Nav() {
     return (
         <div className="papa">
-            <div className="navBod">
+            <div className="navBod_main">
+            <button className='dropbtn'>Main</button>
+                <div className="main_dropdwn">
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                </div>
+            </div>
+            <div className="navBod_level">
                 {/* <img className='imgs' src={images} alt="" /> */}
                 <button className="dropbtn">Level Up Site</button>
                 <div className="level_up_dropdwn">

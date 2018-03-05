@@ -1,7 +1,5 @@
-
-
 @media (min-width: 787px) {
-    .papa{
+    .papa {
         display: flex;
         justify-content: center;
     }
@@ -14,9 +12,9 @@
         border-radius: 4px;
         height: 65px;
         width: 80%;
-        display: flex;
+        /* display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: center; */
         border: black 1px solid;
         padding-left: 10px;
         padding-right: 10px;
@@ -31,12 +29,11 @@
         /* align-self: flex-start; */
         opacity: 0.7;
     }
-    .level_up_dropdwn{
+    .level_up_dropdwn {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         /* background-color: tan; */
-        
     }
     .links {
         text-decoration: none;
@@ -53,40 +50,66 @@
         font-size: 16px;
         border: none;
     }
-    
-    .navBod {
+    .navBod_main {
         position: relative;
         display: inline-block;
     }
-    
+    .main_dropdwn {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    .main_dropdwn a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .main_dropdwn a:hover {
+        background-color: #ddd
+    }
+
+    .navBod_main:hover .level_up_dropdwn {
+        display: block;
+    }
+    .navBod_main:hover .dropbtn {
+        background-color: #3e8e41;
+    }
+
+    .navBod_level {
+        position: relative;
+        display: inline-block;
+    }
     .level_up_dropdwn {
         display: none;
         position: absolute;
         background-color: #f1f1f1;
         min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
     }
-    
     .level_up_dropdwn a {
         color: black;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
     }
-    
-    .level_up_dropdwn a:hover {background-color: #ddd}
-    
-    .navBod:hover .level_up_dropdwn {
+    .level_up_dropdwn a:hover {
+        background-color: #ddd
+    }
+    .navBod_level:hover .level_up_dropdwn {
         display: block;
     }
-    
-    .navBod:hover .dropbtn {
+    .navBod_level:hover .dropbtn {
         background-color: #3e8e41;
     }
 }
+
 @media (max-width: 786px) {
-    .papa{
+    .papa {
         display: flex;
         justify-content: center;
     }
@@ -117,13 +140,12 @@
         /* align-self: flex-start; */
         opacity: 0.7;
     }
-    .level_up_dropdwn{
+    .level_up_dropdwn {
         display: flex;
         justify-content: space-around;
         align-items: center;
         font-size: 12px;
         /* background-color: tan; */
-        
     }
     .links {
         text-decoration: none;
@@ -146,4 +168,4 @@
         height: 100%;
         border: 5px gray solid;
     }
-} */ 
+} */

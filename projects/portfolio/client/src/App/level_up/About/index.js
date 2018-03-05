@@ -1,5 +1,5 @@
 import React from 'react';
-import levelUp from '../../images/story.JPG';
+import levelUp from '../images/story.JPG';
 import './About.css';
 
 function About(props) {

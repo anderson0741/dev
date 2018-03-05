@@ -15,7 +15,6 @@ const cloudinaryUrl = 'https://api.cloudinary.com/v1_1/anderson0741/upload';
 export default class Form extends Component {
     constructor(props) {
         super(props);
-        // let { /*make, model, year, miles, drivetrain, transmission, color, doors, price, photos, photo1, photo2, photo3, photo4,*/ description } = props;
         this.state = {
             inputs: {
                 "make": '',
