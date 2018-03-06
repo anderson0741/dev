@@ -75,6 +75,20 @@
         margin: 2% 20%;
     }
 } */
+.welcome_level{
+    background-image: url('../../images/TransAm.jpg');
+    background-size: cover;
+    background-position-y: center;
+    height: 500px;
+    width: 1300px;
+    box-shadow: 1px 1px 1px black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 35px;
+    text-shadow: 3px 3px black;
+    color: white;
+}
 .homeDivBox{
     display: flex;
     flex-direction: column;

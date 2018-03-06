@@ -26,13 +26,12 @@ class Nav extends Component {
                         <div className='links'><p>/</p></div>
                         {isAuthenticated ? <div className='links'><Link className='links' to="/upload">Upload Content</Link></div> : null}
                         {isAuthenticated ? <div className='links'><p>/</p></div> : null}
-                        {isAuthenticated ? <div className="links">
-                            <Link className='links' onClick={this.props.logout}>Logout</Link>
-                        </div> : null}
+                        {isAuthenticated ? <div className="links"><Link className='links' onClick={this.props.logout}>Logout</Link></div> : null}
                         {/* <Link to="/image">Upload Image</Link> */}
                         {isAuthenticated ? <div className='links'><p>/</p></div> : null}
                         <div className='links'><Link className='links' to="/contact">Contact Us</Link></div>
                         <div className='links'><p>/</p></div>
+                        <div className='links'><Link className='links' to="/login">Login</Link></div>
                     </div>
                 </div>
             </div>
