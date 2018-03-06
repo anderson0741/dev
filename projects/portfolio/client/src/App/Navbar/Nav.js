@@ -9,31 +9,29 @@ import './Nav.css';
 function Nav() {
     return (
         <div className="papa">
-            <div className="navBod_main">
-            <button className='dropbtn'>Main</button>
-                <div className="main_dropdwn">
-                    <a href="/">Home</a>
-                    <a href="/about">About</a>
+            <div className="navBod">
+                <div className="navBod_main">
+                    <button className='dropbtn'>Home Content</button>
+                    <div className="main_dropdwn">
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/contact">Contact</a>
+                    </div>
                 </div>
-            </div>
-            <div className="navBod_level">
-                {/* <img className='imgs' src={images} alt="" /> */}
-                <button className="dropbtn">Level Up Site</button>
-                <div className="level_up_dropdwn">
-                    <a href="/level_up_home">Home</a>
-                    <a href="/level_up_about">About</a>
-                    <a href="/level_up_upload">Upload Content</a>
-                    <a href="/level_up_contact">Contact Us</a>
-                    {/* <img className='imgs' src={images} alt="" /> */}
-                    {/* <p className='links'>/</p>
-                    <Link className='links' to="/level_up_home">Home</Link>
-                    <p className='links'>/</p>
-                    <Link className='links' to="/level_up_about">About</Link>
-                    <p className='links'>/</p>
-                    <Link className='links' to="/level_up_upload">Upload Content</Link>
-                    <p className='links'>/</p>
-                    <Link className='links' to="/level_up_contact">Contact Us</Link>
-                    <p className='links'>/</p> */}
+                <div className="navBod_level">
+                    <button className="dropbtn">Level Up Site</button>
+                    <div className="level_up_dropdwn">
+                        <a href="/level_up_home">Home</a>
+                        <a href="/level_up_about">About</a>
+                        <a href="/level_up_create">Upload Content</a>
+                        <a href="/level_up_contact">Contact Us</a>
+                    </div>
+                </div>
+                <div className="navBod_star">
+                    <button className="dropbtn">Star Wars</button>
+                    <div className="main_dropdwn">
+                        <a href="/starwarsapi">API</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -180,7 +180,7 @@ export default class Form extends Component {
             <div>
                 <form onSubmit={this.handleSubmit} className="overallWrap">
                     <br />
-                    <div className="color small"><h1 className="title">Shop Cars</h1></div>
+                    <div className="color small"><h1 className="level_title">Shop Cars</h1></div>
                     <br />
                     <div className="listingWrap">
                         <div className="color">
