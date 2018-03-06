@@ -12,6 +12,7 @@ import Level_Up_Contact from './level_up/Contact';
 // import Level_Up_Signup from './level_up/';
 import Level_Up_Content from './level_up/Content/Content';
 import Starwars_API from './StarwarsAPI';
+import Character from './StarwarsAPI/Sidebar/Character';
 
 import './App.css'
 
@@ -41,9 +42,8 @@ class App extends Component {
                     <Route path='/level_up_create' component={Level_Up_Content} />
                     {/* <Route path='/level_up_login' component={Level_Up_Login} /> */}
                     {/* <Route path='/level_up_signup' component={Level_Up_Signup} /> */}
-                    <div className="stars">
-                        <Route path='/starwarsapi' component={Starwars_API} />
-                    </div>
+                    <Route path='/starwarsapi' component={Starwars_API} />
+                    <Route path='/characters/:id' component={Character} />
                 </Switch>
             </div>
         )

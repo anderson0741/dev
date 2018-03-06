@@ -1,9 +1,11 @@
-/* .stars{
-    background-image: url(http://orig12.deviantart.net/53f9/f/2016/338/7/d/star_wars___death_star_wallpaper_by_rocklou-daqj3gl.png);
+body{
+    /* background-image: url(https://www.planwallpaper.com/static/images/Autumn-Wallpapers-Backgrounds.jpg); */
     background-repeat: none;
     background-size: cover;
-} */
+}
 
 .global_div{
-    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
 }
