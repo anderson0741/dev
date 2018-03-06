@@ -1,63 +1,30 @@
-import React, { Component } from 'react';
-import SignupForm from "./SignUpForm";
+import React from 'react';
 
-import { connect } from "react-redux";
-import { signup } from '../../redux/auth';
-
-class SignupFormContainer extends Component {
-    constructor() {
-        super();
-        this.state = {
-            inputs: {
-                name: "",
-                username: "",
-                password: ""
-            }
-        }
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    handleChange(e) {
-        e.persist();
-        this.setState(prevState => {
-            return {
-                inputs: {
-                    ...prevState.inputs,
-                    [e.target.name]: e.target.value
-                }
-            }
-        })
-    }
-
-    clearInputs() {
-        this.setState({
-            inputs: {
-                name: "",
-                username: "",
-                password: ""
-            }
-        })
-    }
-
-    handleSubmit(e) {
-        e.preventDefault();
-        this.props.signup(this.state.inputs);
-        //alert(JSON.stringify(this.state.inputs));
-        this.clearInputs();
-    }
-
-    render() {
-        return (
-            <SignupForm
-                handleChange={this.handleChange.bind(this)}
-                handleSubmit={this.handleSubmit.bind(this)}
-                {...this.state.inputs} />
-        )
-    }
+function SignupForm(props) {
+    return (
+        <div className="outerSign">
+            <form className="signForm" onSubmit={props.handleSubmit}>
+                <div className="innerSign">
+                    <h3>Sign Up!</h3>
+                    <input
+                        onChange={props.handleChange}
+                        value={props.username}
+                        name="username"
+                        type="text"
+                        placeholder="Username" />
+                    <br />
+                    <input
+                        onChange={props.handleChange}
+                        value={props.password}
+                        name="password"
+                        type="password"
+                        placeholder="Password" />
+                    <br />
+                    <button type="submit">Submit</button>
+                </div> 
+            </form>
+        </div>
+    )
 }
 
-export default connect(null, {signup})(SignupFormContainer);
-
-
-
+export default SignupForm
