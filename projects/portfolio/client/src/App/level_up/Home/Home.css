@@ -12,15 +12,22 @@
     grid-template-areas: "s a" "l l";
 }
 .homeBox{
-    border: solid black 3px;
-    box-shadow: 3px 3px 7px gray;
+    border: solid black 1px;
+    box-shadow: 1px 1px 7px gray;
 }
 .welcome_level{
     background-image: url('../images/TransAm.jpg');
     background-size: cover;
-    height: 900px;
+    background-position-y: center;
+    height: 500px;
     width: 1300px;
-
+    box-shadow: 1px 1px 1px black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 35px;
+    text-shadow: 3px 3px black;
+    color: white;
 }
 .shopCars{
     grid-area: s;
@@ -32,7 +39,7 @@
     align-items: center;
     color: white;
     text-decoration: none;
-    text-shadow: 3px 3px 12px black;
+    text-shadow: 1px 1px 1px black;
 }
 .aboutSelector{
     grid-area: a;
@@ -44,7 +51,7 @@
     align-items: center;
     color: white;
     text-decoration: none;
-    text-shadow: 3px 3px 12px black;
+    text-shadow: 1px 1px 1px black;
 }
 .location{
     grid-area: l;
@@ -60,7 +67,7 @@
     align-items: center;
     color: white;
     text-decoration: none;
-    text-shadow: 3px 3px 12px black;
+    text-shadow: 1px 1px 1px black;
 }
 .otherFuture{
     grid-area: of;
@@ -70,5 +77,5 @@
     align-items: center;
     color: white;
     text-decoration: none;
-    text-shadow: 3px 3px 12px black;
+    text-shadow: 1px 1px 1px black;
 }
