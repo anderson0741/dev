@@ -19,7 +19,7 @@ class Listing extends Component {
 
 
     render() {
-        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photo1, photo2, photo3, /*photo4,*/ description, listingDelete, _id, } = this.props;
+        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photo1, photo2, photo3, /*photo4,*/ description, listingDelete, _id } = this.props;
         let { isEditing } = this.state;
         return (
             <div className="parent">

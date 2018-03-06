@@ -1,36 +1,57 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import SignUp from '../SignUp/index';
+import React, { Component } from 'react';
+import LoginForm from "./LoginForm";
 
-function LoginForm(props) {
-    return (
-        <div className="outerSign">
-            <form className="signForm" onSubmit={props.handleSubmit}>
-                <div className="innerSign">
-                    <h3>Log In</h3>
-                    <input
-                        onChange={props.handleChange}
-                        value={props.username}
-                        name="username"
-                        type="text"
-                        placeholder="Username" />
-                    <br />
-                    <input
-                        onChange={props.handleChange}
-                        value={props.password}
-                        name="password"
-                        type="password"
-                        placeholder="Password" />
-                    <br />
-                    <button type="submit">Submit</button>
-                    <br />
-                    <br />
-                    <br />
-                    <Link to="/SignUp">Sign Up</Link>
-                </div>
-            </form>
-        </div>
-    )
+import { connect } from "react-redux";
+import { login } from '../../redux/auth';
+
+class LoginFormContainer extends Component {
+    constructor() {
+        super();
+        this.state = {
+            inputs: {
+                username: "",
+                password: ""
+            }
+        }
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(e) {
+        e.persist();
+        this.setState((prevState) => {
+            return {
+                inputs: {
+                    ...prevState.inputs,
+                    [e.target.name]: e.target.value
+                }
+            }
+        })
+    }
+
+    clearInputs() {
+        this.setState({
+            inputs: {
+                username: "",
+                password: ""
+            }
+        })
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.login(this.state.inputs);
+        this.clearInputs();
+    }
+
+    render() {
+        return (
+            <LoginForm
+                handleChange={this.handleChange}
+                handleSubmit={this.handleSubmit}
+                {...this.state.inputs} />
+        )
+    }
 }
 
-export default LoginForm;
+export default connect(null, { login })(LoginFormContainer)

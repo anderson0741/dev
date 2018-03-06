@@ -13,10 +13,10 @@ mongoose.connect("mongodb://localhost/listings", (err) => {
 
 app.use(morgan("dev"));
 app.use(bodyParser.json());
-
-app.use("/api", expressJwt({secret: process.env.SECRET}));
+app.use("/api/public/listing", require('./routes/public'));
+app.use("/api/listing/", expressJwt({secret: process.env.SECRET}));
 app.use("/auth", require("./routes/auth"));
-app.use('/listing', require('./routes/routes'));
+app.use('/api/listing', require('./routes/routes'));
 
 app.listen(8088, () => {
     console.log("Server is running on port 8088");

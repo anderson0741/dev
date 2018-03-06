@@ -39,8 +39,8 @@ const listingSchema = new mongoose.Schema({
     "photo4": String,
     user: {
         type: Schema.Types.ObjectId,
-        ref: "User",
-        required: true
+        ref: "User"
+        // required: true
     }
 });
 

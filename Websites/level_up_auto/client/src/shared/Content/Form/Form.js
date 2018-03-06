@@ -4,6 +4,7 @@ import axios from 'axios';
 // import Upload from '../shared/Upload';
 import request from 'superagent'; 
 import ListingDisplay from './Listing/ListingDisplay';
+import UserDisplay from './Userz/UserDisplay';
 // import EditForm from './EditForm/EditForm';
 
 import './Form.css';
@@ -31,7 +32,8 @@ export default class Form extends Component {
                 "color": '',
                 "doors": '',
                 "price": '',
-                "description": ''
+                "description": '',
+                "user": ''
             },
             listings: [],
             uploadedFileCloudinaryUrl: "",
@@ -172,7 +174,7 @@ export default class Form extends Component {
     }
 
     render() {
-        let { make, model, year, miles, drivetrain, transmission, color, doors, price, description, photo1, photo2, photo3, photo4 } = this.state.inputs;
+        let { make, model, year, miles, drivetrain, transmission, color, doors, price, description, photo1, photo2, photo3, photo4, user } = this.state.inputs;
         let { listings, loading } = this.state;
         console.log(listings);
         // console.log(make, model, year, miles, drivetrain, transmission, color, doors, price);
@@ -261,6 +263,7 @@ export default class Form extends Component {
                     </div>
                 </form>
                 <ListingDisplay handleEdit={this.handleEdit} listingDelete={this.listingDelete} loading={loading} listings={listings} />
+                <UserDisplay handleEdit={this.handleEdit} listingDelete={this.listingDelete} loading={loading} user={user} />
             </div>
 
         )
