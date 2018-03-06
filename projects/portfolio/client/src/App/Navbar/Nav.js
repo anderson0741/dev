@@ -8,7 +8,7 @@ import './Nav.css';
 
 function Nav() {
     return (
-        <div className="papa">
+        <div className="outside_nav">
             <div className="navBod">
                 <div className="navBod_main">
                     <button className='dropbtn'>Home Content</button>
@@ -29,7 +29,7 @@ function Nav() {
                 </div>
                 <div className="navBod_star">
                     <button className="dropbtn">Star Wars</button>
-                    <div className="main_dropdwn">
+                    <div className="star_dropdwn">
                         <a href="/starwarsapi">API</a>
                     </div>
                 </div>

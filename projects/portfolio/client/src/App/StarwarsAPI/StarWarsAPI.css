@@ -1,17 +1,18 @@
-.app-wrapper {
-    background-image: url(http://orig12.deviantart.net/53f9/f/2016/338/7/d/star_wars___death_star_wallpaper_by_rocklou-daqj3gl.png);
+.starwarz_div {
+    /* background-image: url(http://orig12.deviantart.net/53f9/f/2016/338/7/d/star_wars___death_star_wallpaper_by_rocklou-daqj3gl.png);
     background-repeat: none;
-    background-size: cover;
+    background-size: cover; */
+
 }
 
-.main-wrapper{
+.main-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.title{
+.title {
     color: white;
     display: flex;
     justify-content: center;
