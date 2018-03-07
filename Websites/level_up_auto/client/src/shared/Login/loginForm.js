@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import SignUp from '../SignUp/index';
 
 function LoginForm(props) {
-    console.log(props)
     return (
         <div className="outerSign">
             <form className="signForm" onSubmit={props.handleSubmit}>
@@ -23,11 +22,16 @@ function LoginForm(props) {
                         type="password"
                         placeholder="Password" />
                     <br />
+                    <br />
                     <button type="submit">Submit</button>
                     <br />
                     <br />
                     <br />
-                    <Link to="/SignUp">Sign Up</Link>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <Link to="/signup">Sign Up</Link>
                 </div>
             </form>
         </div>

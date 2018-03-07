@@ -44,7 +44,8 @@ export default function reducer(state = initialState, action) {
     }
 }
 
-export function login(credentials) {
+export function login(credentials, history) {
+    console.log(credentials);
     return dispatch => {
         axios.post("/auth/login", credentials)
             .then(response => {
@@ -52,6 +53,7 @@ export function login(credentials) {
                 localStorage.token = token
                 localStorage.user = JSON.stringify(user);
                 dispatch(authenticate(user));
+                history.push("/");
             })
             .catch((err) => {
                 console.error(err);

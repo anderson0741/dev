@@ -4,6 +4,8 @@ import LoginForm from "./LoginForm";
 import { connect } from "react-redux";
 import { login } from '../../redux/auth';
 
+import './Login.css';
+
 class LoginFormContainer extends Component {
     constructor() {
         super();
@@ -40,16 +42,20 @@ class LoginFormContainer extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.login(this.state.inputs);
+        this.props.login(this.state.inputs, this.props.history);
         this.clearInputs();
     }
 
     render() {
         return (
-            <LoginForm
-                handleChange={this.handleChange}
-                handleSubmit={this.handleSubmit}
-                {...this.state.inputs} />
+            <div className="outerlog">
+                <div className='log'>
+                    <LoginForm
+                        handleChange={this.handleChange}
+                        handleSubmit={this.handleSubmit}
+                        {...this.state.inputs} />
+                </div>
+            </div>
         )
     }
 }

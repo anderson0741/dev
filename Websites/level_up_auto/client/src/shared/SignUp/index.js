@@ -4,6 +4,8 @@ import SignupForm from "./SignUpForm";
 import { connect } from "react-redux";
 import { signup } from '../../redux/auth';
 
+import '../Login/Login.css';
+
 class SignupFormContainer extends Component {
     constructor() {
         super();
@@ -49,15 +51,19 @@ class SignupFormContainer extends Component {
 
     render() {
         return (
-            <SignupForm
-                handleChange={this.handleChange.bind(this)}
-                handleSubmit={this.handleSubmit.bind(this)}
-                {...this.state.inputs} />
+            <div className="outerlog">
+                <div className="log">
+                    <SignupForm
+                        handleChange={this.handleChange.bind(this)}
+                        handleSubmit={this.handleSubmit.bind(this)}
+                        {...this.state.inputs} />
+                </div>
+            </div>
         )
     }
 }
 
-export default connect(null, {signup})(SignupFormContainer);
+export default connect(null, { signup })(SignupFormContainer);
 
 
 

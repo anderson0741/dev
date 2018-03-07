@@ -105,6 +105,7 @@
 .homeBox{
     border: solid black 3px;
     box-shadow: 3px 3px 7px gray;
+    border-radius: 3px;
 }
 .shopCars{
     grid-area: s;

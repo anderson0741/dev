@@ -20,6 +20,8 @@ function SignupForm(props) {
                         type="password"
                         placeholder="Password" />
                     <br />
+                    <br />
+                    <br />
                     <button type="submit">Submit</button>
                 </div> 
             </form>

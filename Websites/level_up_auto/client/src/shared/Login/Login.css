@@ -1,0 +1,18 @@
+.outerlog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log{
+    width: 200px;
+    height: 300px;
+    box-shadow: 3px 3px 13px black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    border: solid black 1px;
+    border-radius: 3px;
+    /* width: 300px; */
+}
