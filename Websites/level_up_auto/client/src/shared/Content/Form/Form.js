@@ -263,7 +263,7 @@ export default class Form extends Component {
                     </div>
                 </form>
                 <ListingDisplay handleEdit={this.handleEdit} listingDelete={this.listingDelete} loading={loading} listings={listings} />
-                <UserDisplay handleEdit={this.handleEdit} listingDelete={this.listingDelete} loading={loading} user={user} />
+                {/* <UserDisplay handleEdit={this.handleEdit} listingDelete={this.listingDelete} loading={loading} user={user} /> */}
             </div>
 
         )
