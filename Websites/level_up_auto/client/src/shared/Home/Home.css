@@ -75,8 +75,14 @@
         margin: 2% 20%;
     }
 } */
+
+body {
+    background-image: url('../../images/jeep_background.jpg');
+    background-repeat: no-repeat;
+    
+}
 .welcome_level{
-    background-image: url('../../images/TransAm.jpg');
+    /* background-image: url('../../images/TransAm.jpg'); */
     background-size: cover;
     background-position-y: center;
     height: 500px;

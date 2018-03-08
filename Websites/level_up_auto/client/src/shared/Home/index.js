@@ -7,7 +7,7 @@ function Home(props) {
             <div className='homeDivBox'>
                 <br/>
                 <div className="welcome_level">
-                    <h1 className='tag'>Welcome to Level Up Car's</h1>
+                    <h1 className='tag'>Welcome to Level Up Cars</h1>
                 </div>
                 <br />
                 <br />
