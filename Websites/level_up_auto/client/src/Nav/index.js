@@ -12,28 +12,46 @@ class Nav extends Component {
     render() {
         const isAuthenticated = this.props.isAuthenticated;
         return (
-            <div className="papa" >
+            <div className="outerNavDiv" >
                 <div className="navBod">
                     <img className='imgs' src={images} alt="" />
-                    <div className="navi ">
-                        {/* <img className='imgs' src={images} alt="" /> */}
-                        <div className='links'><p>/</p></div>
+                    <div className="menuOptions">
+                        <div className="navBod_nav guest">
+                            <button className="dropbtn">Menu</button>
+                            <div className="nav_dropdwn">
+                                <a><Link className='links' to="/">Home</Link></a>
+                                <a><Link className='links' to="/about">About</Link></a>
+                                <a><Link className='links' to="/cars">Shop Cars</Link></a>
+                                <a><Link className='links' to="/contact">Contact Us</Link></a>
+                            </div>
+                        </div>
+                        {isAuthenticated ? <div className="navBod_nav user">
+                            <button className="dropbtn">Username</button>
+                            <div className="nav_dropdwn user">
+                                <a><Link className='links' to="/upload">Upload Content</Link></a>
+                                <a className='links' onClick={this.props.logout}>Logout</a>
+                            </div>
+                        </div> : null}
+                    </div>
+                    {/* <div className="navi "> */}
+                    {/* <img className='imgs' src={images} alt="" /> */}
+                    {/* <div className='links'><p>/</p></div>
                         <div className='links'><Link className='links' to="/">Home</Link></div>
                         <div className='links'><p>/</p></div>
                         <div className='links'><Link className='links' to="/about">About</Link></div>
                         <div className='links'><p>/</p></div>
                         <div className='links'><Link className='links' to="/cars">Shop Cars</Link></div>
                         <div className='links'><p>/</p></div>
-                        {isAuthenticated ? <div className='links'><Link className='links' to="/upload">Upload Content</Link></div> : null}
-                        {/* <div className='links'><Link className='links' to="/upload">Upload Content</Link></div> */}
-                        {isAuthenticated ? <div className='links'><p>/</p></div> : null}
-                        <div className='links'><Link className='links' to="/contact">Contact Us</Link></div>
-                        {/* <Link to="/image">Upload Image</Link> */}
-                        {isAuthenticated ? <div className='links'><p>/</p></div> : null}
+                        {isAuthenticated ? <div className='links'><Link className='links' to="/upload">Upload Content</Link></div> : null} */}
+                    {/* <div className='links'><Link className='links' to="/upload">Upload Content</Link></div> */}
+                    {/* {isAuthenticated ? <div className='links'><p>/</p></div> : null} */}
+                    {/* <div className='links'><Link className='links' to="/contact">Contact Us</Link></div> */}
+                    {/* <Link to="/image">Upload Image</Link> */}
+                    {/* {isAuthenticated ? <div className='links'><p>/</p></div> : null}
                         {isAuthenticated ? <div className="links"><a className='links' onClick={this.props.logout}>Logout</a></div> : null}
                         <div className='links'><p>/</p></div>
-                        {isAuthenticated ? null : <div className='links'><Link className='links' to="/login">Login</Link></div>}
-                    </div>
+                        {isAuthenticated ? null : <div className='links'><Link className='links' to="/login">Login</Link></div>} */}
+                    {/* </div> */}
                 </div>
             </div>
         )

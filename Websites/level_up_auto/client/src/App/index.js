@@ -15,20 +15,26 @@ import './App.css';
 function App(props) {
     return (
         <div className="appStructure">
-            <Nav />
+            <div className="appNav">
+                <Nav />
+            </div>
             <br />
-            <Switch>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/about' component={About} />
-                <Route exact path='/cars' component={Shop} />
-                <Route path='/upload' component={Content} />
-                {/* <Route path='/image' component={Upload} /> */}
-                <Route path='/contact' component={Contact} />
-                <Route path='/login' component={Login} />
-                <Route path='/signup' component={SignUp} />
-            </Switch>
+            <div className="switchContent">
+                <Switch>
+                    <Route exact path='/' component={Home} />
+                    <Route exact path='/about' component={About} />
+                    <Route exact path='/cars' component={Shop} />
+                    <Route path='/upload' component={Content} />
+                    {/* <Route path='/image' component={Upload} /> */}
+                    <Route path='/contact' component={Contact} />
+                    <Route path='/login' component={Login} />
+                    <Route path='/signup' component={SignUp} />
+                </Switch>
+            </div>
             <br />
-            <Footer />
+            <div className="appFooter">
+                <Footer />
+            </div>
         </div>
     )
 }

@@ -78,7 +78,9 @@
 
 body {
     background-image: url('../../images/jeep_background.jpg');
-    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
     
 }
 .welcome_level{
@@ -87,7 +89,6 @@ body {
     background-position-y: center;
     height: 500px;
     width: 1300px;
-    box-shadow: 1px 1px 1px black;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -109,8 +110,8 @@ body {
     grid-template-areas: "s a" "l l";
 }
 .homeBox{
-    border: solid black 3px;
-    box-shadow: 3px 3px 7px gray;
+    border: solid black 2px;
+    box-shadow: 3px 3px 7px black;
     border-radius: 3px;
 }
 .shopCars{

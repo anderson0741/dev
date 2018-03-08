@@ -9,8 +9,6 @@ function Home(props) {
                 <div className="welcome_level">
                     <h1 className='tag'>Welcome to Level Up Cars</h1>
                 </div>
-                <br />
-                <br />
                 <div className="selector">
                     <a href="cars" className="shopCars homeBox">
                         <h1>SHOP CARS</h1>
