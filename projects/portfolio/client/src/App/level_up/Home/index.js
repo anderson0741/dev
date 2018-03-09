@@ -1,10 +1,14 @@
 import React from 'react';
 import './Home.css';
+import Home1 from '../../screen_shots/home1.png';
+import Home2 from '../../screen_shots/home2.png';
 
 function Home(props) {
     return (
         <div className="outerHomeDiv">
-            <div className='homeDivBox'>
+            <img className='contact_shot' src={Home1} alt="" />
+            <img className='contact_shot' src={Home2} alt="" />
+            {/* <div className='homeDivBox'>
                 <br/>
                 <div className="welcome_level">
                     <h1 className='tag'>Welcome to Level Up Car's</h1>
@@ -21,7 +25,7 @@ function Home(props) {
                         <h1>LOCATION</h1>
                     </a>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

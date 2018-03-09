@@ -1,6 +1,7 @@
 @media (min-width: 768px) {
     .parent{
         margin-bottom: 13px;
+        padding-top: 30px;
     }
     .images {
         display: flex;
