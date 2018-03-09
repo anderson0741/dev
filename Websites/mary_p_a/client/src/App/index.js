@@ -16,11 +16,11 @@ export default class App extends Component {
                 </div>
                 <br />
                 <div className="content">
-                    <LeftSideBar />
+                    {/* <LeftSideBar /> */}
                     <Switch>
                         <Route path="/" component={Home} />
                     </Switch>
-                    <RightSideBar />
+                    {/* <RightSideBar /> */}
                 </div>
             </div>
         )

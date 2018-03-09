@@ -5,9 +5,9 @@ function Home(props) {
     return (
         <div className="outerHomeDiv">
             <div className='homeDivBox'>
-                <br/>
+                <br />
                 <div className="welcome_level">
-                    <h1 className='tag'>Welcome to Level Up Cars</h1>
+                    <h1 className='tag zoomIn'>Welcome to Level Up Cars</h1>
                 </div>
                 <div className="selector">
                     <a href="cars" className="shopCars homeBox">
