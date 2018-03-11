@@ -6,7 +6,7 @@
         justify-content: center;
     }
     .navBod {
-        background-color: rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.9);
         top: 0%;
         background-position-y: 450%;
         background-position-x: 40%;

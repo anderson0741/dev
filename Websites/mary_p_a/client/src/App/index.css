@@ -1,3 +1,7 @@
+body{
+    background-image: url('../images/smokey_bg.jpg');
+}
+
 .content{
     display: flex;
     justify-content: space-between;
