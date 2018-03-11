@@ -15,12 +15,15 @@ const Title = styled.div`
     justify-content: center;
 `;
 const Name = styled.h1`
-    font-size: 9vw;
+    font-size: 10vw;
+    color: rgb(145, 137, 137);
+    text-shadow: 3px 3px 3px black;
 `;
 const Subtitle = styled.h3`
-    font-size: 4vw;
+    font-size: 5vw;
     text-align: center;
-   
+   color: rgb(145, 137, 137);
+   text-shadow: 3px 3px 3px black;
 `;
 const Grid = styled.div`
     display: grid;
@@ -32,11 +35,6 @@ function Home() {
     return (
         <Grid id="home" >
             <div>
-                {/* <Videocont>
-                    <Video video autobuffer loop autoPlay>
-                        <source src={Typing} type="video/mp4" />
-                    </Video>
-                </Videocont> */}
                 <Overlay>
                     <Title>
                         <Name>Mary Anderson</Name>
