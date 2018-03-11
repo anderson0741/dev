@@ -60,19 +60,6 @@ class Nav extends Component {
                                 </div>
                             </div> : null}
                         </SNav>
-                        {/* <div><p className='links'>/</p></div>
-                        {isAuthenticated ? null : <div><Link className='links' to="/">Home</Link></div>}
-                        <div><p className='links'>/</p></div>
-                        {isAuthenticated ? null : <div><Link className='links' to="/about">About</Link></div>}
-                        <div><p className='links'>/</p></div>
-                        {isAuthenticated ? <div><Link className='links' to="/upload">Upload Posts</Link></div> : null}
-                        <div><p className='links'>/</p></div>
-                        {isAuthenticated ? null : <div><Link className='links' to="/contact">Contact</Link></div>}
-                        <div><p className='links'>/</p></div>
-                        {isAuthenticated ? null : <div className="navlinkz"><Link to="/login">Login</Link></div>}
-                        {isAuthenticated ? <div className="navlinkz">
-                            <Link onClick={this.props.logout}>Logout</Link>
-                        </div> : null} */}
                     </div>
                 </div>
             </div>
