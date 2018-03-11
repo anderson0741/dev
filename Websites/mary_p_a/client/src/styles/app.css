@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-image: url('../images/smokey_bg.jpg')
+}
+canvas {
+    background: linear-gradient(to right, black, black, black, red, yellow);
+}
