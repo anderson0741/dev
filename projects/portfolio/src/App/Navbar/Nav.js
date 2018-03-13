@@ -6,11 +6,20 @@ import { Link } from 'react-router-dom';
 
 import './Nav.css';
 
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
 function Nav() {
     return (
         <div className="outside_nav">
-            <div className="navBod">
-                <div className="navBod_main">
+            <div className="navBod topnav">
+                <div className="navBod_main active">
                     <button className='dropbtn'>Home Content</button>
                     <div className="main_dropdwn">
                         <a href="/">Home</a>
@@ -34,6 +43,9 @@ function Nav() {
                     <div className="star_dropdwn">
                         <a href="/starwarsapi">API</a>
                     </div>
+                </div>
+                <div>
+                    {/* <a href="javascript:void(0);" style="font-size:15px;" className="icon" onclick="myFunction()">&#9776;</a> */}
                 </div>
             </div>
         </div>

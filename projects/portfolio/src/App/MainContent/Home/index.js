@@ -39,14 +39,22 @@ function Home(props) {
                 </Overlay>
                 <br />
                 <div className="main_selector">
-                    <h1 className="various_projects main_homeBox">Such fun</h1>
+                    <h1 className="various_projects main_homeBox">Projects</h1>
                     <a href="/level_up_home" className="main_shopCars main_homeBox">
-                        <h1>Level Up Cars</h1>
-                        <p>Local Dealership</p>
+                        <Overlay>
+                            <Title>
+                                <h1>Level Up Cars</h1>
+                                <p>Local Dealership</p>
+                            </Title>
+                        </Overlay>
                     </a>
                     <a className="main_aboutSelector main_homeBox" href="/allaboutme">
-                        <h1>All about ME</h1>
-                        <p>Esthetics Web Page</p>
+                        <Overlay>
+                            <Title>
+                                <h1>All about ME</h1>
+                                <p>Esthetics Web Page</p>
+                            </Title>
+                        </Overlay>
                     </a>
                     <a className="main_aboutSelf main_homeBox" href="/about">
                         <h1>About</h1>
