@@ -1,0 +1,13 @@
+body{
+    background-image: url(https://www.planwallpaper.com/static/images/Autumn-Wallpapers-Backgrounds.jpg);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+}
+
+.global_div{
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+}
