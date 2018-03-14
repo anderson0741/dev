@@ -1,17 +1,11 @@
 @media(min-width: 862px) {
     .welcome_main {
-        /* background-image: url('../../images/TransAm.jpg'); */
         display: flex;
         flex-direction: column;
         background-size: cover;
         justify-content: center;
         align-items: center;
         background-position-y: center;
-        height: 500px;
-        width: 1300px;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
         font-size: 35px;
         text-shadow: 3px 3px black;
         color: white;
@@ -118,16 +112,10 @@
     .welcome_main {
         display: flex;
         flex-direction: column;
-        background-size: cover;
         justify-content: center;
         align-items: center;
+        background-size: cover;
         background-position-y: center;
-        height: 500px;
-        width: 1300px;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        font-size: 35px;
         text-shadow: 3px 3px black;
         color: white;
     }
