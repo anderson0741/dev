@@ -41,20 +41,12 @@ function Home(props) {
                 <div className="main_selector">
                     <h1 className="various_projects main_homeBox">Projects</h1>
                     <a href="/level_up_home" className="main_shopCars main_homeBox">
-                        <Overlay>
-                            <Title>
-                                <h1>Level Up Cars</h1>
-                                <p>Local Dealership</p>
-                            </Title>
-                        </Overlay>
+                        <h1 className='littleTitle'>Level Up Cars</h1>
+                        <p className='sub'>Local Dealership</p>
                     </a>
-                    <a className="main_aboutSelector main_homeBox" href="/allaboutme">
-                        <Overlay>
-                            <Title>
-                                <h1>All about ME</h1>
-                                <p>Esthetics Web Page</p>
-                            </Title>
-                        </Overlay>
+                    <a className="main_aboutSelector main_homeBox" href="/all_about_me">
+                        <h1 className='littleTitle'>All about ME</h1>
+                        <p className='sub'>Esthetics Web Page</p>
                     </a>
                     <a className="main_aboutSelf main_homeBox" href="/about">
                         <h1>About</h1>

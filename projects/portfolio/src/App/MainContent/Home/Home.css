@@ -111,6 +111,10 @@
         text-decoration: none;
         text-shadow: 3px 3px 12px black;
     }
+    .littleTitle {
+        margin-bottom: 0vh;
+        margin-top: 10vh;
+    }
 }
 
 @media(max-width: 861px) {

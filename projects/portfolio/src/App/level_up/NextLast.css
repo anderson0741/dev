@@ -71,7 +71,7 @@
     border-radius: 3px;
 }
 
-a {
+.levelLink {
     text-decoration: none;
     color: white;
 }

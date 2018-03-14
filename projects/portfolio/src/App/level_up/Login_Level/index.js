@@ -6,13 +6,13 @@ function Login_Level() {
     return (
         <div className="login_parent">
             <div className="next_last">
-                <button className='prev_btn'><a href="/level_up_contact">Prev</a></button>
+                <button className='prev_btn'><a className='levelLink' href="/level_up_contact">Prev</a></button>
             </div>
             <div>
                 <img className='contact_shot' src={log_in} alt="" />
             </div>
             <div className="next_last">
-                <button className='prev_btn'><a href="/level_up_contact">Prev</a></button>
+                <button className='prev_btn'><a className='levelLink' href="/level_up_contact">Prev</a></button>
             </div>
         </div>
     )

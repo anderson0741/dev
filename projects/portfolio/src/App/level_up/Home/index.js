@@ -9,14 +9,14 @@ function Home(props) {
     return (
         <div className="levelHome_parent">
             <div className="next_last">
-                <button className="next_btn"><a href="/level_up_create">Next</a></button>
+                <button className="next_btn"><a className='levelLink' href="/level_up_create">Next</a></button>
             </div>
             <div className="outerHomeDiv">
                 <img className='contact_shot' src={Home1} alt="" />
                 <img className='contact_shot' src={Home2} alt="" />
             </div>
             <div className="next_last">
-                <button className="next_btn"><a href="/level_up_create">Next</a></button>
+                <button className="next_btn"><a className='levelLink' href="/level_up_create">Next</a></button>
             </div>
         </div>
     )
