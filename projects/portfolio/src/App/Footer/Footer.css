@@ -1,0 +1,18 @@
+.footer_parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    background-color: rgba(244, 159, 0, 0.7);
+    border: solid black 2px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px black;
+    
+}
+
+.icons{
+    height: 75px;
+    width: 75px;
+    margin-top: 1vh;
+    margin-right: 1vh;
+}
