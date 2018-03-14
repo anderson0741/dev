@@ -44,9 +44,9 @@ function Nav() {
                         <a href="/starwarsapi">API</a>
                     </div>
                 </div>
-                <div>
+                {/* <div> */}
                     {/* <a href="javascript:void(0);" style="font-size:15px;" className="icon" onclick="myFunction()">&#9776;</a> */}
-                </div>
+                {/* </div> */}
             </div>
         </div>
     )
