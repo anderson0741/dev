@@ -37,7 +37,7 @@
         /* align-self: flex-end; */
     }
     .dropbtn {
-        background-color: rgb(236, 78, 92);
+        background-color: rgb(231, 123, 22);
         color: white;
         padding: 16px;
         font-size: 16px;
@@ -68,7 +68,7 @@
         display: block;
     }
     .navBod_main:hover .dropbtn {
-        background-color: #3e8e41;
+        background-color: rgba(0, 0, 0, 0.3);
     }
     .navBod_level {
         position: relative;
@@ -95,7 +95,7 @@
         display: block;
     }
     .navBod_level:hover .dropbtn {
-        background-color: #3e8e41;
+        background-color: rgba(0, 0, 0, 0.3);
     }
     .starlevel {
         position: relative;
@@ -122,7 +122,7 @@
         display: block;
     }
     .navBod_star:hover .dropbtn {
-        background-color: #3e8e41;
+        background-color: rgba(0, 0, 0, 0.3);
     }
 }
 
@@ -169,7 +169,7 @@
         color: black;
     }
     .active {
-        background-color: #4CAF50;
+        background-color: rgba(0, 0, 0, 0.5);
         color: white;
     }
     .topnav .icon {

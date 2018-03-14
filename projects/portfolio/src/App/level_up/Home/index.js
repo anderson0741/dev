@@ -2,12 +2,22 @@ import React from 'react';
 import './Home.css';
 import Home1 from '../../screen_shots/home1.png';
 import Home2 from '../../screen_shots/home2.png';
+// import SideNav from '../SideNav';
+import '../NextLast.css';
 
 function Home(props) {
     return (
-        <div className="outerHomeDiv">
-            <img className='contact_shot' src={Home1} alt="" />
-            <img className='contact_shot' src={Home2} alt="" />
+        <div className="levelHome_parent">
+            <div className="next_last">
+                <button className="next_btn"><a href="/level_up_create">Next</a></button>
+            </div>
+            <div className="outerHomeDiv">
+                <img className='contact_shot' src={Home1} alt="" />
+                <img className='contact_shot' src={Home2} alt="" />
+            </div>
+            <div className="next_last">
+                <button className="next_btn"><a href="/level_up_create">Next</a></button>
+            </div>
         </div>
     )
 }

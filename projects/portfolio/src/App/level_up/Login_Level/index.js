@@ -1,10 +1,19 @@
 import React from 'react'
 import log_in from '../../screen_shots/login1.png';
+import '../NextLast.css';
 
 function Login_Level() {
     return (
-        <div>
-            <img className='contact_shot' src={log_in} alt="" />
+        <div className="login_parent">
+            <div className="next_last">
+                <button className='prev_btn'><a href="/level_up_contact">Prev</a></button>
+            </div>
+            <div>
+                <img className='contact_shot' src={log_in} alt="" />
+            </div>
+            <div className="next_last">
+                <button className='prev_btn'><a href="/level_up_contact">Prev</a></button>
+            </div>
         </div>
     )
 }

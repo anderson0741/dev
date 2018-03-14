@@ -1,3 +1,7 @@
+.levelHome_parent{
+    display: flex;
+    flex-direction: column;
+}
 .homeDivBox{
     display: flex;
     flex-direction: column;
