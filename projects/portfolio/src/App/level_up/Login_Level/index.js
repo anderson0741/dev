@@ -4,7 +4,10 @@ import '../NextLast.css';
 
 function Login_Level() {
     return (
-        <div className="login_parent">
+        <div className="login_parent levelHome_parent">
+            <div className="disclaimer">
+                <h3>The following are screenshots from Level Up Auto</h3>
+            </div>
             <div className="next_last">
                 <button className='prev_btn'><a className='levelLink' href="/level_up_contact">Prev</a></button>
             </div>

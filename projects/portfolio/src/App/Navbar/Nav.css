@@ -137,6 +137,7 @@
     .outside_nav {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
     .homebtn{
         text-decoration: none;
@@ -152,7 +153,7 @@
         height: 65px;
         width: 100%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         /* border: black 1px solid; */
         padding-left: 10px;
