@@ -4,11 +4,11 @@
 // console.log(questionOne());
 
 
-// function questionTwo (num1, num2, num3) {
-//     return Math.max(num1, num2, num3)
-// }
+function questionTwo (num1, num2, num3) {
+    return Math.max(num1, num2, num3)
+}
 
-// console.log(questionTwo(1, 9, 3));
+console.log(questionTwo(10, 9, 3));
 
 // var questionThree = function(number) {
 //     // Your code goes here!
