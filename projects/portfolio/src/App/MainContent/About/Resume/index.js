@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Document, Page } from 'react-pdf';
-import ResumePDF from './Resume...docx (1).pdf';
+import ResumePDF from './Resume.pdf';
 import './Resume.css';
 
 export default class Resume extends Component {

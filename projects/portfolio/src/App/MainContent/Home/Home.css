@@ -1,15 +1,4 @@
 @media(min-width: 862px) {
-    .welcome_main {
-        display: flex;
-        flex-direction: column;
-        background-size: cover;
-        justify-content: center;
-        align-items: center;
-        background-position-y: center;
-        font-size: 35px;
-        text-shadow: 3px 3px black;
-        color: white;
-    }
     .main_tag {
         margin: auto;
     }
@@ -118,16 +107,6 @@
 }
 
 @media(max-width: 861px) {
-    .welcome_main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-size: cover;
-        background-position-y: center;
-        text-shadow: 3px 3px black;
-        color: white;
-    }
     .main_tag {
         margin: auto;
     }
@@ -139,12 +118,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 0px;
     }
     .main_selector {
         display: grid;
         grid-template-columns: 400px;
         grid-template-rows: 200px 100px 200px 200px;
-        grid-gap: 50px;
+        grid-gap: 3px;
         grid-template-areas: "ab" "v" "s" "a" "l";
     }
     .main_homeBox {
@@ -178,7 +158,7 @@
     }
     .main_aboutSelf {
         grid-area: ab;
-        /* background-image: url("../../images/story.JPG"); */
+        background-image: url('../../images/About.JPG');
         background-size: 400px;
         display: flex;
         flex-direction: column;

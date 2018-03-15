@@ -37,7 +37,6 @@ function Home(props) {
                         <Subtitle className="webD">-Web Developer</Subtitle>
                     </Title>
                 </Overlay>
-                <br />
                 <div className="main_selector">
                     <h1 className="various_projects main_homeBox">Projects</h1>
                     <a href="/level_up_home" className="main_shopCars main_homeBox">

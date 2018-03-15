@@ -1,12 +1,23 @@
-body{
-    background-image: url(https://www.planwallpaper.com/static/images/Autumn-Wallpapers-Backgrounds.jpg);
-    /* background-repeat: no-repeat; */
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: repeat-y;
+@media(min-width: 862px) {
+    body {
+        background-image: url('./images/Autumn-Wallpapers.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: repeat-y;
+    }
 }
 
-.global_div{
+@media(max-width: 861px) {
+    body {
+        background-image: url('./images/Autumn-Wallpapers.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: repeat-y;
+        background-position: center;
+    }
+}
+
+.global_div {
     background-position: center;
     background-attachment: fixed;
     background-repeat: repeat-y;

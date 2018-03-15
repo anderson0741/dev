@@ -3,6 +3,10 @@
         display: flex;
         justify-content: center;
     }
+    .homebtn{
+        text-decoration: none;
+        color: white;
+    }
     .navBod {
         /* background-color: rgb(92, 187, 79); */
         background-image: url("../images/union.jpg");
