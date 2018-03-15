@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Home.css';
 import styled from 'styled-components';
+import Image1 from '../images/About.JPG';
+import Image2 from '../images/contact.png';
+import Images3 from '../images/Screen Shot 2018-03-12 at 7.39.37 PM.png';
+import Images4 from '../images/union.jpg';
 
 const Overlay = styled.div`
     display: grid;
@@ -27,9 +31,27 @@ const Subtitle = styled.h3`
     text-shadow: 3px 3px black;
 `;
 
-function Home(props) {
-    return (
-        <div className="outerHomeDiv">
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+class Home extends Component {
+    render() {
+        return (
             <div className='homeDivBox'>
                 <Overlay>
                     <Title>
@@ -37,26 +59,19 @@ function Home(props) {
                         <Subtitle className="subName">-Sue Palmer</Subtitle>
                     </Title>
                 </Overlay>
-                <div className="main_selector">
-                    {/* <h1 className="various_projects main_homeBox">Projects</h1>
-                    <a href="/level_up_home" className="main_shopCars main_homeBox">
-                        <h1 className='littleTitle'>Level Up Cars</h1>
-                        <p className='sub'>Local Dealership</p>
-                    </a>
-                    <a className="main_aboutSelector main_homeBox" href="/all_about_me">
-                        <h1 className='littleTitle'>All about ME</h1>
-                        <p className='sub'>Esthetics Web Page</p>
-                    </a>
-                    <a className="main_aboutSelf main_homeBox" href="/about">
-                        <h1>About</h1>
-                    </a>
-                    <a href="contact" className="main_location main_homeBox">
-                        <h1>LOCATION</h1>
-                    </a> */}
+                <h2 class="w3-center">Manual Slideshow</h2>
+                <div class="w3-content w3-display-container">
+                    <img class="mySlides" src={Image1} style="width:100%" />
+                    <img class="mySlides" src={Image2} style="width:100%" />
+                    <img class="mySlides" src={Images3} style="width:100%" />
+                    <img class="mySlides" src={Images4} style="width:100%" />
+
+                    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default Home
