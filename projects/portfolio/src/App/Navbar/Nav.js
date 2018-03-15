@@ -19,21 +19,22 @@ function Nav() {
                     </div>
                 </div>
                 <div className="navBod_level">
-                    <button className="dropbtn"><a className
-                    ="homebtn" href="/level_up_home">Level Up Site</a></button>
+                    <button className="dropbtn">Projects</button>
                     <div className="level_up_dropdwn">
-                        {/* <a href="/level_up_home">Home</a> */}
+                        <a className="titleLink" href="/level_up_home">Level Up Home</a>
                         {/* <a href="/level_up_about">About</a> */}
                         <a href="/level_up_create">Upload Content</a>
                         <a href="/level_up_shopping">Shop</a>
                         <a href="/level_up_contact">Contact Us</a>
                         <a href="/level_up_login">Login</a>
+                        <a className="titleLink" href="/starwarsapi">Star Wars API</a>
                     </div>
                 </div>
                 <div className="navBod_star">
-                    <button className="dropbtn">Star Wars</button>
+                    <button className="dropbtn">Social</button>
                     <div className="star_dropdwn">
-                        <a href="/starwarsapi">API</a>
+                        <a href="https://www.linkedin.com/in/anderson0741/">LinkedIn</a>
+                        <a href="https://github.com/anderson0741">GitHub</a>
                     </div>
                 </div>
             </div>

@@ -128,8 +128,8 @@
     .navBod_star:hover .dropbtn {
         background-color: rgba(0, 0, 0, 0.3);
     }
-    .mobileNav {
-        display: none;
+    .titleLink{
+        background-color: rgb(231, 123, 22);
     }
 }
 
@@ -258,5 +258,8 @@
     }
     .navBod_star:hover .dropbtn {
         background-color: rgba(0, 0, 0, 0.3);
+    }
+    .titleLink{
+        background-color: rgb(231, 123, 22);
     }
 }
