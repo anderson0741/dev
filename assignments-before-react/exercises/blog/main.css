@@ -1,0 +1,72 @@
+body {
+    background-image: url('http://vg5b2ejdwb-flywheel.netdna-ssl.com/wp-content/uploads/2014/07/ladybird-spiders-eresus-sandalia.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main-nav {
+    background-color: rgba(12, 226, 215, 0.7);
+    width: 100%;
+    height: 70px;
+    padding: 5px;
+    padding-top: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 5vh;
+    box-shadow: 3px 3px 12px black;
+}
+
+.linkz{
+    text-decoration: none;
+    margin-right: 3vw;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}
+.title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 70px;
+    text-align: center;
+    font-size: 15vh;
+    text-shadow: 3px 3px 15px black;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.blog_wrap{
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45vw;
+    color: white;
+    margin-top: 3vh;
+    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.4);
+    border: solid rgb(0, 0, 0) 2px;
+    border-radius: 2%;
+}
+.blog_p{
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+.mainframepic {
+    height: 100px;
+    width: 65%;
+    background-color: darkorange;
+}
+
+.blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

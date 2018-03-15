@@ -34,11 +34,11 @@ const Subtitle = styled.h3`
 var slideIndex = 1;
 showDivs(slideIndex);
 
-function plusDivs(n) {
+export function plusDivs(n) {
   showDivs(slideIndex += n);
 }
 
-function showDivs(n) {
+export function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
   if (n > x.length) {slideIndex = 1}    
@@ -49,7 +49,7 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
 }
 
-class Home extends Component {
+export default class Home extends Component {
     render() {
         return (
             <div className='homeDivBox'>
@@ -74,4 +74,3 @@ class Home extends Component {
     }
 }
 
-export default Home
