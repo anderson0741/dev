@@ -38,7 +38,7 @@ function Home(props) {
                     </Title>
                 </Overlay>
                 <div className="main_selector">
-                    <h1 className="various_projects main_homeBox">Projects</h1>
+                    <h1 className="various_projects main_homeBox littleTitle">Projects</h1>
                     <a href="/level_up_home" className="main_shopCars main_homeBox">
                         <h1 className='littleTitle'>Level Up Cars</h1>
                         <p className='sub'>Local Dealership</p>
@@ -48,18 +48,18 @@ function Home(props) {
                         <p className='sub'>Esthetics Web Page</p>
                     </a>
                     <a className="main_aboutSelf main_homeBox" href="/about">
-                        <h1>About</h1>
+                        <h1 className='otherTitle'>About</h1>
                     </a>
                     <div className="misc_small main_homeBox">
-                        <h1 className="subProjects">Misc Small React CSS/JS</h1>
-                        <p className="subProjects">-Images only</p>
+                        <h1 className="subProjects otherTitle">Misc Small React CSS/JS</h1>
+                        <p className="subProjects sub">-Images only</p>
                     </div>
                     <div className="track main_homeBox"></div>
                     <div className="travel main_homeBox"></div>
                     <div className="clock main_homeBox"></div>
                     <div className="starw main_homeBox"></div>
                     <a href="/contact" className="main_location main_homeBox">
-                        <h1>LOCATION</h1>
+                        <h1 className='otherTitle'>LOCATION</h1>
                     </a>
                 </div>
             </div>
