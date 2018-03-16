@@ -244,8 +244,8 @@
     }
     .main_selector {
         display: grid;
-        grid-template-columns: 70vw;
-        grid-template-rows: 30vw 20vw 30vw 30vw 20vw 45vw 45vw 45vw 45vw 15vw;
+        grid-template-columns: 400px;
+        grid-template-rows: 200px 100px 300px 300px 100px 400px 400px 400px 400px 150px;
         grid-gap: 3px;
         grid-template-areas: "ab" "v" "s" "a" "m" "t" "tr" "c" "sw" "l";
     }
@@ -263,7 +263,7 @@
         background-position: center;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         color: white;
         text-decoration: none;
@@ -277,7 +277,7 @@
         background-position: center;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         color: white;
         text-decoration: none;
@@ -291,7 +291,7 @@
         background-position: center;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         color: white;
         text-decoration: none;
@@ -347,7 +347,7 @@
         background-position: center;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         color: white;
         text-decoration: none;
@@ -361,7 +361,7 @@
         background-position: center;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         color: white;
         text-decoration: none;
@@ -375,7 +375,7 @@
         background-position: center;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         color: white;
         text-decoration: none;
@@ -389,7 +389,7 @@
         background-position: center;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         color: white;
         text-decoration: none;
@@ -408,10 +408,21 @@
         background-size: 1920px 1200px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         color: white;
         text-decoration: none;
         text-shadow: 3px 3px 12px black;
+    }
+    .littleTitle {
+        margin-bottom: 0vh;
+        font-size: 4vw;
+    }
+    .otherTitle {
+        font-size: 4vw;
+    }
+    .sub{
+        margin: 0;
+        font-size: 2vw;
     }
 }

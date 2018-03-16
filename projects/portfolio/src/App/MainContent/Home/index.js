@@ -54,11 +54,11 @@ function Home(props) {
                         <h1 className="subProjects otherTitle">Misc Small React CSS/JS</h1>
                         <p className="subProjects sub">-Images only</p>
                     </div>
-                    <div className="track main_homeBox"></div>
-                    <div className="travel main_homeBox"></div>
-                    <div className="clock main_homeBox"></div>
-                    <div className="starw main_homeBox"></div>
-                    <a href="/contact" className="main_location main_homeBox">
+                    <a href="/track" className="track main_homeBox"></a>
+                    <a href="/travel" className="travel main_homeBox"></a>
+                    <a href="/clock" className="clock main_homeBox"></a>
+                    <a href="/starwarsapi" className="starw main_homeBox"></a>
+                    <a href="/" href="/contact" className="main_location main_homeBox">
                         <h1 className='otherTitle'>LOCATION</h1>
                     </a>
                 </div>

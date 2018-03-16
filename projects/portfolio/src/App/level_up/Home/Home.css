@@ -19,23 +19,9 @@
     border: solid black 1px;
     box-shadow: 1px 1px 7px gray;
 }
-.welcome_level{
-    background-image: url('../../images/TransAm.jpg');
-    background-size: cover;
-    background-position-y: center;
-    height: 500px;
-    width: 1300px;
-    box-shadow: 1px 1px 1px black;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    font-size: 35px;
-    text-shadow: 3px 3px black;
-    color: white;
-}
 .shopCars{
     grid-area: s;
-    background-image: url('../../images/jeeps.jpg');
+    background-image: url('../../ShrunkPix/jeeps.jpg');
     background-size: 400px;
     display: flex;
     flex-direction: column;
@@ -47,7 +33,7 @@
 }
 .aboutSelector{
     grid-area: a;
-    background-image: url("../../images/story.JPG");
+    background-image: url("../../ShrunkPix/story.JPG");
     background-size: 400px;
     display: flex;
     flex-direction: column;
@@ -59,7 +45,7 @@
 }
 .location{
     grid-area: l;
-    background-image: url('../../images/location_.JPG');
+    background-image: url('../../ShrunkPix/location_.JPG');
     /* background-size: 400px; */
     background-position: center;
     background-attachment: fixed;
