@@ -15,9 +15,9 @@
     .main_selector {
         display: grid;
         grid-template-columns: 400px 400px;
-        grid-template-rows: 200px 100px 400px 200px;
+        grid-template-rows: 200px 150px 400px 150px 400px 400px 200px;
         grid-gap: 50px;
-        grid-template-areas: "ab ab" "v v" "s a" "l l";
+        grid-template-areas: "ab ab" "v v" "s a" "m m" "t tr" "c sw" "l l";
     }
     .main_homeBox {
         border: solid black 2px;
@@ -26,7 +26,7 @@
     }
     .main_shopCars {
         grid-area: s;
-        background-image: url('../../images/jeeps.jpg');
+        background-image: url('../../ShrunkPix/jeeps.jpg');
         background-size: 400px;
         display: flex;
         flex-direction: column;
@@ -38,7 +38,7 @@
     }
     .main_aboutSelector {
         grid-area: a;
-        background-image: url("../../images/Screen Shot 2018-03-12 at 8.13.33 PM.png");
+        background-image: url("../../ShrunkPix/Screen Shot 2018-03-12 at 8.13.33 PM.png");
         background-size: 400px;
         display: flex;
         flex-direction: column;
@@ -50,7 +50,7 @@
     }
     .main_aboutSelf {
         grid-area: ab;
-        background-image: url('../../images/About.JPG');
+        background-image: url('../../ShrunkPix/About.JPG');
         background-size: 400px;
         display: flex;
         flex-direction: column;
@@ -66,7 +66,28 @@
     }
     .various_projects {
         grid-area: v;
-        background-image: url("../../images/union.jpg");
+        background-image: url("../../ShrunkPix/union.jpg");
+        background-size: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        text-shadow: 3px 3px 12px black;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 1200px 1080px;
+        border-radius: 4px;
+        border: black 1px solid;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-shadow: 4px 3px 13px black;
+    }
+    .misc_small {
+        grid-area: m;
+        background-image: url("../../ShrunkPix/union.jpg");
         background-size: 400px;
         display: flex;
         flex-direction: column;
@@ -87,7 +108,7 @@
     }
     .main_location {
         grid-area: l;
-        background-image: url('../images/location_.JPG');
+        background-image: url('../../ShrunkPix/location_.JPG');
         background-position: center;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -99,6 +120,90 @@
         color: white;
         text-decoration: none;
         text-shadow: 3px 3px 12px black;
+    }
+    .track{
+        grid-area: t;
+        background-image: url("../../ShrunkPix/Track.png");
+        background-size: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        text-shadow: 3px 3px 12px black;
+        background-position: center;
+        /* background-attachment: fixed; */
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 4px;
+        border: black 1px solid;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-shadow: 4px 3px 13px black;
+    }
+    .travel{
+        grid-area: tr;
+        background-image: url("../../ShrunkPix/Travel.png");
+        background-size: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        text-shadow: 3px 3px 12px black;
+        background-position: center;
+        /* background-attachment: fixed; */
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 4px;
+        border: black 1px solid;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-shadow: 4px 3px 13px black;
+    }
+    .clock{
+        grid-area: c;
+        background-image: url("../../ShrunkPix/Clock.png");
+        background-size: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        text-shadow: 3px 3px 12px black;
+        background-position: center;
+        /* background-attachment: fixed; */
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 4px;
+        border: black 1px solid;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-shadow: 4px 3px 13px black;
+    }
+    .starw{
+        grid-area: sw;
+        background-image: url("../../ShrunkPix/starw.png");
+        background-size: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        text-shadow: 3px 3px 12px black;
+        background-position: center;
+        /* background-attachment: fixed; */
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 4px;
+        border: black 1px solid;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-shadow: 4px 3px 13px black;
     }
     .littleTitle {
         margin-bottom: 0vh;
@@ -134,7 +239,7 @@
     }
     .main_shopCars {
         grid-area: s;
-        background-image: url('../../images/Camaro.jpg');
+        background-image: url('../../ShrunkPix/Camaro.jpg');
         background-size: 400px;
         display: flex;
         flex-direction: column;
@@ -146,7 +251,7 @@
     }
     .main_aboutSelector {
         grid-area: a;
-        background-image: url("../../images/Screen Shot 2018-03-12 at 8.13.33 PM.png");
+        background-image: url("../../ShrunkPix/Screen Shot 2018-03-12 at 8.13.33 PM.png");
         background-size: 400px;
         display: flex;
         flex-direction: column;
@@ -158,7 +263,7 @@
     }
     .main_aboutSelf {
         grid-area: ab;
-        background-image: url('../../images/About.JPG');
+        background-image: url('../../ShrunkPix/About.JPG');
         background-size: 400px;
         display: flex;
         flex-direction: column;
@@ -170,7 +275,28 @@
     }
     .various_projects {
         grid-area: v;
-        background-image: url("../../images/union.jpg");
+        background-image: url("../../ShrunkPix/union.jpg");
+        background-size: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        text-shadow: 3px 3px 12px black;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 1200px 1080px;
+        border-radius: 4px;
+        border: black 1px solid;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-shadow: 4px 3px 13px black;
+    }
+    .misc_small {
+        grid-area: v;
+        background-image: url("../../ShrunkPix/union.jpg");
         background-size: 400px;
         display: flex;
         flex-direction: column;
@@ -191,7 +317,7 @@
     }
     .main_location {
         grid-area: l;
-        background-image: url('../images/location_.JPG');
+        background-image: url('../../ShrunkPix/location_.JPG');
         /* background-size: 400px; */
         background-position: center;
         background-attachment: fixed;
@@ -206,4 +332,3 @@
         text-shadow: 3px 3px 12px black;
     }
 }
-

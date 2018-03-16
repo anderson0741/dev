@@ -1,6 +1,6 @@
 import React from 'react';
 import './Contact.css';
-import Contact from '../../screen_shots/contact.png';
+import Contact from '../../ShrunkPix/contact.png';
 import '../NextLast.css';
 
 function Level_Up_Contact() {

@@ -1,4 +1,4 @@
-const timeInDays = .025;
+const timeInDays = 1.25;
 const currentTime = Date.parse(new Date());
 const deadline = new Date(currentTime + timeInDays * 24 * 60 * 60 * 1000);
 

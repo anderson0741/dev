@@ -1,5 +1,5 @@
 import React from 'react'
-import log_in from '../../screen_shots/login1.png';
+import log_in from '../../ShrunkPix/login1.png';
 import '../NextLast.css';
 
 function Login_Level() {

@@ -4,7 +4,32 @@
     background-size: 100%;
     /* background-image: url(http://a.abcnews.com/images/US/AP_guyana_plane_crash_jt_130707_16x9_992.jpg); */
 }
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
 
+}
+.head{
+    background-color: rgba(243, 175, 73, 0.3);
+    width: 70vw;
+    border: solid black 2px;
+    box-shadow: 10px 7px 23px black; 
+}
+.name_input{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+#elButton{
+    margin-bottom: 3vh;
+}
+.title_texts{
+    font-size: 13vh;
+    margin: auto;
+    text-align: center;
+    text-shadow: 10px 10px 15px;
+}
 .text{
     text-align: center;
     margin: auto;

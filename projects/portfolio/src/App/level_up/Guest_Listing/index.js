@@ -1,5 +1,5 @@
 import React from 'react';
-import Shopping from '../../screen_shots/listed.png';
+import Shopping from '../../ShrunkPix/listed.png';
 import '../NextLast.css';
 
 function Guest_Listing() {

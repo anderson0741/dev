@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import Form from './Form/Form';
-import Form_Shot from '../../screen_shots/upload.png';
+import Form_Shot from '../../ShrunkPix/upload.png';
 import '../NextLast.css';
 
 export default class Content extends Component {

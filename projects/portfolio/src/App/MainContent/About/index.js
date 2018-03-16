@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './About.css';
-import Picture_Of_Me from '../../images/picture_of_me.png';
+import Picture_Of_Me from '../../ShrunkPix/picture_of_me.png';
 
 function About(props) {
     return (
