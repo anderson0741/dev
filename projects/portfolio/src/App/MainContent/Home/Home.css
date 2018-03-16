@@ -205,6 +205,9 @@
         padding-right: 10px;
         box-shadow: 4px 3px 13px black;
     }
+    .subProjects{
+        margin: 0;
+    }
     .littleTitle {
         margin-bottom: 0vh;
         margin-top: 10vh;
@@ -228,14 +231,15 @@
     .main_selector {
         display: grid;
         grid-template-columns: 400px;
-        grid-template-rows: 200px 100px 200px 200px;
+        grid-template-rows: 200px 100px 200px 200px 100px 400px 400px 400px 200px;
         grid-gap: 3px;
-        grid-template-areas: "ab" "v" "s" "a" "l";
+        grid-template-areas: "ab" "v" "s" "a" "m" "t" "tr" "c" "sw" "l";
     }
     .main_homeBox {
         border: solid black 2px;
         box-shadow: 3px 3px 7px black;
         border-radius: 3px;
+        margin-top: 5vh;
     }
     .main_shopCars {
         grid-area: s;
@@ -295,7 +299,7 @@
         box-shadow: 4px 3px 13px black;
     }
     .misc_small {
-        grid-area: v;
+        grid-area: m;
         background-image: url("../../ShrunkPix/union.jpg");
         background-size: 400px;
         display: flex;
@@ -314,6 +318,65 @@
         padding-left: 10px;
         padding-right: 10px;
         box-shadow: 4px 3px 13px black;
+    }
+    .track{
+        grid-area: t;
+        background-image: url("../../ShrunkPix/Track.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        text-shadow: 3px 3px 12px black;
+    }
+    .travel{
+        grid-area: tr;
+        background-image: url("../../ShrunkPix/Travel.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        text-shadow: 3px 3px 12px black;
+    }
+    .clock{
+        grid-area: c;
+        background-image: url("../../ShrunkPix/Clock.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        text-shadow: 3px 3px 12px black;
+    }
+    .starw{
+        grid-area: sw;
+        background-image: url("../../ShrunkPix/starw.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        text-shadow: 3px 3px 12px black;
+    }
+    .subProjects{
+        margin: 0;
     }
     .main_location {
         grid-area: l;
