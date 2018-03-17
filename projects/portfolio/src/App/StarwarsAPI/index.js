@@ -1,6 +1,7 @@
 import React from 'react';
 import StarW from '../ShrunkPix/starw.png';
 import '../level_up/NextLast.css';
+// 
 
 function StarwarsAPI(props) {
     return (
