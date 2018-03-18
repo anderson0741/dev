@@ -15,8 +15,8 @@ function Home(props) {
                 <button className="next_btn"><a className='levelLink' href="/level_up_create">Next</a></button>
             </div>
             <div className="outerHomeDiv">
-                <img className='contact_shot' src={Home1} alt="" />
-                <img className='contact_shot' src={Home2} alt="" />
+                <img className='contact_shot' src={Home1}/>
+                <img className='contact_shot' src={Home2}/>
             </div>
             <div className="next_last">
                 <button className="next_btn"><a className='levelLink' href="/level_up_create">Next</a></button>

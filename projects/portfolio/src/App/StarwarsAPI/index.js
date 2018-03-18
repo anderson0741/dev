@@ -12,7 +12,7 @@ function StarwarsAPI(props) {
                 <button className="prev_btn"><a className='levelLink' href="/travel">Prev</a></button>
             </div>
             <div class="addresses">
-                <img className='contact_shot' src={StarW} alt="" />
+                <img className='contact_shot' src={StarW} />
             </div>
             <div className="next_last">
                 <button className="prev_btn"><a className='levelLink' href="/travel">Prev</a></button>

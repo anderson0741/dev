@@ -15,7 +15,7 @@ export default class Content extends Component {
                     <button className='next_btn'><a className='levelLink' href="/level_up_shopping">Next</a></button>
                 </div>
                 <div>
-                    <img className='contact_shot' src={Form_Shot} alt="" />
+                    <img className='contact_shot' src={Form_Shot} />
                 </div>
                 <div className="next_last">
                     <button className="prev_btn"><a className='levelLink' href="/level_up_home">Prev</a></button>
