@@ -47,3 +47,23 @@ body {
     background-color: white;
     text-align: center;
 }
+.next_or_last{
+    /* display: flex; */
+    /* flex-direction: column; */
+    color: white;
+    text-decoration: none;
+    margin: 13px;
+    /* margin-right: 13px; */
+}
+.next_or_last:hover{
+    color: white;
+    margin: 13px;
+    text-decoration: underline;
+}
+.returnDiv {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    background-color: black;
+    border-radius: 13px;
+}
