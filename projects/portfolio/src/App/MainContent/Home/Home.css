@@ -130,7 +130,6 @@
     .track {
         grid-area: t;
         background-image: url("../../ShrunkPix/Track.png");
-        background-size: 400px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -151,7 +150,6 @@
     .travel {
         grid-area: tr;
         background-image: url("../../ShrunkPix/Travel.png");
-        background-size: 400px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -160,7 +158,6 @@
         text-decoration: none;
         text-shadow: 3px 3px 12px black;
         background-position: center;
-        /* background-attachment: fixed; */
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 4px;
@@ -172,7 +169,6 @@
     .clock {
         grid-area: c;
         background-image: url("../../ShrunkPix/Clock.png");
-        background-size: 400px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -181,7 +177,6 @@
         text-decoration: none;
         text-shadow: 3px 3px 12px black;
         background-position: center;
-        /* background-attachment: fixed; */
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 4px;
@@ -193,7 +188,6 @@
     .starw {
         grid-area: sw;
         background-image: url("../../ShrunkPix/starw.png");
-        background-size: 400px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -202,7 +196,6 @@
         text-decoration: none;
         text-shadow: 3px 3px 12px black;
         background-position: center;
-        /* background-attachment: fixed; */
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 4px;
@@ -401,7 +394,6 @@
     .main_location {
         grid-area: l;
         background-image: url('../../ShrunkPix/location_.JPG');
-        /* background-size: 400px; */
         background-position: center;
         background-attachment: fixed;
         background-repeat: no-repeat;
