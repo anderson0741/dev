@@ -1,6 +1,6 @@
-import React from 'react'
-import Clock_Shot from '../ShrunkPix/Clock.png';
-import '../level_up/NextLast.css';
+import React, { Component } from 'react'
+// import Clock_Shot from '../ShrunkPix/Clock.png';
+// import '../level_up/NextLast.css';
 import './clock.css';
 
 const timeInDays = 1.25;
@@ -42,26 +42,40 @@ const initializeClock = (endtime) => {
 
 initializeClock(deadline);
 
-function Clock() {
-    return (
-
-        <div className="wrapper">
-            <h1 className="doomsday">Count Down Clock</h1>
-            <div className="clock">
-                <div className="border border_day">Days</div>
-                <div className="days" className="border"></div>
-                <div className="border border_hours">Hours</div>
-                <div className="hours" className="border"></div>
-                <div className="border border_min">Minutes</div>
-                <div className="minutes" className="border"></div>
-                <div className="border">Seconds</div>
-                <div className="seconds" className="border"></div>
+export default class Clock extends Component {
+    render() {
+        return (
+            <div className="clock-wrapper">
+                <div className="next_last">
+                    <button className='next_btn'><a className='levelLink' href="/track">Next</a></button>
+                </div>
+                <h1 className="doomsday">Count Down Clock</h1>
+                <div className="the_clock">
+                    <div className="border border_day">Days</div>
+                    <div className="days" className="border"></div>
+                    <div className="border border_hours">Hours</div>
+                    <div className="hours" className="border"></div>
+                    <div className="border border_min">Minutes</div>
+                    <div className="minutes" className="border"></div>
+                    <div className="border">Seconds</div>
+                    <div className="seconds" className="border"></div>
+                </div>
+                <div className="next_last">
+                    <button className='next_btn'><a className='levelLink' href="/track">Next</a></button>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
-export default Clock
+// 
+
+
+    // )
+// }
+// function Clock() {
+//      return (
+// export default Clock
     // < div className = "contact_parent levelHome_parent" >
     //     <div className="disclaimer">
     //         <h3>The following are screenshots from Level Up Auto</h3>
