@@ -1,6 +1,6 @@
 @media(min-width: 862px) {
     body {
-        background-image: url('./ShrunkPix/Autumn-Wallpapers.jpg');
+        background-image: url('../../ShrunkPix/Autumn-Wallpapers.jpg');
         background-size: cover;
         background-attachment: fixed;
         background-repeat: repeat-y;
@@ -47,7 +47,7 @@
     }
     .main_aboutSelector {
         grid-area: a;
-        background-image: url("../../ShrunkPix/Screen Shot 2018-03-12 at 8.13.33 PM.png");
+        background-image: url("../../ShrunkPix/Under_construction.JPG");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -229,7 +229,7 @@
 
 @media(max-width: 861px) {
     body{
-        background-image: url('./ShrunkPix/Autumn-Wallpapers.jpg');
+        background-image: url('../../ShrunkPix/Autumn-Wallpapers.jpg');
         background-size: cover;
         background-attachment: fixed;
         background-repeat: repeat-y;
@@ -277,7 +277,7 @@
     }
     .main_aboutSelector {
         grid-area: a;
-        background-image: url("../../ShrunkPix/Screen Shot 2018-03-12 at 8.13.33 PM.png");
+        background-image: url("../../ShrunkPix/Under_construction.JPG");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
