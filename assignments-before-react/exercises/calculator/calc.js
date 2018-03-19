@@ -9,41 +9,41 @@ var add = document.getElementById("add")
 var subtract = document.getElementById("subtract")
 var divide = document.getElementById("divide")
 
-function clearInputs(){
-    add1.value ="";
-    add2.value ="";
-    sub1.value ="";
-    sub2.value ="";
-    div1.value ="";
-    div2.value ="";
-    mult1.value="";
-    mult2.value="";
+function clearInputs() {
+    add1.value = "";
+    add2.value = "";
+    sub1.value = "";
+    sub2.value = "";
+    div1.value = "";
+    div2.value = "";
+    mult1.value = "";
+    mult2.value = "";
 }
 
-add.onclick = function(){
+add.onclick = function () {
     var firstNum = Number(add1.value);
     var secondNum = Number(add2.value);
     outputAdd.innerHTML = firstNum + secondNum;
     clearInputs();
 }
 
-subtract.onclick = function(){
+subtract.onclick = function () {
     var firstNum = Number(sub1.value);
     var secondNum = Number(sub2.value);
     outputSub.innerHTML = firstNum - secondNum;
     clearInputs();
 }
 
-divide.onclick = function(){
+divide.onclick = function () {
     var firstNum = Number(div1.value);
     var secondNum = Number(div2.value);
     outputDiv.innerHTML = firstNum / secondNum;
     clearInputs();
 }
 
-mult.onclick = function(){
+mult.onclick = function () {
     var firstNum = Number(mult1.value);
-    var secondNum =Number(mult2.value);
+    var secondNum = Number(mult2.value);
     outputMult.innerHTML = firstNum * secondNum;
     clearInputs();
 }

@@ -1,12 +1,49 @@
 body {
-    /* width: 40vw; */
-    height: 100vh; 
-    background-color: blue;
+    background-image: url('./Matrix BinaryHD WallpapersImagesPictures.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
 }
 
 #colbod {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    background-color: orange;
+    align-items: center;
+    background-color: rgba(49, 53, 56, 0.7);
     margin: auto;
+    width: 500px;
+    /* margin-top: 150px; */
+}
+.titletag{
+    color: white;
+    text-shadow: 13px 13px 13px silver;
+    font-size: 75px;
+}
+.calc{
+    display: flex;
+    flex-direction: column;
+    /* border: solid black 2px; */
+    margin-top: 1vh;
+}
+
+#mult{
+    margin-top: 3px;
+    border: solid black 2px;
+}
+#outputAdd{
+    background-color: white;
+    text-align: center;
+}
+#outputSub{
+    background-color: white;
+    text-align: center;
+}
+#outputDiv{
+    background-color: white;
+    text-align: center;
+}
+#outputMult{
+    background-color: white;
+    text-align: center;
 }

@@ -15,7 +15,7 @@ import Level_Up_Content from './level_up/Content/Content';
 import Starwars_API from './StarwarsAPI';
 import Travel from './Travel';
 import Track from './Track';
-import Clock from './Clock';
+// import Clock from './Clock';
 // import Character from './StarwarsAPI/Sidebar/Character';
 import Footer from './Footer';
 
@@ -42,7 +42,7 @@ class App extends Component {
                     <Route path='/level_up_login' component={Level_Up_Login} />
                     <Route path='/starwarsapi' component={Starwars_API} />
                     {/* <Route path='/characters/:id' component={Character} /> */}
-                    <Route path='/clock' component={Clock} />
+                    {/* <Route path='/clock' component={Clock} /> */}
                     <Route path='/travel' component={Travel} />
                     <Route path='/track' component={Track} />
                 </Switch>
