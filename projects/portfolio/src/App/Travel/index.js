@@ -6,7 +6,7 @@ function Travel() {
     return (
         <div className="contact_parent levelHome_parent">
             <div className="disclaimer">
-                <h3>The following are screenshots from Level Up Auto</h3>
+                <h3>The following is a screenshot</h3>
             </div>
             <div className="next_last">
                 <button className="prev_btn"><a className='levelLink' href="/track">Prev</a></button>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import Clock_Shot from '../ShrunkPix/Clock.png';
-// import '../level_up/NextLast.css';
+import '../level_up/NextLast.css';
 import './clock.css';
 
 const timeInDays = 1.25;
@@ -23,10 +23,10 @@ const getTimeRemaining = (endtime) => {
 }
 
 const initializeClock = (endtime) => {
-    let clockDays = document.getElementsByClassName("days");
-    let clockHours = document.getElementsByClassName("hours");
-    let clockMinutes = document.getElementsByClassName("minutes");
-    let clockSeconds = document.getElementsByClassName("seconds");
+    let clockDays = document.getElementById("days");
+    let clockHours = document.getElementById("hours");
+    let clockMinutes = document.getElementById("minutes");
+    let clockSeconds = document.getElementById("seconds");
     let timeinterval = setInterval(function () {
         let t = getTimeRemaining(endtime);
         clockDays.innerHTML = ('0' + t.days).slice(-2);
@@ -43,22 +43,33 @@ const initializeClock = (endtime) => {
 initializeClock(deadline);
 
 export default class Clock extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            "total": t,
+            "days": days,
+            "hours": hours,
+            "minutes": minutes,
+            "seconds": seconds
+        }
+    }
     render() {
+        let { clockDays, clockHours, clockMinutes, clockSeconds } = this.state;
         return (
             <div className="clock-wrapper">
                 <div className="next_last">
                     <button className='next_btn'><a className='levelLink' href="/track">Next</a></button>
                 </div>
-                <h1 className="doomsday">Count Down Clock</h1>
-                <div className="the_clock">
-                    <div className="border border_day">Days</div>
-                    <div className="days" className="border"></div>
-                    <div className="border border_hours">Hours</div>
-                    <div className="hours" className="border"></div>
-                    <div className="border border_min">Minutes</div>
-                    <div className="minutes" className="border"></div>
-                    <div className="border">Seconds</div>
-                    <div className="seconds" className="border"></div>
+                <h1 class="doomsday">Count Down Clock</h1>
+                <div id="clock">
+                    <div class="border border_day">Days</div>
+                    <div id="days" class="border"></div>
+                    <div class="border border_hours">Hours</div>
+                    <div id="hours" class="border"></div>
+                    <div class="border border_min">Minutes</div>
+                    <div id="minutes" class="border"></div>
+                    <div class="border">Seconds</div>
+                    <div id="seconds" class="border"></div>
                 </div>
                 <div className="next_last">
                     <button className='next_btn'><a className='levelLink' href="/track">Next</a></button>
