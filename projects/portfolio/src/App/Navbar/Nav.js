@@ -31,7 +31,7 @@ function Nav() {
                         <a href="/level_up_login">Login</a>
                         <a className="titleLink" href="/clock">Small Projects</a>
                         {/* <a href="/level_up_about">About</a> */}
-                        <a href="/clock">Clock CSS/JS</a>
+                        <a href="https://timer-for-portfolio.herokuapp.com/end.html">Clock CSS/JS</a>
                         <a href="/track">Track CSS</a>
                         <a href="/travel">Travel CSS/JS</a>
                         <a href="/starwarsapi">StarWars CRUD</a>
