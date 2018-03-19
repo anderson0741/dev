@@ -1,4 +1,10 @@
 @media(min-width: 862px) {
+    body {
+        background-image: url('./ShrunkPix/Autumn-Wallpapers.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: repeat-y;
+    }
     .main_tag {
         margin: auto;
     }
@@ -215,13 +221,20 @@
     .otherTitle {
         font-size: 4vw;
     }
-    .sub{
+    .sub {
         margin: 0;
         font-size: 2vw;
     }
 }
 
 @media(max-width: 861px) {
+    body{
+        background-image: url('./ShrunkPix/Autumn-Wallpapers.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: repeat-y;
+        background-position: center;
+    }
     .main_tag {
         margin: auto;
     }
@@ -413,7 +426,7 @@
     .otherTitle {
         font-size: 4vw;
     }
-    .sub{
+    .sub {
         margin: 0;
         font-size: 2vw;
     }
