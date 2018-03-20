@@ -1,20 +1,31 @@
 @media (min-width: 820px) {
     .about_parent {
-        background-color: rgba(255, 255, 255, 0.7);
+        /* background-color: rgba(255, 255, 255, 0.7);
         border: solid black 2px;
-        border-radius: 3px;
+        border-radius: 3px; */
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 800px;
         margin: auto;
         margin-top: 7vh;
     }
+    .contactWrapper{
+        background-color: rgba(255, 255, 255, 0.7);
+        border: solid black 2px;
+        border-radius: 3px;
+        text-align: center;
+        margin-bottom: 3vh;
+        width: 100%
+    }
     .about_adjust {
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: rgba(255, 255, 255, 0.7);
+        border: solid black 2px;
+        border-radius: 3px;
     }
     .theAbout {
         width: 75%;
@@ -35,6 +46,7 @@
         border: solid black 2px;
         border-radius: 3px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 370px;
