@@ -5,6 +5,7 @@ import Nav from './Navbar/Nav';
 
 import Home from './MainContent/Home';
 import About from './MainContent/About';
+import Contact from './MainContent/Contact';
 import Resume from './MainContent/About/Resume';
 import Level_Up_Home from './level_up/Home';
 import Level_Up_Contact from './level_up/Contact';
@@ -28,6 +29,7 @@ class App extends Component {
                     <Route exact path='/' component={Home} />
                     <Route path='/about' component={About} />
                     <Route path='/resume' component={Resume}/>
+                    <Route path='/contact' component={Contact}/>
                     <Route path='/level_up_home' component={Level_Up_Home} />
                     <Route path='/level_up_contact' component={Level_Up_Contact} />
                     <Route path='/level_up_create' component={Level_Up_Content} />
