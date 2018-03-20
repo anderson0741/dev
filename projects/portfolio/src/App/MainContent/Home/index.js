@@ -56,7 +56,8 @@ function Home(props) {
                     </div>
                     <a href="/track" className="track main_homeBox"></a>
                     <a href="/travel" className="travel main_homeBox"></a>
-                    <a href="/clock" className="clock main_homeBox"></a>
+                    <a href="https://timer-for-portfolio.herokuapp.com/end.html" className="clock main_homeBox"></a>
+                    <a href="https://calculator-for-portfolio.herokuapp.com/calc.html" className="calc main_homeBox"></a>
                     <a href="/starwarsapi" className="starw main_homeBox"></a>
                     <a href="/" href="/contact" className="main_location main_homeBox">
                         <h1 className='otherTitle'>LOCATION</h1>

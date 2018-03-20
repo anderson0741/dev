@@ -47,13 +47,17 @@ body {
     background-color: white;
     text-align: center;
 }
+.theInputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    color: white;
+}
 .next_or_last{
-    /* display: flex; */
-    /* flex-direction: column; */
     color: white;
     text-decoration: none;
     margin: 13px;
-    /* margin-right: 13px; */
 }
 .next_or_last:hover{
     color: white;
@@ -62,8 +66,6 @@ body {
 }
 .returnDiv {
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: space-between; */
     background-color: black;
     border-radius: 13px;
 }
