@@ -60,7 +60,7 @@ function Home(props) {
                     <a href="https://calculator-for-portfolio.herokuapp.com/calc.html" className="calc main_homeBox"></a>
                     <a href="/starwarsapi" className="starw main_homeBox"></a>
                     <a href="/" href="/contact" className="main_location main_homeBox">
-                        <h1 className='otherTitle'>LOCATION</h1>
+                        <h1 className='otherTitle'>Contact</h1>
                     </a>
                 </div>
             </div>

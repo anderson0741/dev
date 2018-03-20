@@ -5,13 +5,13 @@ import Picture_Of_Me from '../../ShrunkPix/picture_of_me.png';
 function About(props) {
     return (
         <div className="about_parent" >
-            <div className="contactWrapper">
+            {/* <div className="contactWrapper">
                 <h1>Lawrence Colton Anderson</h1>
                 <h2>Phone: (801) 941-5161</h2>
                 <h3>Email: Anderson0741@icloud.com</h3>
                 <h3>GitHub: <a href="https://github.com/anderson0741">Anderson0741</a></h3>
                 <h3>LinkedIn: <a href="https://www.linkedin.com/in/anderson0741/">Colton Anderson</a></h3>
-            </div>
+            </div> */}
             <div className="about_adjust">
                 <div className="picture_of_me">
                     <img className='picture_border' src={Picture_Of_Me} alt="" />
