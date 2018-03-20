@@ -21,7 +21,7 @@
     .main_selector {
         display: grid;
         grid-template-columns: 40vw 40vw;
-        grid-template-rows: 30vw 20vw 40vw 20vw 40vw 40vw 30vw;
+        grid-template-rows: 20vw 20vw 40vw 20vw 40vw 40vw 20vw;
         grid-gap: 50px;
         grid-template-areas: "ab ab" "v v" "s a" "m m" "t tr" "c ca" "l l";
     }
