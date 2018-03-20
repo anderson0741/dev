@@ -1,0 +1,88 @@
+.wrapper{
+    /* margin: 3vh 3vw; */
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7vh;
+}
+.sectionWithVid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.vidSectionText{
+    margin-right: 2vw;
+    align-self: flex-start
+}
+.vertical{
+    transform: rotate(270deg);
+    float: left;
+    margin-top: 23vh;
+}
+.theVideo{
+    width: 800px;
+}
+/* .blueBack{
+    background-color: blue;
+} */
+.gridSection{
+    display: flex;
+    margin-top: 40px;
+    background-color: dodgerblue;
+    width: 100vw;
+    /* margin-right: -1; */
+}
+.backC{
+    /* background-color: gray; */
+}
+.inner{
+    background-color: dimgray;
+    height: 275px;
+    /* position: absolute; */
+}
+.first{
+    display: flex;
+    flex-direction: column;
+    margin: 13px;
+}
+.second{
+    display: flex;
+    flex-direction: column;
+    margin: 13px;
+}
+.third{
+    display: flex;
+    flex-direction: column;
+    margin: 13px;
+}
+.arrow{
+    border-radius: 50%;
+    width: 150px;
+    margin: auto;
+    position: relative;
+}
+.btnDiv{
+    display: flex;
+    color: white;
+    height: 45px;
+    text-align: center;
+    /* margin: auto; */
+}
+.btn{
+    height: 145px;
+}
+.blueBtn{
+    background-color: navy;
+    width: 50%;
+    align-content: center;
+    align-items: center;
+    /* margin-top: 3px; */
+    /* display: flex; */
+    /* margin: auto; */
+}
+.pinkBtn{
+    background-color: mediumvioletred;
+    width: 50%;
+}
