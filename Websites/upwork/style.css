@@ -6,11 +6,13 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 7vh;
+    margin: 3vh 3vw;
 }
 .sectionWithVid{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 3vh 3vw;
 }
 .vidSectionText{
     margin-right: 2vw;
@@ -24,44 +26,42 @@
 .theVideo{
     width: 800px;
 }
-/* .blueBack{
-    background-color: blue;
-} */
 .gridSection{
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     margin-top: 40px;
     background-color: dodgerblue;
     width: 100vw;
     /* margin-right: -1; */
 }
 .backC{
-    /* background-color: gray; */
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
 }
 .inner{
-    background-color: dimgray;
-    height: 275px;
-    /* position: absolute; */
-}
-.first{
-    display: flex;
-    flex-direction: column;
-    margin: 13px;
-}
-.second{
-    display: flex;
-    flex-direction: column;
-    margin: 13px;
-}
-.third{
-    display: flex;
-    flex-direction: column;
-    margin: 13px;
+    background-color: rgb(196, 196, 196);
+    height: 210px;
+    width: 329px;
+    margin-top: 13vh;
 }
 .arrow{
     border-radius: 50%;
     width: 150px;
-    margin: auto;
-    position: relative;
+    margin-top: 2vh;
+    position: absolute;
+    box-shadow: 7px 13px 73px black;
+    background-color: dodgerblue;
+}
+.textz{
+    margin-top: 18vh;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-bottom: 3vw;
+    text-align: center;
 }
 .btnDiv{
     display: flex;
@@ -69,18 +69,14 @@
     height: 45px;
     text-align: center;
     /* margin: auto; */
-}
-.btn{
-    height: 145px;
+    margin-bottom: 13vh;
+    /* margin-top: -13vh; */
 }
 .blueBtn{
-    background-color: navy;
+    background-color: rgb(12, 85, 180);
     width: 50%;
     align-content: center;
     align-items: center;
-    /* margin-top: 3px; */
-    /* display: flex; */
-    /* margin: auto; */
 }
 .pinkBtn{
     background-color: mediumvioletred;
