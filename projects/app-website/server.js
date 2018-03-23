@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
+require("dotenv").config(); 
+const expressJwt = require("express-jwt");
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const morgan = require("morgan");
-// const cors = require('cors');
 
 mongoose.connect("mongodb://localhost/listings", (err) => {
     if (err) throw err;
@@ -12,8 +13,11 @@ mongoose.connect("mongodb://localhost/listings", (err) => {
 
 app.use(morgan("dev"));
 app.use(bodyParser.json());
-// app.use(cors());
+// app.use("/api/public/listing", require('./routes/public'));
+app.use("/api/listing/", expressJwt({secret: process.env.SECRET}));
+app.use("/auth", require("./routes/auth"));
 app.use('/listing', require('./routes/routes'));
+app.use('/api/upload', require('./routes/routes'));
 
 app.listen(8088, () => {
     console.log("Server is running on port 8088");
