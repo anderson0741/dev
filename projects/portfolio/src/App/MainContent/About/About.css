@@ -1,8 +1,5 @@
 @media (min-width: 820px) {
     .about_parent {
-        /* background-color: rgba(255, 255, 255, 0.7);
-        border: solid black 2px;
-        border-radius: 3px; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -71,6 +68,5 @@
     .picture_border {
         border-radius: 10px;
         box-shadow: 3px 3px 12px rgb(72, 73, 72);
-        /* width: 20px; */
     }
 }
