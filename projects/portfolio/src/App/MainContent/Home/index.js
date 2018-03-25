@@ -38,27 +38,27 @@ function Home(props) {
                     </Title>
                 </Overlay>
                 <div className="main_selector">
-                    <h1 className="various_projects main_homeBox littleTitle">Projects</h1>
-                    <a href="/level_up_home" className="main_shopCars main_homeBox">
+                    <h1 className="various_projects main_homeBox consTitle">Projects</h1>
+                    <a href="/level_up_home" className="main_shopCars main_homeBox cons1">
                         <h1 className='littleTitle'>Level Up Cars</h1>
                         <p className='sub'>Local Dealership</p>
                     </a>
-                    <a className="main_aboutSelector main_homeBox" href="/all_about_me">
+                    <a className="main_aboutSelector main_homeBox cons1" href="/all_about_me">
                         <h1 className='littleTitle'>All about ME</h1>
                         <p className='sub'>Esthetics Web Page</p>
                     </a>
                     <a className="main_aboutSelf main_homeBox" href="/about">
                         <h1 className='otherTitle'>About</h1>
                     </a>
-                    <div className="misc_small main_homeBox">
+                    <div className="misc_small main_homeBox consTitle">
                         <h1 className="subProjects otherTitle">Misc Small React CSS/JS</h1>
                         <p className="subProjects sub">-Images only</p>
                     </div>
-                    <a href="/track" className="track main_homeBox"></a>
-                    <a href="/travel" className="travel main_homeBox"></a>
-                    <a href="https://timer-for-portfolio.herokuapp.com/end.html" className="clock main_homeBox"></a>
-                    <a href="https://calculator-for-portfolio.herokuapp.com/calc.html" className="calc main_homeBox"></a>
-                    <a href="/starwarsapi" className="starw main_homeBox"></a>
+                    <a href="/track" className="track main_homeBox cons1"></a>
+                    <a href="/travel" className="travel main_homeBox cons1"></a>
+                    <a href="https://timer-for-portfolio.herokuapp.com/end.html" className="clock main_homeBox cons1"></a>
+                    <a href="https://calculator-for-portfolio.herokuapp.com/calc.html" className="calc main_homeBox cons1"></a>
+                    <a href="/starwarsapi" className="starw main_homeBox cons1"></a>
                     <a href="/" href="/contact" className="main_location main_homeBox">
                         <h1 className='otherTitle'>Contact</h1>
                     </a>
