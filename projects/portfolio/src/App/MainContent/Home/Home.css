@@ -24,41 +24,26 @@
         grid-gap: 50px;
         grid-template-areas: "ab ab" "v v" "s a" "m m" "t tr" "c ca" "l l";
     }
-    .main_homeBox {
+    .cons1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        text-shadow: 3px 3px 12px black;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-left: 10px;
+        padding-right: 10px;
         border: solid black 2px;
         box-shadow: 3px 3px 7px black;
         border-radius: 3px;
         text-align: center;
     }
-    .cons1{
-        /* background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black; */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        /* border-radius: 4px; */
-        /* border: black 1px solid; */
-        padding-left: 10px;
-        padding-right: 10px;
-        /* box-shadow: 4px 3px 13px black; */
-    }
     .consTitle{
-        background-image: url("../../ShrunkPix/union.jpg");
+        /* background-image: url("../../ShrunkPix/union.jpg"); */
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
@@ -70,209 +55,57 @@
         color: white;
         text-decoration: none;
         text-shadow: 3px 3px 12px black;
-        border-radius: 4px;
-        border: black 1px solid;
         padding-left: 10px;
         padding-right: 10px;
-        box-shadow: 4px 3px 13px black;
-        
+        border: solid black 2px;
+        box-shadow: 3px 3px 7px black;
+        border-radius: 3px;
+        text-align: center;
     }
     .main_shopCars {
         grid-area: s;
         background-image: url('../../ShrunkPix/jeeps.jpg');
-        /* background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black; */
     }
     .main_aboutSelector {
         grid-area: a;
         background-image: url("../../ShrunkPix/Under_construction.JPG");
-        /* background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black; */
     }
     .main_aboutSelf {
         grid-area: ab;
         background-image: url('../../ShrunkPix/About.JPG');
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         background-position-y: -100px;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
     }
     .various_projects {
         grid-area: v;
-        /* background-image: url("../../ShrunkPix/union.jpg"); */
-        /* background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        border-radius: 4px;
-        border: black 1px solid;
-        padding-left: 10px;
-        padding-right: 10px;
-        box-shadow: 4px 3px 13px black; */
+        background-image: url("../../ShrunkPix/union.jpg");
     }
     .misc_small {
         grid-area: m;
-        /* background-image: url("../../ShrunkPix/union.jpg");
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
-        border-radius: 4px;
-        border: black 1px solid;
-        padding-left: 10px;
-        padding-right: 10px;
-        box-shadow: 4px 3px 13px black; */
+        background-image: url("../../ShrunkPix/union.jpg");
     }
     .main_location {
         grid-area: l;
         background-image: url('../../ShrunkPix/location_.JPG');
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
     }
     .track {
         grid-area: t;
         background-image: url("../../ShrunkPix/Track.png");
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 4px;
-        border: black 1px solid;
-        padding-left: 10px;
-        padding-right: 10px;
-        box-shadow: 4px 3px 13px black; */
     }
     .travel {
         grid-area: tr;
         background-image: url("../../ShrunkPix/Travel.png");
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 4px;
-        border: black 1px solid;
-        padding-left: 10px;
-        padding-right: 10px;
-        box-shadow: 4px 3px 13px black; */
     }
     .clock {
         grid-area: c;
         background-image: url("../../ShrunkPix/Clock.png");
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 4px;
-        border: black 1px solid;
-        padding-left: 10px;
-        padding-right: 10px;
-        box-shadow: 4px 3px 13px black; */
     }
     .calc {
         grid-area: ca;
         background-image: url("../../ShrunkPix/calc2.png");
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 4px;
-        border: black 1px solid;
-        padding-left: 10px;
-        padding-right: 10px;
-        box-shadow: 4px 3px 13px black; */
     }
     .starw {
         grid-area: sw;
         background-image: url("../../ShrunkPix/starw.png");
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 4px;
-        border: black 1px solid;
-        padding-left: 10px;
-        padding-right: 10px;
-        box-shadow: 4px 3px 13px black; */
     }
     .subProjects {
         margin: 0;
@@ -319,165 +152,83 @@
         grid-gap: 3px;
         grid-template-areas: "ab" "v" "s" "a" "m" "t" "tr" "c" "ca" "sw" "l";
     }
-    .main_homeBox {
+    .consTitle{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        text-shadow: 3px 3px 12px black;
+        background-size: 1200px 1080px;
+        border-radius: 4px;
+        border: black 1px solid;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-shadow: 4px 3px 13px black;
+    }
+    .cons1{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        text-shadow: 3px 3px 12px black;
+        margin-top: 5px;
         border: solid black 2px;
         box-shadow: 3px 3px 7px black;
         border-radius: 3px;
-        margin-top: 5vh;
+        text-align: center;
     }
     .main_shopCars {
         grid-area: s;
         background-image: url('../../ShrunkPix/Camaro.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
     }
     .main_aboutSelector {
         grid-area: a;
         background-image: url("../../ShrunkPix/Under_construction.JPG");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
     }
     .main_aboutSelf {
         grid-area: ab;
         background-image: url('../../ShrunkPix/About.JPG');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
+        background-position-y: -150px;
+        background-position-x: -600px;
     }
     .various_projects {
         grid-area: v;
         background-image: url("../../ShrunkPix/union.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
-        background-size: 1200px 1080px;
-        border-radius: 4px;
-        border: black 1px solid;
-        padding-left: 10px;
-        padding-right: 10px;
-        box-shadow: 4px 3px 13px black;
     }
     .misc_small {
         grid-area: m;
         background-image: url("../../ShrunkPix/union.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
-        background-size: 1200px 1080px;
-        border-radius: 4px;
-        border: black 1px solid;
-        padding-left: 10px;
-        padding-right: 10px;
-        box-shadow: 4px 3px 13px black;
     }
     .track {
         grid-area: t;
         background-image: url("../../ShrunkPix/Track.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
     }
     .travel {
         grid-area: tr;
         background-image: url("../../ShrunkPix/Travel.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
     }
     .clock {
         grid-area: c;
         background-image: url("../../ShrunkPix/Clock.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
     }
     .calc {
         grid-area: ca;
         background-image: url("../../ShrunkPix/calc2.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
     }
     .starw {
         grid-area: sw;
         background-image: url("../../ShrunkPix/starw.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
     }
     .subProjects {
         margin: 0;
@@ -485,17 +236,6 @@
     .main_location {
         grid-area: l;
         background-image: url('../../ShrunkPix/location_.JPG');
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: 1920px 1200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        text-shadow: 3px 3px 12px black;
     }
     .littleTitle {
         margin-bottom: 0vh;
