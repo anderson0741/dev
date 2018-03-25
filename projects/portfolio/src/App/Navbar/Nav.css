@@ -10,6 +10,7 @@
     .navBod {
         background-image: url("../ShrunkPix/union.jpg");
         background-position-y: 450%;
+        background-attachment: fixed;
         background-position-x: 40%;
         border: 5px gray solid;
         border-radius: 4px;

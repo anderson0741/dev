@@ -1,10 +1,10 @@
 @media(min-width: 862px) {
-    body {
+    /* body {
         background-image: url('../../ShrunkPix/Autumn-Wallpapers.jpg');
         background-size: cover;
         background-attachment: fixed;
-        background-repeat: repeat-y;
-    }
+        background-repeat: repeat-y; */
+    /* } */
     .main_tag {
         margin: auto;
     }
@@ -125,13 +125,13 @@
 }
 
 @media(max-width: 861px) {
-    body{
+    /* body{
         background-image: url('../../ShrunkPix/Autumn-Wallpapers.jpg');
         background-size: cover;
         background-attachment: fixed;
         background-repeat: repeat-y;
         background-position: center;
-    }
+    } */
     .main_tag {
         margin: auto;
     }
@@ -155,7 +155,7 @@
     .consTitle{
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        /* background-attachment: fixed; */
         background-position: center;
         display: flex;
         flex-direction: column;
@@ -170,6 +170,7 @@
         padding-left: 10px;
         padding-right: 10px;
         box-shadow: 4px 3px 13px black;
+        margin-top: 5px;
     }
     .cons1{
         background-size: cover;
