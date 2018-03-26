@@ -9,7 +9,7 @@ export default class Content extends Component {
             <div className="content_parent levelHome_parent">
                 <div className="disclaimer">
                     <h3>The following are screenshots from Level Up Auto</h3>
-                    {/* <p>https://levelupcars.herokuapp.com/cars</p> */}
+                    <a href="https://levelupcars.herokuapp.com">Level Up Cars Site</a>
                 </div>
                 <div className="next_last">
                     <button className="prev_btn"><a className='levelLink' href="/level_up_home">Prev</a></button>

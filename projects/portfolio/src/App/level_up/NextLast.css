@@ -193,5 +193,6 @@
         box-shadow: 3px 3px 3px rgba(54, 53, 53, 0.7);
         margin-top: 1vh;
         width: 70vw;
+        text-decoration: none;
     }
 }
