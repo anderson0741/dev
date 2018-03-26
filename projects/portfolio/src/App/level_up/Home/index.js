@@ -8,6 +8,7 @@ function Home(props) {
         <div className="levelHome_parent">
             <div className="disclaimer">
                 <h3>The following are screenshots from Level Up Auto</h3>
+                <p>https://levelupcars.herokuapp.com/</p>
             </div>
             <div className="next_last">
                 <button className="next_btn"><a className='levelLink' href="/level_up_create">Next</a></button>

@@ -7,6 +7,7 @@ function Level_Up_Contact() {
         <div className="contact_parent levelHome_parent">
             <div className="disclaimer">
                 <h3>The following are screenshots from Level Up Auto</h3>
+                <p>https://levelupcars.herokuapp.com/contact</p>
             </div>
             <div className="next_last">
                 <button className="prev_btn"><a className='levelLink' href="/level_up_shopping">Prev</a></button>

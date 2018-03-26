@@ -83,6 +83,7 @@
     .disclaimer{
         background-color: rgba(255, 255, 255, 0.9);
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         border: solid black 2px;
@@ -184,6 +185,7 @@
     .disclaimer{
         background-color: rgba(255, 255, 255, 0.9);
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         border: solid black 2px;
