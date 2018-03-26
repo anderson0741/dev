@@ -11,6 +11,7 @@
     body {
         background-image: url('./ShrunkPix/Autumn-Wallpapers.jpg');
         background-size: 861px 861px;
+        /* background-size: cover; */
         background-attachment: scroll;
         background-repeat: repeat-y;
         background-position: center;
