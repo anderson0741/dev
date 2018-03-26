@@ -1,5 +1,4 @@
 import React from 'react';
-import './Home.css';
 import Home1 from '../../ShrunkPix/home1.png';
 import Home2 from '../../ShrunkPix/home2.png';
 import '../NextLast.css';
