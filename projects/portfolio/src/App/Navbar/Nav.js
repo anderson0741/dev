@@ -29,7 +29,7 @@ function Nav() {
                         <a href="/level_up_shopping">Shop</a>
                         <a href="/level_up_contact">Contact Us</a>
                         <a href="/level_up_login">Login</a>
-                        <a className="titleLink" href="/clock">Small Projects</a>
+                        <p className="titleLink" >Small Projects</p>
                         {/* <a href="/level_up_about">About</a> */}
                         <a href="https://timer-for-portfolio.herokuapp.com/end.html">Clock CSS/JS</a>
                         <a href="https://calculator-for-portfolio.herokuapp.com/calc.html">Calculator CSS/JS</a>

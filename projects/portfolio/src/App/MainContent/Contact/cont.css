@@ -8,6 +8,7 @@
     width: 75vw;
     align-content: center;
     text-shadow: 3px 3px 3px rgba(77, 75, 75, 0.8);
+    background-color: white;
 }
 .gitDiv{
     width: 300px;
