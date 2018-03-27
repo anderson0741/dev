@@ -94,19 +94,15 @@
         text-shadow: 3px 3px 12px black;
     }
 }
-
+/*  */
 @media(max-width: 861px) {
     body {
         background-image: url('../../images/jeep_background.jpg');
-        background-position-x: -202px;
-        /* background-position-y: -12px; */
+        background-position-x: -392px;
+        background-position-y: 25px;
         background-attachment: scroll;
         background-repeat: repeat-y;
-        background-size: 861px 1061px;
-    }
-    .tag {
-        /* border: white 5px solid; */
-        /* box-shadow: 3px 3px 3px 3px black; */
+        background-size: 1200px 600px;
     }
     .welcome_level {
         display: none;
