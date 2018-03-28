@@ -1,0 +1,87 @@
+/* box-sizing: border-box;
+   margin: 0;
+   border: 5px solid black;
+} */
+
+body {
+   background-color:black;
+   background-image: url(dream1.jpg);
+   display: flex;
+   flex-direction: column;
+}
+
+header {
+   width:100%;
+   text-align: center;
+   box-shadow: 3px 3px 12px;
+   color: black;
+ }
+
+h1 {
+   height: 200px;
+   font-size: 100px;
+   text-align: center;
+   padding: 80px;
+   padding-bottom: 30px;
+}
+
+nav {
+   padding: 5px;
+   margin: 20px;
+   text-align: center;
+   width: 100%;
+   font-size: 50px;
+   align-items: center;
+   background-color: black;
+   display: flex;
+   justify-content: space-around;
+}
+ 
+.main {
+   margin: 10px;
+   padding: 80px;
+   display: flex;
+   flex-direction: column;
+   background-color: rgba(255, 255, 255, 0.8);
+}
+
+p {
+   font-size: 25px;
+   text-align: center;
+   padding: 70px 110px 50px 110px;
+}
+.face {
+   float: left;
+}
+
+.dumb {
+   text-align: center;
+   font-size: 40px;
+   margin-top: 0;
+}
+
+.dcmain {
+   height: 245px;
+   float: left;
+}
+
+form {
+   height: 200px;
+   margin: 30px;
+}
+
+input {
+   height: 50px;
+   width: 300px;
+   text-align: center;
+}
+
+footer {
+   padding: 80px;
+   text-align: center;
+}
+
+#submit {
+   height: 50px;
+   width: 295px;
+}
