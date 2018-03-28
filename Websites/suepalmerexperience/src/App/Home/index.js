@@ -48,7 +48,7 @@ const Subtitle = styled.h3`
 //   }
 //   x[slideIndex-1].style.display = "block";  
 // }
-
+// probably change all this to a regular page, non react
 function Home(props) {
     return (
         <div className='homeDivBox'>
