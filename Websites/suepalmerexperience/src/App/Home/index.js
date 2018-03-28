@@ -31,46 +31,46 @@ const Subtitle = styled.h3`
     text-shadow: 3px 3px black;
 `;
 
-var slideIndex = 1;
-showDivs(slideIndex);
+// var slideIndex = 1;
+// showDivs(slideIndex);
 
-export function plusDivs(n) {
-  showDivs(slideIndex += n);
+// export function plusDivs(n) {
+//   showDivs(slideIndex += n);
+// }
+
+// export function showDivs(n) {
+//   var i;
+//   var x = document.getElementsByClassName("mySlides");
+//   if (n > x.length) {slideIndex = 1}    
+//   if (n < 1) {slideIndex = x.length}
+//   for (i = 0; i < x.length; i++) {
+//      x[i].style.display = "none";  
+//   }
+//   x[slideIndex-1].style.display = "block";  
+// }
+
+function Home(props) {
+    return (
+        <div className='homeDivBox'>
+            <Overlay>
+                <Title>
+                    <Name className='main_title'>The Sue Palmer Experience</Name>
+                    <Subtitle className="subName">-Sue Palmer</Subtitle>
+                </Title>
+            </Overlay>
+            {/* <h2 class="w3-center">Manual Slideshow</h2>
+            <div class="w3-content w3-display-container">
+                <img class="mySlides" src={Image1} style="width:100%" />
+                <img class="mySlides" src={Image2} style="width:100%" />
+                <img class="mySlides" src={Images3} style="width:100%" />
+                <img class="mySlides" src={Images4} style="width:100%" />
+
+                <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+            </div> */}
+        </div>
+    )
 }
 
-export function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-
-export default class Home extends Component {
-    render() {
-        return (
-            <div className='homeDivBox'>
-                <Overlay>
-                    <Title>
-                        <Name className='main_title'>The Sue Palmer Experience</Name>
-                        <Subtitle className="subName">-Sue Palmer</Subtitle>
-                    </Title>
-                </Overlay>
-                <h2 class="w3-center">Manual Slideshow</h2>
-                <div class="w3-content w3-display-container">
-                    <img class="mySlides" src={Image1} style="width:100%" />
-                    <img class="mySlides" src={Image2} style="width:100%" />
-                    <img class="mySlides" src={Images3} style="width:100%" />
-                    <img class="mySlides" src={Images4} style="width:100%" />
-
-                    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-                    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-                </div>
-            </div>
-        )
-    }
-}
+export default Home
 
