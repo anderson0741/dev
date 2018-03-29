@@ -53,6 +53,18 @@ const Subtitle = styled.h3`
 //   }
 //   x[slideIndex-1].style.display = "block";  
 // }
+(document).ready(function () {
+    ('.photos').slick({
+        // arrows: true,
+        dots: true,
+        autoplay: true,
+        adaptiveHeight: true,
+        autoplaySpeed: 1500,
+        // centerMode: true,
+        // centerPadding: 500px,
+        fade: true
+    })
+});
 
 function Home(props) {
     return (
@@ -65,7 +77,7 @@ function Home(props) {
             </Overlay>
             <div className="photos">
                 <div>
-                    <img className='pix' src={Image1}/>
+                    <img className='pix' src={Image1} />
                 </div>
                 <div>
                     <img className="pix" src={Image2} alt="" />
@@ -92,6 +104,24 @@ function Home(props) {
                     <img className="pix" src={Image9} alt="" />
                 </div>
             </div>
+            <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+            <script type="text/javascript" src="slick/slick.min.js"></script>
+
+            {/* <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.photos').slick({
+                        // arrows: true,
+                        dots: true,
+                        autoplay: true,
+                        adaptiveHeight: true,
+                        autoplaySpeed: 1500,
+                        // centerMode: true,
+                        // centerPadding: 500px,
+                        fade: true
+                    })
+                });
+    </script> */}
         </div>
     )
 }
