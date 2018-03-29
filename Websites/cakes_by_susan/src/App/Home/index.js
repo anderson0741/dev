@@ -36,95 +36,109 @@ const Subtitle = styled.h3`
     text-shadow: 3px 3px black;
 `;
 
-// var slideIndex = 1;
-// showDivs(slideIndex);
-
-// export function plusDivs(n) {
-//   showDivs(slideIndex += n);
+// onNextClick() {
+//     if(this.state.activeIndex < 4){
+//         this.setState({activeIndex: this.state.activeIndex +1});
+//     } else {
+//         this.setState({activeIndex: 0})
+//     }
 // }
 
-// export function showDivs(n) {
-//   var i;
-//   var x = document.getElementsByClassName("mySlides");
-//   if (n > x.length) {slideIndex = 1}    
-//   if (n < 1) {slideIndex = x.length}
-//   for (i = 0; i < x.length; i++) {
-//      x[i].style.display = "none";  
-//   }
-//   x[slideIndex-1].style.display = "block";  
-// }
-(document).ready(function () {
-    ('.photos').slick({
-        // arrows: true,
-        dots: true,
-        autoplay: true,
-        adaptiveHeight: true,
-        autoplaySpeed: 1500,
-        // centerMode: true,
-        // centerPadding: 500px,
-        fade: true
-    })
-});
 
-function Home(props) {
-    return (
-        <div className='homeDivBox'>
-            <Overlay>
-                <Title>
-                    <Name className='main_title'>The Sue Palmer Experience</Name>
-                    <Subtitle className="subName">-Sue Palmer</Subtitle>
-                </Title>
-            </Overlay>
-            <div className="photos">
-                <div>
-                    <img className='pix' src={Image1} />
+export default class Home extends Component {
+    constructor() {
+        super();
+        this.state = {
+            activeIndex: 0
+        }
+        this.onNextClick = this.onNextClick.bind(this);
+        this.onPrevClick = this.onPrevClick.bind(this);
+    }
+    onNextClick() {
+        if (this.state.activeIndex < 4) {
+            this.setState({ activeIndex: this.state.activeIndex + 1 });
+        } else {
+            this.setState({ activeIndex: 0 })
+        }
+    }
+
+    onPrevClick() {
+        if (this.state.activeIndex > 0) {
+            this.setState({ activeIndex: this.state.activeIndex - 1 });
+        } else {
+            this.setState({ activeIndex: 4 })
+        }
+    }
+    render() {
+        let sliderStyle = {
+            transform: `translateX(${this.state.activeIndex * -110}%)`,
+            transition: '0.2s'
+        }
+        return (
+            <div className='container'>
+                <Overlay>
+                    <Title>
+                        <Name className='main_title'>The Sue Palmer Experience</Name>
+                        <Subtitle className="subName">-Sue Palmer</Subtitle>
+                    </Title>
+                </Overlay>
+                <div className="sliderwrap">
+                    <div className='buttons'>
+                        <button onClick={this.onPrevClick}>◀</button>
+                        <button onClick={this.onNextClick}>▶</button>
+                    </div>
+                    <ol className='slide-container' style={sliderStyle}>
+                        <li key={0}>{}</li>
+                        <li key={1}>{}</li>
+                        <li key={2}>{}</li>
+                        <li key={3}>{}</li>
+                        <li key={4}>{}</li>
+                    </ol>
+                    {/* <ol className='slide-container' style={sliderStyle}>
+                        <li key={1}>{}</li>
+                    </ol>
+                    <ol className='slide-container' style={sliderStyle}>
+                        <li key={2}>{}</li>
+                    </ol>
+                    <ol className='slide-container' style={sliderStyle}>
+                        <li key={3}>{}</li>
+                    </ol>
+                    <ol className='slide-container' style={sliderStyle}>
+                        <li key={4}>{}</li>
+                    </ol> */}
+                    {/* <button onClick={this.onNextClick}>▶</button> */}
                 </div>
-                <div>
-                    <img className="pix" src={Image2} alt="" />
-                </div>
-                <div>
-                    <img className="pix" src={Image3} alt="" />
-                </div>
-                <div>
-                    <img className="pix" src={Image4} alt="" />
-                </div>
-                <div>
-                    <img className="pix" src={Image5} alt="" />
-                </div>
-                <div>
-                    <img className="pix" src={Image6} alt="" />
-                </div>
-                <div>
-                    <img className="pix" src={Image7} alt="" />
-                </div>
-                <div>
-                    <img className="pix" src={Image8} alt="" />
-                </div>
-                <div>
-                    <img className="pix" src={Image9} alt="" />
-                </div>
+                {/* <div className="photos">
+                    <div>
+                        <img className='pix' src={Image1} />
+                    </div>
+                    <div>
+                        <img className="pix" src={Image2} alt="" />
+                    </div>
+                    <div>
+                        <img className="pix" src={Image3} alt="" />
+                    </div>
+                    <div>
+                        <img className="pix" src={Image4} alt="" />
+                    </div>
+                    <div>
+                        <img className="pix" src={Image5} alt="" />
+                    </div>
+                    <div>
+                        <img className="pix" src={Image6} alt="" />
+                    </div>
+                    <div>
+                        <img className="pix" src={Image7} alt="" />
+                    </div>
+                    <div>
+                        <img className="pix" src={Image8} alt="" />
+                    </div>
+                    <div>
+                        <img className="pix" src={Image9} alt="" />
+                    </div>
+                </div> */}
             </div>
-            <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-            <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-            <script type="text/javascript" src="slick/slick.min.js"></script>
-
-            {/* <script type="text/javascript">
-                $(document).ready(function () {
-                    $('.photos').slick({
-                        // arrows: true,
-                        dots: true,
-                        autoplay: true,
-                        adaptiveHeight: true,
-                        autoplaySpeed: 1500,
-                        // centerMode: true,
-                        // centerPadding: 500px,
-                        fade: true
-                    })
-                });
-    </script> */}
-        </div>
-    )
+        )
+    }
 }
-
-export default Home
 
