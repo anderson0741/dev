@@ -1,0 +1,27 @@
+.wrapper{
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  margin: auto
+}
+.titleDiv{
+  /* display: flex; */
+  /* background-color: red */
+}
+.photos{
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* margin-left: auto; */
+  /* align-content: center; */
+  /* margin-left: 15vw; */
+  border: solid black 2px;
+  width: 75vw;
+  margin: auto;
+  background-size: cover;
+}
+.pix{
+  /* height: 300px;
+  width: 300px; */
+  background-size: cover;
+}
