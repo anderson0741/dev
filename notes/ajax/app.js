@@ -13,7 +13,7 @@ xhr.onreadystatechange = function (){
         let div = document.getElementById("profile-info");
         div.appendChild(h3);
         div.appendChild(h4);
-        div.appendChild(p);
+        // div.appendChild(p);
     }
 }
 
