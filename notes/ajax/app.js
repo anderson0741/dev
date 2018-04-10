@@ -12,8 +12,8 @@ xhr.onreadystatechange = function (){
         p.innerHTML = "Mass: " + data.mass;
         let div = document.getElementById("profile-info");
         div.appendChild(h3);
-        div.appendChild(h4);
-        div.appendChild(p);
+        // div.appendChild(h4);
+        // div.appendChild(p);
     }
 }
 
