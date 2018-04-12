@@ -42,7 +42,7 @@ h1 {
 
 .close:hover,
 .close:focus {
-    color: #bbb;
+    color: rgb(187, 187, 187);
     text-decoration: none;
     cursor: pointer;
 }
