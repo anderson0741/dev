@@ -73,8 +73,6 @@ class GuestListing extends React.Component {
                 <div className="sample">
                     <br/>
                     <br/>
-                    <br/>
-                    <br/>
                     <img className="sampleImage" src={photo1} alt="" ></img>
                     <div className="sampleDetails">
                     <img className="MobileSampleImage" src={photo1} alt="" ></img>
