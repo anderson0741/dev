@@ -18,7 +18,7 @@ class Popup extends React.Component {
                                     <div className="inputListing">
                                         <h1> {this.props.year} {this.props.make} {this.props.model} </h1>
                                         <div className="price">
-                                            <h1>${this.props.price}</h1>
+                                            <h1 className="prices">${this.props.price}</h1>
                                         </div>
                                     </div>
                                     <div>
@@ -69,9 +69,21 @@ class GuestListing extends React.Component {
     render() {
         let { make, model, year, miles, drivetrain, transmission, color, doors, price, photo1, photo2, photo3, /*photo4,*/ description } = this.props;
         return (
-            <div className="parent">
-                <img className="image" src={photo1} alt="" ></img>
-                <button onClick={this.togglePopup.bind(this)}>show  section</button>
+            <div className="popupSection">
+                <div className="sample">
+                    <img className="sampleImage" src={photo1} alt="" ></img>
+                    <div className="sampleDetails">
+                    <h1>{year} {make} {model}</h1>
+                    <h4 className="prices">${price}</h4>
+                    <div className="sampleRadio">
+                        <p>Color: {color}</p>
+                        <p>Drivetrain: {drivetrain}</p>
+                        <p>Transmission: {transmission}</p>
+                    </div>
+                    <button onClick={this.togglePopup.bind(this)}>Show More</button>
+                    </div>
+                </div>
+                {/* <button onClick={this.togglePopup.bind(this)}>show  section</button> */}
                 {this.state.showPopup ?
                     <Popup
                         make={make}
