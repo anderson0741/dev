@@ -7,11 +7,11 @@ function Home(props) {
             <div className='homeDivBox'>
                 <br />
                 <div className="welcome_level">
-                    <h1 className='tag'>WELCOME TO LEVEL UP CARS</h1>
+                    <h1 className='tag'>UTAH EUROPEAN DOBERMAN</h1>
                 </div>
                 <div className="welcome_level_mobile">
                     <h2 className='tag'>WELCOME TO</h2>
-                    <h1>LEVEL UP CARS</h1>
+                    <h1>UTAH EUROPEAN DOBERMAN</h1>
                 </div>
                 <div className="selector">
                     <a href="cars" className="shopCars cons1">
