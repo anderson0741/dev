@@ -5,8 +5,11 @@ function Home(props) {
     return (
         <div className="outerHomeDiv">
             <div className='homeDivBox'>
-                <br />
+                {/* <br />
                 <div className="welcome_level">
+                    <h1 className='tag'>UTAH EUROPEAN DOBERMAN</h1>
+                </div> */}
+                <div className="knockout">
                     <h1 className='tag'>UTAH EUROPEAN DOBERMAN</h1>
                 </div>
                 <div className="welcome_level_mobile">
@@ -18,7 +21,7 @@ function Home(props) {
                         <h1>Dogs</h1>
                     </a>
                     <a className="aboutSelector cons1" href="/about">
-                        <h1>ABOUT US</h1>
+                        <h1>ABOUT</h1>
                     </a>
                     <a href="contact" className="location consTitle">
                         <h1>LOCATION</h1>
