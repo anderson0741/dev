@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="outerNavDiv">
+        <div class="navBod">
+            <img class='imgs' src='../client/src/images/Dobermanlogo2.jpg' alt="" />
+            <h1 class='NavTitle'>Utah European Doberman</h1>
+            <div class="menuOptions">
+                <div class="navBod_nav guest">
+                    <button class="dropbtn">Menu</button>
+                    <div class="nav_dropdwn">
+                        <a class='links' href="https://utah-european-doberman.herokuapp.com/">Home</a>
+                        <a class='links' href="https://utah-european-doberman.herokuapp.com/about">About</a>
+                        <a class='links' href="https://utah-european-doberman.herokuapp.com/cars">Dogs</a>
+                        <a class='links' href="https://affectionate-easley-94ccbb.netlify.com">Reserve Your Dog</a>
+                        <a class='links' href="/contact">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form name="contact" method="POST">
+        <div class="deets">
+            <div class="surveyTitle">
+                <h1 class='detailSurvey'>Reserve your European Doberman</h1>
+                <p class='detailSurvey'>Dogs are 2,000 - 3,200 based on options selected. </p>
+                <h3 class='detailSurvey'>Email: Europeandobes@gmail.com</h3>
+            </div>
+            <div class="infoSurvey">
+                <h3 class="surveyInputs">Email:</h3>
+                <input type="text" placeholder='Email' />
+                <h3 class="surveyInputs">Location:</h3>
+                <input type="text" placeholder='Where are you located?' />
+                <h3 class="surveyInputs">Phone Number:</h3>
+                <input type="text" placeholder='Phone Number' />
+                <h3 class="surveyInputs">Social Media:</h3>
+                <input type="text" placeholder='Instagram/Facebook handle' />
+            </div>
+            <div class="contactSurvey">
+                <h3 class="surveyInputs">Best way to contact:</h3>
+                <label htmlFor="">
+                    <input type="radio" name="contactInfo" value="Phone" /> Phone</label>
+                <label htmlFor="">
+                    <input type="radio" name="contactInfo" value="Email" /> Email</label>
+                <label htmlFor="">
+                    <input type="radio" name="contactInfo" value="Social Media" /> Social Media</label>
+            </div>
+            <div class="genderSurvey">
+                <h3 class="surveyInputs">Preferred Gender:</h3>
+                <label htmlFor="">
+                    <input type="checkbox" name="gender" value="Male" /> Male</label>
+                <label htmlFor="">
+                    <input type="checkbox" name="gender" value="Female" /> Female</label>
+                <label htmlFor="">
+                    <input type="checkbox" name="gender" value="none" /> No Preference</label>
+            </div>
+            <div class="breedSurvey">
+                <h3 class="surveyInputs">Do you plan to breed:</h3>
+                <label htmlFor="">
+                    <input type="radio" name="breed" value="Yes" /> Yes</label>
+                <label htmlFor="">
+                    <input type="radio" name="breed" value="No" /> No</label>
+            </div>
+            <div class="appearanceSurvey">
+                <h3 class="surveyInputs">Preference on appearance:</h3>
+                <div class="optionSurvey">
+                    <label htmlFor="">
+                        <input type="checkbox" name="preference" value="Ears" /> Ears cropped (dogs ears are cropped 9-12 weeks old)</label>
+                    <label htmlFor="">
+                        <input type="checkbox" name="preference" value="Tail" /> Tail Docked</label>
+                </div>
+            </div>
+            <br />
+            <div class="submitSurvey">
+                <input class="submit" type="submit" value="Submit" />
+            </div>
+            <br />
+        </div>
+    </form>
+</body>
+
+</html>
