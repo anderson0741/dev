@@ -23,6 +23,7 @@ class Nav extends Component {
                                 <a className='links' href="/">Home</a>
                                 <a className='links' href="/about">About</a>
                                 <a className='links' href="/cars">Dogs</a>
+                                <a className='links' href="https://affectionate-easley-94ccbb.netlify.com">Reserve Your Dog</a>
                                 <a className='links' href="/contact">Contact Us</a>
                             </div>
                         </div>
