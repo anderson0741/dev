@@ -7,12 +7,13 @@
         background-repeat: repeat-y;
         background-size: cover;
     }
-    .knockout {
-        background: url('../../images/farm.jpg');
+    .welcome_dob {
+        /* background: url('../../images/farm.jpg');
         background-position: center;
         background-attachment: fixed;
         background-repeat: repeat-y;
-        background-size: cover;
+        background-size: cover; */
+        background-color: white;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
         color: red;
         -webkit-text-fill-color: transparent;
@@ -21,14 +22,15 @@
         font-size: 70px;
         font-family: arial, helvetica;
         width: 870px;
-        margin: 50px auto;
+        margin: 20px auto;
         margin-bottom: 35vh;
         text-align: center;
     }
-    .tag {
-        border: white 5px solid;
-        /* border: black 5px solid; */
-        /* box-shadow: 3px 3px 3px 3px black; */
+    .aboutBackground {
+        /* width: 110%; */
+        background-color: white;
+        height: 100vh;
+        width: 200vw;
     }
     .welcome_level {
         height: 500px;
@@ -62,7 +64,7 @@
         border-radius: 3px;
     }
     .cons1 {
-        border: solid black 2px;
+        border: solid rgb(61, 61, 61) 1px;
         box-shadow: 3px 3px 7px black;
         border-radius: 3px;
         /* background-size: 400px; */
@@ -96,7 +98,7 @@
     .shopCars {
         grid-area: s;
         /* background-image: url('../../images/jeeps.jpg'); */
-        background-image: url("../../images/doberman_puppies.jpg");
+        background-image: url("../../images/doberman_puppie.jpg");
     }
     .aboutSelector {
         grid-area: a;
@@ -177,7 +179,7 @@
         grid-template-areas: "s" "a" "l";
     }
     .cons1 {
-        border: solid black 2px;
+        border: solid black 1px;
         box-shadow: 3px 3px 7px black;
         border-radius: 3px;
         /* background-size: 400px; */
@@ -210,7 +212,7 @@
     .shopCars {
         grid-area: s;
         /* background-image: url('../../images/jeeps.jpg'); */
-        background-image: url("../../images/doberman_puppies.jpg");
+        background-image: url("../../images/doberman_puppie.jpg");
     }
     .aboutSelector {
         grid-area: a;

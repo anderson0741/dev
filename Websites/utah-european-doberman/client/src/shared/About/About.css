@@ -1,10 +1,15 @@
 .theAboutWrapper{
     background-color: white;
+    width: 25vw;
     border: solid 1px gray;
     border-radius: 3px;
     padding: 15px 15px;
-    box-shadow: 2px 2px 12px black;
-    margin-top: 10vh;
+    /* box-shadow: 2px 2px 12px black; */
+    /* margin-top: 10vh; */
+    /* margin-left: 50px; */
+    /* margin-right: 50px; */
+    transform: translate(-50%, -50%);
+    
 }
 
 .theAboutTitle{
@@ -15,7 +20,8 @@
 
 .aboutPic {
     float: left;
-    width: 500px;
+    width: 30vw;
+    height: auto;
     padding: 25px 25px;
 }
 

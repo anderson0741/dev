@@ -8,7 +8,7 @@ import Content from '../shared/Content/Content';
 import Nav from '../Nav';
 import Footer from '../Footer/Footer';
 import Login from '../shared/Login';
-import SignUp from '../shared/SignUp'
+import SignUp from '../shared/SignUp';
 import './App.css';
 
 
