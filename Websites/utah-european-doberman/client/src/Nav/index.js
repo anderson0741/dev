@@ -20,7 +20,7 @@ class Nav extends Component {
                     <a className='linkz' href="/contact">Contact Us</a>
                 </div>
 
-                <div className="mobileWrapper">
+                {/* <div className="mobileWrapper">
                     <div className="info">
                         <div className="info-content">
                             <h1>Multi level <strong>CSS-only push menu</strong></h1>
@@ -39,7 +39,7 @@ class Nav extends Component {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         )
     }
