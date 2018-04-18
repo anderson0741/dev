@@ -56,7 +56,7 @@ export default class EditForm extends Component {
     }
 
     render() {
-        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photo1, photo2, photo3, /*photo4,*/ description } = this.state.inputs;
+        let { gender, color, price, photo1, photo2, photo3, photo4, description } = this.state.inputs;
         let { listings } = this.state;
         console.log(listings);
         return (

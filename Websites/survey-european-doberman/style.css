@@ -63,7 +63,9 @@
         width: 300px;
         opacity: 0.9;
     }
-
+    .hidden{
+        display: none;
+    }
     .links {
         text-decoration: none;
         color: white;
@@ -140,7 +142,9 @@
         width: 300px;
         opacity: 0.9;
     }
-
+    .hidden{
+        display: none;
+    }
     .links {
         text-decoration: none;
         color: white;

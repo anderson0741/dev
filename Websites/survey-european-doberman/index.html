@@ -36,32 +36,39 @@
                 <h3 class='detailSurvey'>Email: Europeandobes@gmail.com</h3>
             </div>
             <div class="infoSurvey">
-                <h3 class="surveyInputs">Email:</h3>
-                <input type="text" placeholder='Email' />
-                <h3 class="surveyInputs">Location:</h3>
-                <input type="text" placeholder='Where are you located?' />
-                <h3 class="surveyInputs">Phone Number:</h3>
-                <input type="text" placeholder='Phone Number' />
-                <h3 class="surveyInputs">Social Media:</h3>
-                <input type="text" placeholder='Instagram/Facebook handle' />
+                <h3 class="surveyInputs">Name:
+                    <input type="text" placeholder='Name' name="Name" value=""/>
+                </h3>
+                <h3 class="surveyInputs">Email:
+                    <input type="text" placeholder='Email' name="Email" value=""/>
+                </h3>
+                <h3 class="surveyInputs">Location:
+                    <input type="text" placeholder='Where are you located?' name="Location" value="" />
+                </h3>
+                <h3 class="surveyInputs">Phone Number:
+                    <input type="text" placeholder='Phone Number' name="Phone" value=""/>
+                </h3>
+                <h3 class="surveyInputs">Social Media:
+                    <input type="text" placeholder='Instagram/Facebook handle' name="Social Media" value="" />
+                </h3>
             </div>
             <div class="contactSurvey">
                 <h3 class="surveyInputs">Best way to contact:</h3>
                 <label htmlFor="">
-                    <input type="radio" name="contactInfo" value="Phone" /> Phone</label>
+                    <input type="radio" name="Best way to contact" value="Phone Number" /> Phone</label>
                 <label htmlFor="">
-                    <input type="radio" name="contactInfo" value="Email" /> Email</label>
+                    <input type="radio" name="Best way to contact" value="Email" /> Email</label>
                 <label htmlFor="">
-                    <input type="radio" name="contactInfo" value="Social Media" /> Social Media</label>
+                    <input type="radio" name="Best way to contact" value="Social Media" /> Social Media</label>
             </div>
             <div class="genderSurvey">
                 <h3 class="surveyInputs">Preferred Gender:</h3>
                 <label htmlFor="">
-                    <input type="checkbox" name="gender" value="Male" /> Male</label>
+                    <input type="radio" name="gender" value="Male" /> Male</label>
                 <label htmlFor="">
-                    <input type="checkbox" name="gender" value="Female" /> Female</label>
+                    <input type="radio" name="gender" value="Female" /> Female</label>
                 <label htmlFor="">
-                    <input type="checkbox" name="gender" value="none" /> No Preference</label>
+                    <input type="radio" name="gender" value="No Preference" /> No Preference</label>
             </div>
             <div class="breedSurvey">
                 <h3 class="surveyInputs">Do you plan to breed:</h3>
@@ -79,9 +86,13 @@
                         <input type="checkbox" name="preference" value="Tail" /> Tail Docked</label>
                 </div>
             </div>
+            <input type="text" class="hidden" name="bot-field" placeholder='Leave blank' />
+            <div className="description input">
+                <textarea name="description" className="describe" placeholder="Anything Additional?" value="" id="" cols="30" rows="10"></textarea>
+            </div>
             <br />
             <div class="submitSurvey">
-                <input class="submit" type="submit" value="Submit" />
+                <button type=”submit”>Send</button>
             </div>
             <br />
         </div>

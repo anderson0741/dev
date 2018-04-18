@@ -2,8 +2,52 @@ import React, { Component } from 'react';
 import '../Listing/Listing.css';
 // import Camaro from '../images/Camaro_orange.jpg';
 
+let { slideIndex, showSlides, slidesIndex } = this.props;
+class Popup2 extends React.Component {
+    showSlides() {
+        // let {slideIndex} = this.props;
+        let i;
+        let slides = document.getElementById("slideDiv");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace("active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += "active";
+        setTimeout(showSlides, 3000);
+    }
 
-class Popup extends React.Component {
+    currentSlide(n) {
+        showSlides(slidesIndex = n);
+    }
+
+    showsSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slideDiv");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slidesIndex = 1
+        }
+        if (n < 1) {
+            slidesIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slidesIndex - 1].style.display = "block";
+        dots[slidesIndex - 1].className += " active";
+    }
+
     render() {
         return (
             <div className='popup'>
@@ -26,13 +70,26 @@ class Popup extends React.Component {
                                     </div>
                                 </div>
                                 <div className="padding">
-                                    <div className="images">
+                                    <div className="images" id="images">
                                         <br />
-                                        <img className="image" src={this.props.photo1}></img>
-                                        <img className="image" src={this.props.photo2}></img>
-                                        <img className="image" src={this.props.photo3}></img>
+                                        <div className="slideDiv fade" id="slideDiv">
+                                            <img className="photoSize" src={this.props.photo1}></img>
+                                        </div>
+                                        <div className="slideDiv fade">
+                                            <img className="image" src={this.props.photo2}></img>
+                                        </div>
+                                        <div className="slideDiv fade">
+                                            <img className="image" src={this.props.photo3}></img>
+                                        </div>
                                         {/* <img className="image" src={photo4} alt="" ></img> */}
                                     </div>
+                                    {/* Added Below */}
+                                    <div className="dottin">
+                                        <span className="dot" onclick="currentSlide(1)"></span>
+                                        <span className="dot" onclick="currentSlide(2)"></span>
+                                        <span className="dot" onclick="currentSlide(3)"></span>
+                                    </div>
+                                    {/* Added ^^ */}
                                     <div className="radios">
                                         <p>Drivetrain: {this.props.drivetrain}</p>
                                         <p>Transmission: {this.props.transmission}</p>
@@ -54,7 +111,7 @@ class Popup extends React.Component {
     }
 }
 
-class GuestListing extends React.Component {
+class GuestListing2 extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -88,7 +145,7 @@ class GuestListing extends React.Component {
                 </div>
                 {/* <button onClick={this.togglePopup.bind(this)}>show  section</button> */}
                 {this.state.showPopup ?
-                    <Popup
+                    <Popup2
                         make={make}
                         model={model}
                         year={year}
@@ -112,49 +169,4 @@ class GuestListing extends React.Component {
 }
 
 
-export default GuestListing
-
-            // <div className="parent">
-            //     <div className="space">
-            //         <br />
-            //     </div>
-            //     <div className='list'>
-            //         <div className="content">
-            //             <div className="details">
-            //                 <div className="inputListing">
-            //                     <h1> {year} {make} {model} </h1>
-            //                     <div className="price">
-            //                         <h1>${price}</h1>
-            //                     </div>
-            //                 </div>
-            //                 <div>
-            //                     <br />
-            //                 </div>
-            //             </div>
-            //             <div className="padding">
-            //                 <div className="images">
-            //                     <br />
-            //                     <img className="image" src={photo1} alt="" ></img>
-            //                     <img className="image" src={photo2} alt="" ></img>
-            //                     <img className="image" src={photo3} alt="" ></img>
-            //                     {/* <img className="image" src={photo4} alt="" ></img> */}
-            //                 </div>
-            //                 {/* <div className="images">
-            //                     <br />
-            //                     <img className="image" src="https://i.ytimg.com/vi/ZopdphMMTE4/maxresdefault.jpg" alt="" />
-            //                 </div> */}
-            //                 <div className="radios">
-            //                     <p>Drivetrain: {drivetrain}</p>
-            //                     <p>Transmission: {transmission}</p>
-            //                     <p>Color: {color}</p>
-            //                     <p>Doors: {doors}</p>
-            //                     <p>Miles: {miles}</p>
-            //                 </div>
-            //             </div>
-            //         </div>
-            //         <div className="description">
-            //             <p>{description}</p>
-            //         </div>
-            //         <br />
-            //     </div>
-            // </div>
+export default GuestListing2
