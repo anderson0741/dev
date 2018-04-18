@@ -4,56 +4,65 @@ import '../Listing/Listing.css';
 
 
 class Popup2 extends React.Component {
-    constructor (){
-        super()
+    constructor(props) {
+        super(props);
+        const { photo1, photo2, photo3 } = props;
+        this.state = {
+            images: [photo1, photo2, photo3],
+            currIndex: 0
+        }
     }
-    showSlides =()=> {
-        // let {slideIndex} = this.props;
-        let i;
-        let slideIndex = 0;
-        let slides = document.getElementById("slideDiv");
-        let dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none"
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace("active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += "active";
-        setTimeout(this.showSlides, 3000);
+    // showSlides = () => {
+    //     // let {slideIndex} = this.props;
+    //     let i;
+    //     let slideIndex = 0;
+    //     let slides = document.getElementById("slideDiv");
+    //     let dots = document.getElementsByClassName("dot");
+    //     for (i = 0; i < slides.length; i++) {
+    //         slides[i].style.display = "none"
+    //     }
+    //     slideIndex++;
+    //     if (slideIndex > slides.length) {
+    //         slideIndex = 1
+    //     }
+    //     for (i = 0; i < dots.length; i++) {
+    //         dots[i].className = dots[i].className.replace("active", "");
+    //     }
+    //     slides[slideIndex - 1].style.display = "block";
+    //     dots[slideIndex - 1].className += "active";
+    //     setTimeout(this.showSlides, 3000);
+    // }
+
+    currentSlide = (n) => {
+        this.setState({
+            currIndex: n
+        })
     }
 
-    currentSlide= (n)=> {
-        this.showSlides(n);
-    }
-
-    showsSlides=(n) => {
-        let i;
-        let slides = document.getElementsByClassName("slideDiv");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            n = 1
-        }
-        if (n < 1) {
-            n = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[n - 1].style.display = "block";
-        dots[n - 1].className += " active";
-    }
+    // showsSlides = (n) => {
+    //     let i;
+    //     let slides = document.getElementsByClassName("slideDiv");
+    //     let dots = document.getElementsByClassName("dot");
+    //     if (n > slides.length) {
+    //         n = 1
+    //     }
+    //     if (n < 1) {
+    //         n = slides.length
+    //     }
+    //     for (i = 0; i < slides.length; i++) {
+    //         slides[i].style.display = "none";
+    //     }
+    //     for (i = 0; i < dots.length; i++) {
+    //         dots[i].className = dots[i].className.replace(" active", "");
+    //     }
+    //     slides[n - 1].style.display = "block";
+    //     dots[n - 1].className += " active";
+    // }
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
+        // let {photo1, photo2, photo3} = this.state;
+        console.log(this.state);
         return (
             <div className='popup'>
                 <div className='popup_inner'>
@@ -76,7 +85,18 @@ class Popup2 extends React.Component {
                                 </div>
                                 <div className="padding">
                                     <div className="images" id="images">
-                                        <br />
+                                        <div>
+                                            {this.state.images.map((image, i) => {
+                                                return <img src={image} style={{ display: i !== this.state.currIndex ? "none" : "block" }} alt="" />
+                                            })}
+                                            <div className="dottin">
+                                                {this.state.images.map((image, i) => {
+                                                    return <span className="dot" onClick={() => this.currentSlide(i)}></span>
+                                                })}
+                                            </div>
+                                            {/* buttons would change the current index in state */}
+                                        </div>
+                                        {/* <br />
                                         <div className="slideDiv fade" id="slideDiv">
                                             <img className="photoSize" src={this.props.photo1}></img>
                                         </div>
@@ -85,15 +105,15 @@ class Popup2 extends React.Component {
                                         </div>
                                         <div className="slideDiv fade">
                                             <img className="image" src={this.props.photo3}></img>
-                                        </div>
+                                        </div> */}
                                         {/* <img className="image" src={photo4} alt="" ></img> */}
                                     </div>
                                     {/* Added Below */}
-                                    <div className="dottin">
+                                    {/* <div className="dottin">
                                         <span className="dot" onclick="currentSlide(1)"></span>
                                         <span className="dot" onclick="currentSlide(2)"></span>
                                         <span className="dot" onclick="currentSlide(3)"></span>
-                                    </div>
+                                    </div> */}
                                     {/* Added ^^ */}
                                     <div className="radios">
                                         <p>Drivetrain: {this.props.drivetrain}</p>
@@ -109,7 +129,7 @@ class Popup2 extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <span class="close" onClick={this.props.closePopup}>&times;</span>
+                    <span className="close" onClick={this.props.closePopup}>&times;</span>
                 </div>
             </div>
         );
