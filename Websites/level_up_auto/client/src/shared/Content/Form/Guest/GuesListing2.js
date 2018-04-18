@@ -24,17 +24,6 @@ class Popup2 extends React.Component {
             this.setState({ active: p, currIndex: p })
         }
     }
-    // getInitialState = () => {
-    //     return { active: null }
-    // }
-
-    // toggle = (position) => {
-    //     if (this.state.active === position) {
-    //         this.setState({ active: null })
-    //     } else {
-    //         this.setState({ active: position })
-    //     }
-    // }
 
     myColor = (p) => {
         if (this.state.active === p) {
@@ -68,7 +57,7 @@ class Popup2 extends React.Component {
                                     <div className="images" id="images">
                                         <div>
                                             {this.state.images.map((image, i) => {
-                                                return <img src={image} style={{ display: i !== this.state.currIndex ? "none" : "block" }} alt="" />
+                                                return <img className="dotImage" src={image} style={{ display: i !== this.state.currIndex ? "none" : "block" }} alt="" />
                                             })}
                                             <div className="dottin">
                                                 {this.state.images.map((image, i) => {
@@ -77,14 +66,6 @@ class Popup2 extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    {/* <div className="dottin">
-                                        <span className="dot" onClick={() => this.currentSlide(0)} style={{background: this.myColor(0)}} onClick={() => {this.toggle(0)}}></span>
-                                        <span className="dot" onClick={() => this.currentSlide(1)} style={{background: this.myColor(1)}} onClick={() => {this.toggle(1)}}></span>
-                                        <span className="dot" onClick={() => this.currentSlide(2)} style={{background: this.myColor(2)}} onClick={() => {this.toggle(2)}}></span>
-                                        <span className="dot" onClick={() => this.currentSlide(3)} style={{background: this.myColor(3)}} onClick={() => {this.toggle(3)}}></span>
-                                        <span className="dot" onClick={() => this.currentSlide(4)} style={{background: this.myColor(4)}} onClick={() => {this.toggle(4)}}></span>
-                                        <span className="dot" onClick={() => this.currentSlide(5)} style={{background: this.myColor(5)}} onClick={() => {this.toggle(5)}}></span>
-                                    </div> */}
                                     <div className="radios">
                                         <p>Drivetrain: {this.props.drivetrain}</p>
                                         <p>Transmission: {this.props.transmission}</p>
@@ -119,7 +100,7 @@ class GuestListing2 extends React.Component {
         });
     }
     render() {
-        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photo1, photo2, photo3, /*photo4,*/ description } = this.props;
+        let { make, model, year, miles, drivetrain, transmission, color, doors, price, photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, description } = this.props;
         return (
             <div className="popupSection">
                 <div className="sample">
@@ -138,7 +119,6 @@ class GuestListing2 extends React.Component {
                         <button onClick={this.togglePopup.bind(this)}>Show More</button>
                     </div>
                 </div>
-                {/* <button onClick={this.togglePopup.bind(this)}>show  section</button> */}
                 {this.state.showPopup ?
                     <Popup2
                         make={make}
@@ -153,6 +133,14 @@ class GuestListing2 extends React.Component {
                         photo1={photo1}
                         photo2={photo2}
                         photo3={photo3}
+                        photo3={photo3}
+                        photo4={photo4}
+                        photo5={photo5}
+                        photo6={photo6}
+                        photo7={photo7}
+                        photo8={photo8}
+                        photo9={photo9}
+                        photo10={photo10}
                         description={description}
                         closePopup={this.togglePopup.bind(this)}
                     />
