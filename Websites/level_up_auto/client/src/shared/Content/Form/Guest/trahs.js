@@ -9,26 +9,40 @@ class Popup2 extends React.Component {
         const { photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10 } = props;
         this.state = {
             images: [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10],
-            currIndex: 0,
-            active: null
-        }
+            currIndex: 0
+        },
+        this.handleClick = this.handleClick.bind(this);
+        this.getInitialState = this.getInitialState.bind(this);
+        this.toggle = this.toggle.bind(this);
+        this.myColor = this.myColor.bind(this);
+        this.currentSlide = this.currentSlide.bind(this);
     }
-    currentSlide = (p, n) => {
-        this.setState({
-            currIndex: n
-            // active: null
-        })
-        if (this.state.active === p) {
-            this.setState({ active: null, currIndex: n })
-        } else {
-            this.setState({ active: p, currIndex: p })
-        }
-    }
-    // getInitialState = () => {
+    // showSlides = () => {
+    //     // let {slideIndex} = this.props;
+    //     let i;
+    //     let slideIndex = 0;
+    //     let slides = document.getElementById("slideDiv");
+    //     let dots = document.getElementsByClassName("dot");
+    //     for (i = 0; i < slides.length; i++) {
+    //         slides[i].style.display = "none"
+    //     }
+    //     slideIndex++;
+    //     if (slideIndex > slides.length) {
+    //         slideIndex = 1
+    //     }
+    //     for (i = 0; i < dots.length; i++) {
+    //         dots[i].className = dots[i].className.replace("active", "");
+    //     }
+    //     slides[slideIndex - 1].style.display = "block";
+    //     dots[slideIndex - 1].className += "active";
+    //     setTimeout(this.showSlides, 3000);
+    // }
+
+    // getInitialState(){
     //     return { active: null }
     // }
 
-    // toggle = (position) => {
+    // toggle(position){
     //     if (this.state.active === position) {
     //         this.setState({ active: null })
     //     } else {
@@ -36,14 +50,28 @@ class Popup2 extends React.Component {
     //     }
     // }
 
-    myColor = (p) => {
-        if (this.state.active === p) {
-            return "#717171";
-        }
-        return "";
+    // myColor(position){
+    //     if (this.state.active === position) {
+    //         return "blue";
+    //     }
+    //     return "";
+    // }
+
+    // handleClick(currentSlide, myColor, i){
+    //     () => this.currentSlide(i)
+    //     // this.myColor(i)
+    // }
+
+    currentSlide(n){
+        this.setState({
+            currIndex: n
+        })
     }
 
     render() {
+        // console.log(this.props)
+        // let {photo1, photo2, photo3} = this.state;
+        console.log(this.state);
         return (
             <div className='popup'>
                 <div className='popup_inner'>
@@ -72,7 +100,7 @@ class Popup2 extends React.Component {
                                             })}
                                             <div className="dottin">
                                                 {this.state.images.map((image, i) => {
-                                                    return <span className="dot" onClick={() => this.currentSlide(i)} style={{ background: this.myColor(i) }}></span>
+                                                    return <span className="dot" onClick={() => this.currentSlide(i)}></span>
                                                 })}
                                             </div>
                                         </div>
@@ -105,7 +133,7 @@ class Popup2 extends React.Component {
         );
     }
 }
-
+// return <span className="dot" onClick={() => this.handleClick(i)} /*style={{background: this.myColor(i)}}*/></span>
 class GuestListing2 extends React.Component {
     constructor() {
         super();
