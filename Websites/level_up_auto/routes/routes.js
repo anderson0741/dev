@@ -39,5 +39,6 @@ listingRoutes.delete('/:id', (req, res) => {
         return res.send(deletedListing);
     })
 });
-// 
+
 module.exports = listingRoutes;
+

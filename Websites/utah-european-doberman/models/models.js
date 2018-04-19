@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const listingSchema = new mongoose.Schema({
+const dogSchema = new mongoose.Schema({
     "gender": {
         type: String,
         required: false
@@ -23,4 +23,4 @@ const listingSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model("Listings", listingSchema);
+module.exports = mongoose.model("Dogs", dogSchema);
