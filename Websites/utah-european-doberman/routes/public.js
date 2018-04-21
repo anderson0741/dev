@@ -1,17 +1,17 @@
 const express = require('express');
-const dogRoutes = express.Router();
-const Dogs = require('../models/models');
+const listingRoutes = express.Router();
+const Listings = require('../models/models');
 
-dogRoutes.get('/', (req, res) => {
-    Dogs.find({}, (err, listingz) => {
+listingRoutes.get('/', (req, res) => {
+    Listings.find({}, (err, listingz) => {
         if(err) return res.status(500).send(err);
         return res.send(listingz);
     })
 });
 
-dogRoutes.get('/:id', (req, res) => {
-    Dogs.findById(req.params.id, (err, dogs) => {
+listingRoutes.get('/:id', (req, res) => {
+    Listings.findById(req.params.id, (err, listing) => {
         if (err) return res.status(500).send(err);
-        return res.send(dogs);
+        return res.send(listing);
     })
 });

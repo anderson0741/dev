@@ -1,43 +1,43 @@
 const express = require('express');
-const dogRoutes = express.Router();
-const Dogs = require('../models/models');
+const listingRoutes = express.Router();
+const Listings = require('../models/models');
 
-dogRoutes.get('/', (req, res) => {
-    Dogs.find({}, (err, dogz) => {
+listingRoutes.get('/', (req, res) => {
+    Listings.find({}, (err, listingz) => {
         if(err) return res.status(500).send(err);
-        return res.send(dogz);
+        return res.send(listingz);
     })
 });
 
-dogRoutes.post('/', (req, res) => {
-    const newDog = new Dogs(req.body);
+listingRoutes.post('/', (req, res) => {
+    const newListing = new Listings(req.body);
     // listing.user = req.user._id;
-    newDog.save((err) => {
+    newListing.save((err) => {
         if (err) return res.status(500).send(err);
-        return res.status(201).send(newDog);
+        return res.status(201).send(newListing);
     })
 });
 
-dogRoutes.get('/:id', (req, res) => {
-    Dogs.findById(req.params.id, (err, dog) => {
+listingRoutes.get('/:id', (req, res) => {
+    Listings.findById(req.params.id, (err, listing) => {
         if (err) return res.status(500).send(err);
-        return res.send(dog);
+        return res.send(listing);
     })
 });
 
-dogRoutes.put('/:id', (req, res) => {
-    Dogs.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedDog) => {
+listingRoutes.put('/:id', (req, res) => {
+    Listings.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedListing) => {
         if (err) return res.status(500).send(err);
-        return res.send(updatedDog);
+        return res.send(updatedListing);
     })
 });
 
-dogRoutes.delete('/:id', (req, res) => {
+listingRoutes.delete('/:id', (req, res) => {
     console.log(req.params.id)
-    Dogs.findByIdAndRemove(req.params.id, (err, deletedDog) =>{
+    Listings.findByIdAndRemove(req.params.id, (err, deletedListing) =>{
         if (err) return res.status(500).send(err);
-        return res.send(deletedDog);
+        return res.send(deletedListing);
     })
 });
 
-module.exports = dogRoutes;
+module.exports = listingRoutes;
