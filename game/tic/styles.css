@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+table{
+    height: 450px;
+    width: 450px; 
+}
+
+td{
+    border: solid black 3px;
+    cursor: pointer;
+}
+
+.cell{
+    height: 150px;
+    width: 150px;
+    background-color: gray;
+    text-align: center;
+    font-size: 75px;
+}
+
+/* .row1{
+    background-color: purple
+}
+.row2{
+    background-color: green
+}
+.row3{
+    background-color: red
+} */
