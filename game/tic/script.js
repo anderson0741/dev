@@ -32,7 +32,7 @@ function funClick(square) {
     // console.log(square.targer.id)
 }
 
-turn = (squareId, playerz) => {
+function turn(squareId, playerz) {
     tictac[squareId] = playerz;
     document.getElementById(squareId).innerText = playerz;
     let won = check(tictac, playerz)
@@ -55,7 +55,7 @@ function check(board, playerz) {
 function gameOver(won) {
     for (let index of winMoves[won.index]) {
         document.getElementById(index).style.backgroundColor =
-            won.playerz == player ? "yellow" : "red";
+            won.playerz == player ? "limegreen" : "red";
     }
     for (let i = 0; i < cells.length; i++) {
         cells[i].removeEventListener('click', funClick, false)
