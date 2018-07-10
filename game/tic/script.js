@@ -28,8 +28,10 @@ function startGame() {
 }
 
 function funClick(square) {
-    turn(square.target.id, player)
-    // console.log(square.targer.id)
+    if (typeof tictac[square.target.id] == 'number') {
+        turn(square.target.id, player)
+        if (!tie()) turn(compTurn(), comp);
+    }
 }
 
 function turn(squareId, playerz) {
@@ -60,4 +62,30 @@ function gameOver(won) {
     for (let i = 0; i < cells.length; i++) {
         cells[i].removeEventListener('click', funClick, false)
     }
+    Winner(won.playerz == player ? "YOU WIN!" : "Loser...")
+}
+
+function Winner(who) {
+    document.querySelector('.finish').style.display = "block";
+    document.querySelector('.finish .text').innerText = who;
+}
+
+function availableSquare() {
+    return tictac.filter(s => typeof s == "number");
+}
+
+function compTurn() {
+    return availableSquare()[0];
+}
+
+function tie() {
+    if (availableSquare().length == 0) {
+        for (let i = 0; i < cells.length; i++) {
+            cells[i].style.backgroundColor = 'purple';
+            cells[i].removeEventListener('click', turnClick, false);
+        }
+        Winner("Tie Game")
+        return true;
+    }
+    return false;
 }
