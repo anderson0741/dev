@@ -13,17 +13,17 @@ const winMoves = [
     [6, 4, 2]
 ]
 
-const cells = document.querySelectorAll('.cell');
+const boxes = document.querySelectorAll('.box');
 
 startGame();
 
 function startGame() {
     document.querySelector('.finish').style.display = "none"
     tictac = Array.from(Array(9).keys());
-    for (let i = 0; i < cells.length; i++) {
-        cells[i].innerText = '';
-        cells[i].style.removeProperty('background-color');
-        cells[i].addEventListener('click', funClick, false);
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].innerText = '';
+        boxes[i].style.removeProperty('background-color');
+        boxes[i].addEventListener('click', funClick, false);
     }
 }
 
@@ -59,8 +59,8 @@ function gameOver(won) {
         document.getElementById(index).style.backgroundColor =
             won.playerz == player ? "limegreen" : "red";
     }
-    for (let i = 0; i < cells.length; i++) {
-        cells[i].removeEventListener('click', funClick, false)
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].removeEventListener('click', funClick, false)
     }
     Winner(won.playerz == player ? "YOU WIN!" : "Loser...")
 }
@@ -80,12 +80,55 @@ function compTurn() {
 
 function tie() {
     if (availableSquare().length == 0) {
-        for (let i = 0; i < cells.length; i++) {
-            cells[i].style.backgroundColor = 'purple';
-            cells[i].removeEventListener('click', turnClick, false);
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].style.backgroundColor = 'purple';
+            boxes[i].removeEventListener('click', turnClick, false);
         }
         Winner("Tie Game")
         return true;
     }
     return false;
 }
+
+// let ticTacGame;
+
+// const player1 = "P1";
+// const player2 = "P2";
+
+// const winMoves = [
+//     [0, 1, 2],
+//     [3, 4, 5],
+//     [6, 7, 8],
+//     [0, 3, 6],
+//     [1, 4, 7],
+//     [2, 5, 8],
+//     [0, 4, 8],
+//     [6, 4, 2]
+// ]
+
+// const boxes = document.querySelectorAll('.box');
+
+// begin();
+
+// function begin() {
+//     document.querySelector('.finish').style.display = 'none'
+//     ticTacGame = Array.from(Array(9).keys());
+//     for (let i = 0; i < boxes.length; i++) {
+//         boxes[i].innerText = '';
+//         boxes[i].style.removeProperty('background-color');
+//         boxes[i].addEventListener('click', playerTurn, false);
+//     }
+// }
+
+// function gameClick(boxS) {
+//     if (typeof ticTacGame[boxS.target.id] == 'number') {
+//         turn
+//     }
+// }
+
+// function playerTurn(boxSId) {
+//     ticTacGame[boxSId] = player;
+//     document.getElementById(boxSId).innerText = player;
+//     let win = check(ticTacGame, player)
+//     if (win) gameEnd(win)
+// }
