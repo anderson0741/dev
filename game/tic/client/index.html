@@ -10,6 +10,23 @@
 </head>
 
 <body>
+    <div class="outerNavDiv">
+        <div class="functionalDiv1"></div>
+        <div class="functionalDiv">
+            <nav role="navigation">
+                <div class="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <h1 class="menu">
+                        <button onclick="startGame()">RESET</button>
+                    </h1>
+                </div>
+            </nav>
+        </div>
+    </div>
     <div class="tac">
         <h1 class="title">Tic Tac Toe</h1>
         <div class="finish">
@@ -32,11 +49,8 @@
                 <td class="box" id="8"></td>
             </tr>
         </table>
-        <!-- <div class="finish">
-            <div class="text"></div>
-        </div> -->
         </br>
-        <button onclick="startGame()">RESET</button>
+        <button class="bottomB" onclick="startGame()">RESET</button>
     </div>
     <script src="script.js"></script>
 </body>

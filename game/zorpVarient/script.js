@@ -1,20 +1,19 @@
 const rs = require("readline-sync");
 
+let input = document.getElementById("typeScript").nodeValue();
+
+$(document).ready(function(){
+    $(document).keypress(function(key){
+        alert(key.);
+    })
+})
+
 console.log("Where am I?");
 
 let inv = [];
 let location = [];
 let car = [];
 let isAlive = true;
-
-// const gameText = document.getElementById(textG)
-
-// function submit() {
-//     document.querySelector('.submit').style.display = "none"
-
-// }
-
-let input = document.getElementById("typeScript")
 
 while(isAlive) {
     let userinput = rs.question("What should I do?");

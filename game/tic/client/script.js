@@ -2,6 +2,8 @@ let tictac;
 const player = "X";
 const comp = "O";
 
+const toeUrl = '/toe/';
+
 const winMoves = [
     [0, 1, 2],
     [3, 4, 5],
@@ -29,29 +31,31 @@ function startGame() {
 
 function funClick(square) {
     if (typeof tictac[square.target.id] == 'number') {
-        turn(square.target.id, player)
-        if (!tie()) turn(compTurn(), comp);
+        if (!turn(square.target.id, player)) {
+            if (!tie()) turn(compTurn(), comp);
+        } 
     }
 }
 
 function turn(squareId, playerz) {
     tictac[squareId] = playerz;
     document.getElementById(squareId).innerText = playerz;
-    let won = check(tictac, playerz)
-    if (won) gameOver(won)
+    let won = check(tictac, playerz);
+    if (won) gameOver(won);
+    return won;
 }
 
 function check(board, playerz) {
     let plays = board.reduce((a, e, i) =>
-        (e === player) ? a.concat(i) : a, []);
+        (e === playerz) ? a.concat(i) : a, []);
     let won = null;
     for (let [index, win] of winMoves.entries()) {
-        if (win.every(elem => plays.indexOf(elem) > -1)) {
+        if (win.every(k => plays.indexOf(k) > -1)) {
             won = { index: index, playerz: playerz };
             break;
         }
     }
-    return won
+    return won;
 }
 
 function gameOver(won) {
@@ -65,70 +69,28 @@ function gameOver(won) {
     Winner(won.playerz == player ? "YOU WIN!" : "Loser...")
 }
 
-function Winner(who) {
+function Winner(whoWon) {
     document.querySelector('.finish').style.display = "block";
-    document.querySelector('.finish .text').innerText = who;
+    document.querySelector('.finish .text').innerText = whoWon;
 }
 
 function availableSquare() {
-    return tictac.filter(s => typeof s == "number");
+    return tictac.filter(d => typeof d == "number");
 }
 
 function compTurn() {
-    return availableSquare()[0];
+    let as = availableSquare();
+    return as[Math.floor(Math.random() * as.length)];
 }
 
 function tie() {
     if (availableSquare().length == 0) {
         for (let i = 0; i < boxes.length; i++) {
-            boxes[i].style.backgroundColor = 'purple';
-            boxes[i].removeEventListener('click', turnClick, false);
+            boxes[i].style.display.backgroundColor = 'purple';
+            boxes[i].removeEventListener('click', funClick, false);
         }
         Winner("Tie Game")
         return true;
     }
     return false;
 }
-
-// let ticTacGame;
-
-// const player1 = "P1";
-// const player2 = "P2";
-
-// const winMoves = [
-//     [0, 1, 2],
-//     [3, 4, 5],
-//     [6, 7, 8],
-//     [0, 3, 6],
-//     [1, 4, 7],
-//     [2, 5, 8],
-//     [0, 4, 8],
-//     [6, 4, 2]
-// ]
-
-// const boxes = document.querySelectorAll('.box');
-
-// begin();
-
-// function begin() {
-//     document.querySelector('.finish').style.display = 'none'
-//     ticTacGame = Array.from(Array(9).keys());
-//     for (let i = 0; i < boxes.length; i++) {
-//         boxes[i].innerText = '';
-//         boxes[i].style.removeProperty('background-color');
-//         boxes[i].addEventListener('click', playerTurn, false);
-//     }
-// }
-
-// function gameClick(boxS) {
-//     if (typeof ticTacGame[boxS.target.id] == 'number') {
-//         turn
-//     }
-// }
-
-// function playerTurn(boxSId) {
-//     ticTacGame[boxSId] = player;
-//     document.getElementById(boxSId).innerText = player;
-//     let win = check(ticTacGame, player)
-//     if (win) gameEnd(win)
-// }
