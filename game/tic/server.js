@@ -1,24 +1,30 @@
 const express = require('express');
 const app = express();
 const http = require('http');
-const path = require('path');
-const mongoose = require('mongoose');
-// const bodyParser = require('body-parser');
-// const cors = require ('cors')
+const axios = require('axios');
+const server = require('http').Server(app);
+const socket = require('socket.io')(server);
+const bodyParser = require('body-parser');
 
-// mongoose.connect("mongodb://localhost/toe", (err) => {
-//     if (err) throw err;
-//     console.log("Connected to the TicTacToe Database");
-// });
 
-// app.use(cors());
-// app.use(bodyParser.json());
-// app.use('/toe', require('./routes/toe'));
-// Routing
-app.get('/toe', function(request, response) {
-    response.sendFile(path.join(_comp, 'sctipt.js'))
-})
+app.get('/', function(req, res) {
+    res.sendFile(_dirname + './index.html');
+});
 
+app.post('/', (req, res) => {
+    const turn = new turn(req.body);
+    newTurn.save((err) => {
+        if (err) return res.status(500).send(err);
+        return res.send(newTurn);
+    })
+});
+
+socket.on('connection', function(socketFF){
+    socketFF.on('createGame', function(tyrb){
+        let as = availableSquare();
+        return as[Math.floor(Math.random() * as.length)];
+    })
+});
 
 app.listen(8080, () =>{
     console.log("Server is running on port 8080");

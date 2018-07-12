@@ -1,8 +1,11 @@
+// const axios = require('axios');
+// let server = require('../server');
+
 let tictac;
 const player = "X";
 const comp = "O";
 
-const toeUrl = '/toe/';
+// const server = require('https://localhost:8080');
 
 const winMoves = [
     [0, 1, 2],
@@ -37,13 +40,16 @@ function funClick(square) {
     }
 }
 
-function turn(squareId, playerz) {
-    tictac[squareId] = playerz;
-    document.getElementById(squareId).innerText = playerz;
-    let won = check(tictac, playerz);
-    if (won) gameOver(won);
-    return won;
-}
+// axios.response.data 
+
+server.turn();
+// function turn(squareId, playerz) {
+//     tictac[squareId] = playerz;
+//     document.getElementById(squareId).innerText = playerz;
+//     let won = check(tictac, playerz);
+//     if (won) gameOver(won);
+//     return won;
+// }
 
 function check(board, playerz) {
     let plays = board.reduce((a, e, i) =>
@@ -58,6 +64,7 @@ function check(board, playerz) {
     return won;
 }
 
+// server.gameOver();
 function gameOver(won) {
     for (let index of winMoves[won.index]) {
         document.getElementById(index).style.backgroundColor =
@@ -78,6 +85,7 @@ function availableSquare() {
     return tictac.filter(d => typeof d == "number");
 }
 
+// server.compTurn();
 function compTurn() {
     let as = availableSquare();
     return as[Math.floor(Math.random() * as.length)];
