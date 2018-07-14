@@ -7,20 +7,40 @@
     // const comp = "O";
 
 
-    $(function () {
+    $('.box').click(function () {
+
+        let $boxes = $('.box')
+
 
         $.ajax({
             type: 'POST',
-            url: 127.0.0.1: 8080,
+            url: '127.0.0.1: 8080',
             data: {
                 'playermove': e.target.id
-            }
+            },
+            // success: function(boxes) {
+            //     $.each(boxes, function(i, drawboard) {
+            //         $boxes.append(gameBoard)
+            //     })
+            // }
             success: drawboard,
-            failure: function (err) {
+            error: function (err) {
                 console.log("Server Error")
             }
         });
     });
+
+    function drawboard(response) {
+        for (i = 0; i < response.tictac.length; i++) {
+            if (response.tictac[i] == "X") {
+                
+                console.log("hello")
+            } else if (response.tictac[i] == "O") {
+                return {gameBoard: tictac}
+            }
+        }
+    }
+
     function startGame() {
         document.querySelector('.finish').style.display = "none"
         // tictac = Array.from(Array(9).keys());

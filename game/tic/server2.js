@@ -11,7 +11,7 @@ const app = express();
 const player = "X";
 const comp = "O";
 
-let tictac = [0,0,0,0,0,0,0,0,0];
+let tictac = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 let winner = null;
 let winningMove = null;
 
@@ -32,9 +32,9 @@ function startGame() {
     winner = null;
     winningMove = null;
     // for (let i = 0; i < boxes.length; i++) {
-        // boxes[i].innerText = '';
-        // boxes[i].style.removeProperty('background-color');
-        // boxes[i].addEventListener('click', funClick, false);
+    // boxes[i].innerText = '';
+    // boxes[i].style.removeProperty('background-color');
+    // boxes[i].addEventListener('click', funClick, false);
     // }
 }
 
@@ -46,25 +46,41 @@ function funClick(square) {
     }
 }
 
-function turn(squareId, playerz) {
-    tictac[squareId] = playerz;
-    // document.getElementById(squareId).innerText = playerz;
-    let won = check(tictac, playerz);
-    if (won) gameOver(won);
-    return won;
+function turn(turnInfo, callBack) {
+    // tictac[turnInfo] = callBack;
+    // // document.getElementById(squareId).innerText = callBack;
+    // let won = check(tictac, callBack);
+    // if (won) gameOver(won);
+    // return won;
+    gameBoard[turnInfo.squarechosen] = "X";
+    check(function() {
+        if (winner != null) return callBack();
+        compTurn(callBack);
+    })
 }
 
 function check(board, playerz) {
-    let plays = board.reduce((a, e, i) =>
-        (e === playerz) ? a.concat(i) : a, []);
-    let won = null;
-    for (let [index, win] of winMoves.entries()) {
-        if (win.every(k => plays.indexOf(k) > -1)) {
-            won = { index: index, playerz: playerz };
-            break;
-        }
+    // let plays = board.reduce((a, e, i) =>
+    //     (e === playerz) ? a.concat(i) : a, []);
+    // let won = null;
+    // for (let [index, win] of winMoves.entries()) {
+    //     if (win.every(k => plays.indexOf(k) > -1)) {
+    //         won = { index: index, playerz: playerz };
+    //         break;
+    //     }
+    // }
+    // return won;
+    if (playerWon) {
+        winner = "player";
+        winningMove = winMoves();
+    } else if (compWon) {
+        winner = "competer"
+        winningMove = winMoves();
+    } else if (tie) {
+        winner = "tie"
     }
-    return won;
+
+    callBack();
 }
 
 // server.gameOver();
@@ -88,8 +104,9 @@ function availableSquare() {
     return tictac.filter(d => typeof d == "number");
 }
 
-function compTurn() {
+function compTurn(callBack) {
     let as = availableSquare();
+    check(callBack);
     return as[Math.floor(Math.random() * as.length)];
 }
 
@@ -106,12 +123,17 @@ function tie() {
 }
 
 
-app.get('/', function(req, res){
-        // return res.send(appz);
-        return res.sendFile('/Users/lawrenceanderson/Desktop/dev/game/tic/client/index.html');;
-    });
+app.get('/', function (req, res) {
+    // return res.send(appz);
+    return res.sendFile('/Users/lawrenceanderson/Desktop/dev/game/tic/client/index.html');
+});
+
+app.get('/:path', function(req, res) {
+    return res.sendFile('/Users/lawrenceanderson/Desktop/dev/game/tic/client/' + req.params.path);
+});
+
 app.post('/', (req, res) => {
-    turn(req.body, function(){
+    turn(req.body, function () {
         res.send({
             gameBoard: tictac,
             winner: winner,
