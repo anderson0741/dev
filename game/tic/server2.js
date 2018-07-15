@@ -74,7 +74,7 @@ function check(board, playerz) {
         winner = "player";
         winningMove = winMoves();
     } else if (compWon) {
-        winner = "competer"
+        winner = "comp"
         winningMove = winMoves();
     } else if (tie) {
         winner = "tie"
@@ -122,6 +122,8 @@ function tie() {
     return false;
 }
 
+// Do I need this?
+let gameBoard = tictac;
 
 app.get('/', function (req, res) {
     // return res.send(appz);
