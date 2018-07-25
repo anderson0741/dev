@@ -44,21 +44,21 @@ function Home(props) {
                         <p className='sub'>Local Dealership</p>
                     </a>
                     <a className="main_aboutSelector cons1" href="/all_about_me">
-                        <h1 className='littleTitle'>All about ME</h1>
-                        <p className='sub'>Esthetics Web Page</p>
+                        <h1 className='littleTitle'>Utah European Doberman</h1>
+                        <p className='sub'>Dogs</p>
                     </a>
                     <a className="main_aboutSelf consTitle" href="/about">
                         <h1 className='otherTitle'>About</h1>
                     </a>
                     <div className="misc_small consTitle">
-                        <h1 className="subProjects otherTitle">Misc Small React CSS/JS</h1>
-                        <p className="subProjects sub">-Images only</p>
+                        <h1 className="subProjects otherTitle"><a className="subProjects" href='http://tic-tac-toe2233.herokuapp.com/'>Javascript Tic Tac Toe Game</a></h1>
+                        {/* <p className="subProjects sub">-Images only</p> */}
                     </div>
-                    <a href="/track" className="track cons1"></a>
-                    <a href="/travel" className="travel cons1"></a>
-                    <a href="https://timer-for-portfolio.herokuapp.com/end.html" className="clock cons1"></a>
-                    <a href="https://calculator-for-portfolio.herokuapp.com/calc.html" className="calc cons1"></a>
-                    <a href="/starwarsapi" className="starw cons1"></a>
+                    {/* <a href="http://tic-tac-toe2233.herokuapp.com/" className="track cons1"></a> */}
+                    {/* <a href="/travel" className="travel cons1"></a> */}
+                    {/* <a href="https://timer-for-portfolio.herokuapp.com/end.html" className="clock cons1"></a> */}
+                    {/* <a href="https://calculator-for-portfolio.herokuapp.com/calc.html" className="calc cons1"></a> */}
+                    {/* <a href="/starwarsapi" className="starw cons1"></a> */}
                     <a href="/" href="/contact" className="main_location consTitle">
                         <h1 className='otherTitle'>Contact</h1>
                     </a>

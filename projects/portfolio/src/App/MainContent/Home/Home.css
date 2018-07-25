@@ -20,9 +20,9 @@
     .main_selector {
         display: grid;
         grid-template-columns: 40vw 40vw;
-        grid-template-rows: 20vw 20vw 40vw 20vw 40vw 40vw 20vw;
+        grid-template-rows: 20vw 20vw 40vw 20vw /*40vw 40vw*/ 20vw;
         grid-gap: 50px;
-        grid-template-areas: "ab ab" "v v" "s a" "m m" "t tr" "c ca" "l l";
+        grid-template-areas: "ab ab" "v v" "s a" "m m" /*"t tr" "c ca"*/ "l l";
     }
     .cons1{
         display: flex;
@@ -68,7 +68,7 @@
     }
     .main_aboutSelector {
         grid-area: a;
-        background-image: url("../../ShrunkPix/Under_construction.JPG");
+        background-image: url("../../ShrunkPix/5.jpg");
     }
     .main_aboutSelf {
         grid-area: ab;
@@ -109,6 +109,8 @@
     }
     .subProjects {
         margin: 0;
+        text-decoration: none;
+        color: white;
     }
     .littleTitle {
         margin-bottom: 0vh;
@@ -126,11 +128,12 @@
 
 @media(max-width: 861px) {
     body {
-        background-image: url('../../ShrunkPix/Autumn-Wallpapers.jpg');
-        background-size: cover;
+        /* background-image: url('../../ShrunkPix/Autumn-Wallpapers.jpg'); */
+        /* background-size: cover;
         background-attachment: fixed;
         background-repeat: repeat-y;
-        background-position: center;
+        background-position: center; */
+        background-color: white;
     }
     .main_tag {
         margin: auto;
@@ -148,9 +151,9 @@
     .main_selector {
         display: grid;
         grid-template-columns: 400px;
-        grid-template-rows: 200px 100px 300px 300px 100px 400px 400px 400px 400px 400px 150px;
+        grid-template-rows: 200px 100px 300px 300px 100px /*400px 400px 400px 400px 400px*/ 150px;
         grid-gap: 3px;
-        grid-template-areas: "ab" "v" "s" "a" "m" "t" "tr" "c" "ca" "sw" "l";
+        grid-template-areas: "ab" "v" "s" "a" "m" /*"t" "tr" "c" "ca" "sw"*/ "l";
     }
     .consTitle{
         background-size: cover;
@@ -195,7 +198,7 @@
     }
     .main_aboutSelector {
         grid-area: a;
-        background-image: url("../../ShrunkPix/Under_construction.JPG");
+        background-image: url("../../ShrunkPix/5.jpg");
     }
     .main_aboutSelf {
         grid-area: ab;
