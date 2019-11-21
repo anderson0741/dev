@@ -20,3 +20,4 @@ xhr.onreadystatechange = function (){
 
 xhr.open("GET", "https://swapi.co/api/people/1/", true);
 xhr.send();
+// important notes
